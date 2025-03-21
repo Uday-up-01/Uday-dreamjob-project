@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 720px;
+    padding: 50px;
+}
+
+.container {
+    width: 900px; 
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: rgb(255, 74, 14);
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border-bottom: 2px solid rgb(255, 74, 14);
+}
+
+td {
+    padding: 14px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #e6e6e6;
+}
+
+.editbtn {
+    background-color: rgb(255, 74, 14);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    background-color: rgb(255, 74, 14);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.adduser {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 74, 14);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

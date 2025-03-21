@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="/Manage_Users.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Users</h1>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let user of Users) { %>
+                        <tr>
+                            <td><%= user.id %></td>
+                            <td><%= user.Username %></td>
+                            <td><%= user.Email %></td>
+                            <td><%= user.Password %></td>
+                            <td><a class="editbtn" href="http://localhost:8080/Adminmanageuser/<%= user.id %>/edit">Edit</a></td>
+                            <td>
+                                <form method="post" action="/Adminmanageuser/<%= user.id %>?_method=DELETE">
+                                    <button class="delete-btn">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+
+                </tbody>
+            </table>
+            <button onclick="window.location.href='/Adminmanageuser/new'" class="adduser">Add New User</button>
+        </div>
+    </div>
+
+</body>
+</html>

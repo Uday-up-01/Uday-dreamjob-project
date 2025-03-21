@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/edituser.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit User Details</h2>
+        <p>User ID: <%= User.id %></p>
+        <p>User Username: <%= User.Username %></p>
+        
+        <form method="POST" action="/Adminmanageuser/<%= User.id %>?_method=PATCH">
+            <input type="text" name="Username" value="<%= User.Username %>">
+            <input type="text" name="Email" value="<%= User.Email %>">
+            <input type="text" name="Password" value="<%= User.Password %>">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

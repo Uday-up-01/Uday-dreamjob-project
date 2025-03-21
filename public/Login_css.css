@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 730px;
+    background-image: url('/Login_bg_img.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f1f1;
+    padding: 5px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.toggle-buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+.toggle-buttons .active {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: #fff;
+    border-radius: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 12px;
+    color: #004e92;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.signup-link {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #004e92;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}

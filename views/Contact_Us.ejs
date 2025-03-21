@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/Contact_Us_css.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contactusnote">
+                We would like to hear from you! Please choose the type of message you would like to contact DreamJob.com
+                 about in the dropdown below. Please don't use this form to send resumes.
+                  Also give exact details so that we can get back to you easily.
+            </div>
+            <form action="#" method="post">
+                <label for="message-type">Message Type</label>
+                <select id="message-type" name="message-type" required>
+                    <option value="Select">Select</option>
+                    <option value="Forgot password">Forgot password</option>
+                    <option value="I want to give Feedback">I want to give Feedback</option>
+                    <option value="I have a Suggestion">I have a Suggestion</option>
+                    <option value="I am a Journalist doing story">I am a Journalist doing story</option>
+                    <option value="I want to Advertise">I want to Advertise</option>
+                    <option value="I have Privacy Concern">I have Privacy Concern</option>
+                    <option value="About Copyright">About Copyright</option>
+                </select>
+                
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
