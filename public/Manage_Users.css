@@ -40,12 +40,18 @@ table {
     overflow: hidden;
 }
 
+.table-head{
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+}
+
+.table-head:hover {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+}
+
 th {
-    background: rgb(255, 74, 14);
     color: white;
     padding: 14px;
     font-size: 16px;
-    border-bottom: 2px solid rgb(255, 74, 14);
 }
 
 td {
@@ -60,7 +66,7 @@ tr:hover {
 }
 
 .editbtn {
-    background-color: rgb(255, 74, 14);
+    background: linear-gradient(90deg, #4b6cb7, #182848);
     color: white;
     border: none;
     border-radius: 5px;
@@ -69,7 +75,7 @@ tr:hover {
 }
 
 .delete-btn {
-    background-color: rgb(255, 74, 14);
+    background: linear-gradient(90deg, #4b6cb7, #182848);
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,7 +85,7 @@ tr:hover {
 .adduser {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: rgb(255, 74, 14);
+    background: linear-gradient(90deg, #4b6cb7, #182848);
     color: white;
     border: none;
     border-radius: 5px;

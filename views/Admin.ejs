@@ -9,18 +9,18 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="/Adminaccount"><i class="fas fa-user"></i> Account</a></li>
-            <li><a href="/AdminResetpassword"><i class="fas fa-key"></i> Reset Password</a></li>
-            <li><a href="/Adminmanageuser"><i class="fas fa-users"></i> Manage Users</a></li>
-            <li><a href="/Adminmanagecontent"><i class="fas fa-tasks"></i> Manage Content</a></li>
-            <li><a class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a onclick="window.location.href='/Adminaccount'"> Account</a></li>
+            <li><a onclick="window.location.href='/AdminResetpassword'"> Reset Password</a></li>
+            <li><a onclick="window.location.href='/Adminmanageuser'"> Manage Users</a></li>
+            <li><a onclick="window.location.href='/Adminmanagecontent'"> Manage Content</a></li>
+            <li><a class="logout"> Logout</a></li>
         </ul>
     </nav>
 
     <main class="content">
         <div class="welcome">
-            <h1>Welcome, <%= username %></h1>
-            <p>Select an option from the navigation bar.</p>
+            <h1>Welcome <%= username %></h1>
+            <p>Select an option from the navigation bar</p>
         </div>
     </main>
 
