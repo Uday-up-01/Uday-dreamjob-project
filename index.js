@@ -4,7 +4,9 @@ const port = 8080;
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const methodoverride = require('method-override');
+const session = require('express-session');
 
+app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodoverride('_method'));
@@ -37,7 +39,7 @@ app.get('/AdminLogin', (req, res) => {
 });
 
 app.get('/Admin', (req, res) => {
-    const username = req.query.username;
+    const username = req.session.username;
     res.render('Admin', { username });
 });
 
@@ -88,6 +90,21 @@ app.get('/Adminmanageuser/:id/edit', (req, res) => {
     res.render('edituser.ejs', { User });
 });
 
+app.get('/Adminaccount', (req, res) => {
+    const username = req.session.username;
+    res.render('Admin_Account', { username });
+});
+
+app.get('/User', (req, res) => {
+    const username = req.session.username;
+    res.render('User', { username });
+});
+
+app.get('/Useraccount', (req, res) => {
+    const username = req.session.username;
+    res.render('User_Account', { username });
+});
+
 app.post('/Adminmanageuser', (req, res) => {
     let { Username, Email, Password } = req.body;
     let id = uuidv4();
@@ -97,16 +114,14 @@ app.post('/Adminmanageuser', (req, res) => {
 
 app.post('/AdminLogin', (req, res) => {
     const { username } = req.body;
-    res.redirect(`/Admin?username=${(username)}`);
-});
-
-app.post('/Adminaccount', (req, res) => {
-    res.redirect();
+    req.session.username = username;
+    res.redirect('/Admin');
 });
 
 app.post('/UserLogin', (req, res) => {
     const { username } = req.body;
-    res.redirect(`/User?username=${(username)}`);
+    req.session.username = username;
+    res.redirect('/User');
 });
 
 app.patch('/Adminmanageuser/:id', (req, res) => {

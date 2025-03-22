@@ -193,3 +193,111 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+#banknav{
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 8px;
+}
+.grid-item {
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+.item1 { 
+    background-color: #4CAF50; 
+    height: 100px;
+    width: 480px;
+} 
+.item2 { 
+    background-color: #FF5722;    
+    height: 100px;
+    width: 480px; 
+}
+.item3 { 
+    background-color: #2196F3;     
+    height: 100px;
+    width: 480px;
+} 
+.item4 { 
+    background-color: #FF9800;     
+    height: 100px;
+    width: 480px;
+} 
+.item5 { 
+    background-color: #8BC34A;     
+    height: 100px;
+    width: 480px;
+} 
+.item6 { 
+    background-color: #00BCD4;     
+    height: 100px;
+    width: 480px;
+} 
+.item7 { 
+    background-color: #F44336;     
+    height: 100px;
+    width: 480px;
+} 
+.item8 { 
+    background-color: #9C27B0;     
+    height: 100px;
+    width: 480px;
+} 
+.item9{
+    background-color: #F44336;
+    height: 100px;
+    width: 480px;
+}
+#tb1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 95%;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    border: 0.1px solid #ddd;
+}
+
+th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #2196F3;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.th2{
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    color: #00f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

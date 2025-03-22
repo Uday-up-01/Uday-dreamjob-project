@@ -15,16 +15,16 @@
                 <button id="login-btn" class="active">Login</button>
                 <button id="signup-btn">Signup</button>
             </div>
-    
+
             <form action="/AdminLogin" method="POST" id="login-form">
                 <input type="text" name="username" placeholder="Enter your name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="password" placeholder="Password" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <div class="forgot-password" onclick="window.location.href='/ContactUs'">Forgot password?</div>
                 <button type="submit" class="submit-btn">Login</button>
                 <p class="signup-link">Not a member? <a href="#" id="switch-to-signup">Signup now</a></p>
-            </form>
-    
+            </form>            
+
             <form method="post" action="/NewAdmin/<%= post.id %>?_method=PATCH" id="signup-form" class="hidden">
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email Address" required>
