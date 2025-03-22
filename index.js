@@ -15,12 +15,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-let Users = [
+let Admins = [
     {id: uuidv4(), Username: 'Uday', Email: "uday@gmail.com", Password: '1234'},
     {id: uuidv4(), Username: 'Harsh', Email: "harsh@gmail.com", Password: '1234'},
-    {id: uuidv4(), Username: 'Ram', Email: "ram@gmail.com", Password: '1234'},
-    {id: uuidv4(), Username: 'Ganga', Email: "ganga@gmail.com", Password: '1234'}
-  ];
+
+];
+
+let Users = [
+    {id: uuidv4(), Username: 'Ganga', Email: "ganga@gmail.com", Password: '1234'},
+    {id: uuidv4(), Username: 'Ram', Email: "ram@gmail.com", Password: '1234'}
+
+];
 
 app.get('/', (req, res) => {
     res.render('DreamJob_1'); 
@@ -36,26 +41,6 @@ app.get('/UserLogin', (req, res) => {
 
 app.get('/AdminLogin', (req, res) => {
     res.render('Admin_Login', { post: {} });
-});
-
-app.get('/Admin', (req, res) => {
-    const username = req.session.username;
-    res.render('Admin', { username });
-});
-
-app.get('/User', (req, res) => {
-    const username = req.query.username;
-    res.render('User', { username });
-});
-
-app.get('/Admin/:Username', (req, res) => {
-    const username = req.params.Username;
-    res.render('Admin', { username });
-});
-
-app.get('/User/:Username', (req, res) => {
-    const username = req.params.Username;
-    res.render('User', { username });
 });
 
 app.get('/state/:state', (req, res) => {
@@ -90,19 +75,20 @@ app.get('/Adminmanageuser/:id/edit', (req, res) => {
     res.render('edituser.ejs', { User });
 });
 
+app.get('/Admin', (req, res) => {
+    res.render('Admin', { username: req.session.admin.Username });
+});
+
 app.get('/Adminaccount', (req, res) => {
-    const username = req.session.username;
-    res.render('Admin_Account', { username });
+    res.render('Admin_Account', { admin: req.session.admin });
 });
 
 app.get('/User', (req, res) => {
-    const username = req.session.username;
-    res.render('User', { username });
+    res.render('User', { username: req.session.user.Username });
 });
 
 app.get('/Useraccount', (req, res) => {
-    const username = req.session.username;
-    res.render('User_Account', { username });
+    res.render('User_Account', { user: req.session.user });
 });
 
 app.post('/Adminmanageuser', (req, res) => {
@@ -113,14 +99,35 @@ app.post('/Adminmanageuser', (req, res) => {
 });
 
 app.post('/AdminLogin', (req, res) => {
-    const { username } = req.body;
-    req.session.username = username;
+    const { username, email, password } = req.body;
+    const admin = Admins.find(u => u.Username === username && u.Email === email && u.Password === password);
+
+    if (!admin) {
+        return res.send(`
+            <script>
+                alert("Invalid Admin!");
+                window.location.href = "/AdminLogin";
+            </script>
+        `);
+    }
+    req.session.admin = admin;
     res.redirect('/Admin');
 });
 
 app.post('/UserLogin', (req, res) => {
-    const { username } = req.body;
-    req.session.username = username;
+    const { username, email, password } = req.body;
+    const user = Users.find(u => u.Username === username && u.Email === email && u.Password === password);
+
+    if (!user) {
+        return res.send(`
+            <script>
+                alert("Invalid User!");
+                window.location.href = "/UserLogin";
+            </script>
+        `);
+    }
+
+    req.session.user = user;
     res.redirect('/User');
 });
 

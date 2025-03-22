@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Account</title>
+    <link rel="stylesheet" href="/User_account.css">
 </head>
 <body>
-    <div>
-        <h1>Username: <%= username %></h1>
-    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a onclick="window.location.href='/Useraccount'" id="Account"> Account</a></li>
+            <li><a onclick="window.location.href='/UserResetpassword'" id="edit-content"> Reset password</a></li>
+            <li><a onclick="window.location.href='/ContactUs'" id="update-content"> Contact Us</a></li>
+            <li><a onclick="window.location.href='/DeleteAccount'" id="delete-content"> Delete Account</a></li>
+            <li><a class="logout"> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="welcome">
+            <h1>Username: <%= user.Username %></h1>
+            <p>ID: <%= user.id %></p>
+            <p>Email: <%= user.Email %></p>
+            <p>Password: <%= user.Password %></p>
+        </div>
+    </main>
 </body>
 </html>

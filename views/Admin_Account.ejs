@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Account</title>
+    <link rel="stylesheet" href="/admin_account.css">
 </head>
 <body>
-    <div>
-        <h1>Username: <%= username %></h1>
-    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a onclick="window.location.href='/Adminaccount'"> Account</a></li>
+            <li><a onclick="window.location.href='/AdminResetpassword'"> Reset Password</a></li>
+            <li><a onclick="window.location.href='/Adminmanageuser'"> Manage Users</a></li>
+            <li><a onclick="window.location.href='/Adminmanagecontent'"> Manage Content</a></li>
+            <li><a class="logout"> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="welcome">
+            <h1>Username: <%= admin.Username %></h1>
+            <p>ID: <%= admin.id %></p>
+            <p>Email: <%= admin.Email %></p>
+            <p>Password: <%= admin.Password %></p>
+        </div>
+    </main>
+
 </body>
 </html>
