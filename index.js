@@ -18,13 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 let Admins = [
     {id: uuidv4(), Username: 'Uday', Email: "uday@gmail.com", Password: '1234'},
     {id: uuidv4(), Username: 'Harsh', Email: "harsh@gmail.com", Password: '1234'},
-
 ];
 
 let Users = [
     {id: uuidv4(), Username: 'Ganga', Email: "ganga@gmail.com", Password: '1234'},
     {id: uuidv4(), Username: 'Ram', Email: "ram@gmail.com", Password: '1234'}
-
 ];
 
 app.get('/', (req, res) => {
