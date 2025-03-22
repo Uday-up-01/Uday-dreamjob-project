@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="/User_delete_account.css">
+</head>
+<body>
+    <div class="container">
+        <div class="delete-box">
+            <h2>Delete Account</h2>
+            <p>Are you sure you want to delete your account?</p>
+
+            <form action="/UserdeleteAccount?_method=DELETE" method="POST">
+                <button type="submit" class="delete-btn">Yes, Delete My Account</button>
+                <a href="/User" class="cancel-btn">Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

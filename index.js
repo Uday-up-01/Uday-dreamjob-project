@@ -51,14 +51,6 @@ app.get('/jobs/:category', (req, res) => {
     res.render(`${category}`);
 });
 
-app.get('/UserResetpassword', (req, res) => {
-    res.render('User_Reset_Password');
-});
-
-app.get('/AdminResetpassword', (req, res) => {
-    res.render('Admin_Reset_Password');
-});
-
 app.get('/Adminmanageuser', (req, res) => {
     res.render('Manage_User', { Users });
 });
@@ -87,6 +79,18 @@ app.get('/User', (req, res) => {
 
 app.get('/Useraccount', (req, res) => {
     res.render('User_Account', { user: req.session.user });
+});
+
+app.get('/UserResetpassword', (req, res) => {
+    res.render('User_Reset_Password', { user: req.session.user });
+});
+
+app.get('/AdminResetpassword', (req, res) => {
+    res.render('Admin_Reset_Password', { admin: req.session.admin });
+});
+
+app.get('/Userdeleteaccount', (req, res) => {
+    res.render('Userdeleteaccount', { user: req.session.user });
 });
 
 app.post('/Adminmanageuser', (req, res) => {
@@ -129,6 +133,22 @@ app.post('/UserLogin', (req, res) => {
     res.redirect('/User');
 });
 
+app.patch('/AdminResetpassword', (req, res) => {
+    let newPassword = req.body.password;
+    let adminEmail = req.session.admin.Email;
+    let admin = Admins.find((a) => a.Email === adminEmail);
+    admin.Password = newPassword;
+    res.redirect('/Admin');
+});
+
+app.patch('/UserResetpassword', (req, res) => {
+    let newPassword = req.body.password;
+    let userEmail = req.session.user.Email;
+    let user = Users.find((a) => a.Email === userEmail);
+    user.Password = newPassword;
+    res.redirect('/User');
+});
+
 app.patch('/Adminmanageuser/:id', (req, res) => {
     let { id } = req.params;
     let Newusername = req.body.Username;
@@ -139,6 +159,11 @@ app.patch('/Adminmanageuser/:id', (req, res) => {
     User.Username = Newusername;
     User.Password = newPassword;
     res.redirect('/Adminmanageuser');
+});
+
+app.delete('/UserdeleteAccount', (req, res) => {
+    Users = Users.filter(user => user.id !== req.session.user.id);
+    res.redirect('/UserLogin'); 
 });
 
 app.delete('/Adminmanageuser/:id', (req, res) => {
