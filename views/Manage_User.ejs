@@ -26,9 +26,9 @@
                     <% for(let user of Users) { %>
                         <tr class="table-row">
                             <td><%= user.id %></td>
-                            <td><%= user.Username %></td>
-                            <td><%= user.Email %></td>
-                            <td><%= user.Password %></td>
+                            <td><%= user.username %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.password %></td>
                             <td><a class="editbtn" href="http://localhost:8080/Adminmanageuser/<%= user.id %>/edit">Edit</a></td>
                             <td>
                                 <form method="post" action="/Adminmanageuser/<%= user.id %>?_method=DELETE">

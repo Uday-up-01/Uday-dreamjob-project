@@ -13,9 +13,9 @@
         <p>User Username: <%= User.Username %></p>
         
         <form method="POST" action="/Adminmanageuser/<%= User.id %>?_method=PATCH">
-            <input type="text" name="Username" value="<%= User.Username %>">
-            <input type="text" name="Email" value="<%= User.Email %>">
-            <input type="text" name="Password" value="<%= User.Password %>">
+            <input type="text" name="Username" value="<%= User.username %>">
+            <input type="text" name="Email" value="<%= User.email %>">
+            <input type="text" name="Password" value="<%= User.password %>">
             <button type="submit">Update</button>
         </form>
     </div>

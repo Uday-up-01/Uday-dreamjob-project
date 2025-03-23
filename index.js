@@ -5,40 +5,35 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const methodoverride = require('method-override');
 const session = require('express-session');
+const mysql = require('mysql2');
 
 app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodoverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
 
-let Admins = [
-    {id: uuidv4(), Username: 'Uday', Email: "uday@gmail.com", Password: '1234'},
-    {id: uuidv4(), Username: 'Harsh', Email: "harsh@gmail.com", Password: '1234'},
-];
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Udaymysql',
+    database: 'dreamjob'
+});
 
-let Users = [
-    {id: uuidv4(), Username: 'Ganga', Email: "ganga@gmail.com", Password: '1234'},
-    {id: uuidv4(), Username: 'Ram', Email: "ram@gmail.com", Password: '1234'}
-];
+connection.connect(err => {
+    if (err) throw err;
+    console.log("Connected to Database");
+});
 
 app.get('/', (req, res) => {
-    res.render('DreamJob_1'); 
+    res.render('DreamJob_1');
 });
 
 app.get('/ContactUs', (req, res) => {
-    res.render('Contact_Us'); 
-});
-
-app.get('/UserLogin', (req, res) => {
-    res.render('User_Login', { post: {} });
-});
-
-app.get('/AdminLogin', (req, res) => {
-    res.render('Admin_Login', { post: {} });
+    res.render('Contact_Us');
 });
 
 app.get('/state/:state', (req, res) => {
@@ -51,125 +46,167 @@ app.get('/jobs/:category', (req, res) => {
     res.render(`${category}`);
 });
 
+app.get('/UserLogin', (req, res) => {
+    res.render('User_Login', { post: {} });
+});
+
+app.post('/UserLogin', (req, res) => {
+    const { username, password } = req.body;
+    
+    connection.query(
+        'SELECT * FROM users WHERE Username = ? AND Password = ?',
+        [username, password],
+        (err, results) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send("Database error.");
+            }
+            if (results.length === 0) {
+                return res.send(`
+                    <script>
+                        alert("Invalid User!");
+                        window.location.href = "/UserLogin";
+                    </script>
+                `);
+            }
+            req.session.user = results[0];
+            res.redirect('/User');
+        }
+    );
+});
+
+app.get('/User', (req, res) => {
+    if (!req.session.user) return res.redirect('/UserLogin');
+    res.render('User', { username: req.session.user.username });
+});
+
+app.get('/AdminLogin', (req, res) => {
+    res.render('Admin_Login', { post: {} });
+});
+
+app.post('/AdminLogin', (req, res) => {
+    const { username, password } = req.body;
+    
+    connection.query(
+        'SELECT * FROM admins WHERE Username =  ? AND Password = ?',
+        [username, password],
+        (err, results) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send("Database error.");
+            }
+            if (results.length === 0) {
+                return res.send(`
+                    <script>
+                        alert("Invalid Admin!");
+                        window.location.href = "/AdminLogin";
+                    </script>
+                `);
+            }
+            req.session.admin = results[0];
+            res.redirect('/Admin');
+        }
+    );
+});
+
+app.get('/Admin', (req, res) => {
+    if (!req.session.admin) return res.redirect('/AdminLogin');
+    res.render('Admin', { username: req.session.admin.username });
+});
+
 app.get('/Adminmanageuser', (req, res) => {
-    res.render('Manage_User', { Users });
+    connection.query('SELECT * FROM users', (err, results) => {
+        if (err) throw err;
+        res.render('Manage_User', { Users: results });
+    });
 });
 
 app.get('/Adminmanageuser/new', (req, res) => {
     res.render('newuser.ejs');
 });
 
+app.post('/Adminmanageuser', (req, res) => {
+    const { Username, Email, Password } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)', 
+    [id, Username, Email, Password], (err) => {
+        if (err) throw err;
+        res.redirect('/Adminmanageuser');
+    });
+});
+
 app.get('/Adminmanageuser/:id/edit', (req, res) => {
-    let { id } = req.params;
-    let User = Users.find((p) => id === p.id);
-    res.render('edituser.ejs', { User });
+    connection.query('SELECT * FROM users WHERE id = ?', [req.params.id], (err, results) => {
+        if (err) throw err;
+        res.render('edituser.ejs', { User: results[0] });
+    });
 });
 
-app.get('/Admin', (req, res) => {
-    res.render('Admin', { username: req.session.admin.Username });
+app.patch('/Adminmanageuser/:id', (req, res) => {
+    const { Username, Email, Password } = req.body;
+
+    connection.query(
+        'UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?',
+        [Username, Email, Password, req.params.id],
+        (err) => {
+            if (err) throw err;
+            res.redirect('/Adminmanageuser');
+        }
+    );
 });
 
-app.get('/Adminaccount', (req, res) => {
-    res.render('Admin_Account', { admin: req.session.admin });
-});
-
-app.get('/User', (req, res) => {
-    res.render('User', { username: req.session.user.Username });
-});
-
-app.get('/Useraccount', (req, res) => {
-    res.render('User_Account', { user: req.session.user });
+app.delete('/Adminmanageuser/:id', (req, res) => {
+    connection.query('DELETE FROM users WHERE id = ?', [req.params.id], (err) => {
+        if (err) throw err;
+        res.redirect('/Adminmanageuser');
+    });
 });
 
 app.get('/UserResetpassword', (req, res) => {
     res.render('User_Reset_Password', { user: req.session.user });
 });
 
+app.patch('/UserResetpassword', (req, res) => {
+    const newPassword = req.body.password;
+    connection.query('UPDATE users SET password = ? WHERE id = ?', [newPassword, req.session.user.id], (err) => {
+        if (err) throw err;
+        res.redirect('/User');
+    });
+});
+
+app.get('/Useraccount', (req, res) => {
+    res.render('User_Account', { user: req.session.user }); 
+});
+
+app.get('/Adminaccount', (req, res) => {
+    res.render('Admin_Account', { admin: req.session.admin });
+});
+
 app.get('/AdminResetpassword', (req, res) => {
     res.render('Admin_Reset_Password', { admin: req.session.admin });
 });
 
-app.get('/Userdeleteaccount', (req, res) => {
+app.patch('/AdminResetpassword', (req, res) => {
+    if (!req.session.admin) return res.redirect('/AdminLogin');
+
+    const newPassword = req.body.password;
+    connection.query('UPDATE admins SET password = ? WHERE id = ?', [newPassword, req.session.admin.id], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin');
+    });
+});
+
+app.get('/UserdeleteAccount', (req, res) => {
     res.render('Userdeleteaccount', { user: req.session.user });
 });
 
-app.post('/Adminmanageuser', (req, res) => {
-    let { Username, Email, Password } = req.body;
-    let id = uuidv4();
-    Users.push({id, Username, Email, Password});
-    res.redirect('/Adminmanageuser');
-});
-
-app.post('/AdminLogin', (req, res) => {
-    const { username, email, password } = req.body;
-    const admin = Admins.find(u => u.Username === username && u.Email === email && u.Password === password);
-
-    if (!admin) {
-        return res.send(`
-            <script>
-                alert("Invalid Admin!");
-                window.location.href = "/AdminLogin";
-            </script>
-        `);
-    }
-    req.session.admin = admin;
-    res.redirect('/Admin');
-});
-
-app.post('/UserLogin', (req, res) => {
-    const { username, email, password } = req.body;
-    const user = Users.find(u => u.Username === username && u.Email === email && u.Password === password);
-
-    if (!user) {
-        return res.send(`
-            <script>
-                alert("Invalid User!");
-                window.location.href = "/UserLogin";
-            </script>
-        `);
-    }
-
-    req.session.user = user;
-    res.redirect('/User');
-});
-
-app.patch('/AdminResetpassword', (req, res) => {
-    let newPassword = req.body.password;
-    let adminEmail = req.session.admin.Email;
-    let admin = Admins.find((a) => a.Email === adminEmail);
-    admin.Password = newPassword;
-    res.redirect('/Admin');
-});
-
-app.patch('/UserResetpassword', (req, res) => {
-    let newPassword = req.body.password;
-    let userEmail = req.session.user.Email;
-    let user = Users.find((a) => a.Email === userEmail);
-    user.Password = newPassword;
-    res.redirect('/User');
-});
-
-app.patch('/Adminmanageuser/:id', (req, res) => {
-    let { id } = req.params;
-    let Newusername = req.body.Username;
-    let newEmail = req.body.Email;
-    let newPassword = req.body.Password;
-    let User = Users.find((p) => id === p.id);
-    User.Email = newEmail;
-    User.Username = Newusername;
-    User.Password = newPassword;
-    res.redirect('/Adminmanageuser');
-});
-
 app.delete('/UserdeleteAccount', (req, res) => {
-    Users = Users.filter(user => user.id !== req.session.user.id);
-    res.redirect('/UserLogin'); 
-});
-
-app.delete('/Adminmanageuser/:id', (req, res) => {
-    let { id } = req.params;
-    Users = Users.filter((p) => id !== p.id);
-    res.redirect('/Adminmanageuser');
+    connection.query('DELETE FROM users WHERE id = ?', [req.session.user.id], (err) => {
+        if (err) throw err;
+        req.session.destroy();
+        res.redirect('/UserLogin');
+    });
 });
 
 app.listen(port, () => {
