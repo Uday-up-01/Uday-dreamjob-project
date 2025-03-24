@@ -46,6 +46,38 @@ app.get('/jobs/:category', (req, res) => {
     res.render(`${category}`);
 });
 
+app.get('/NewAdmin', (req, res) => {
+    res.render('/AdminLogin');
+});
+
+app.post('/NewAdmin', (req, res) => {
+    const { username, email, password } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO admins (id, username, email, password) VALUES (?, ?, ?, ?)', 
+    [id, username, email, password], (err) => {
+        if (err) throw err;
+            res.redirect('/AdminLogin');
+        }
+    );
+});
+
+app.get('/NewUser', (req, res) => {
+    res.render('/UserLogin');
+});
+
+app.post('/NewUser', (req, res) => {
+    const { username, email, password } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)', 
+    [id, username, email, password], (err) => {
+        if (err) throw err;
+            res.redirect('/UserLogin');
+        }
+    );
+});
+
 app.get('/UserLogin', (req, res) => {
     res.render('User_Login', { post: {} });
 });
