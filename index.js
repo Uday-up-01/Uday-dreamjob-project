@@ -28,8 +28,21 @@ connection.connect(err => {
     console.log("Connected to Database");
 });
 
-app.get('/', (req, res) => {
-    res.render('DreamJob_1');
+app.get("/", (req, res) => {
+    const homepageQuery = "SELECT title FROM homepagenewupdates";
+    const gridQuery = "SELECT title FROM homepagegridupdates";
+    const jobQuery = "SELECT title FROM homepagejobnotifications";  
+    const jobQuerytwo = "SELECT title FROM homepagejobnotificationstwo";
+
+    connection.query(homepageQuery, (err, homepageResults) => {
+        connection.query(gridQuery, (err, gridResults) => {
+            connection.query(jobQuery, (err, jobResults) => { 
+                connection.query(jobQuerytwo, (err, jobResultstwo) => { 
+                    res.render("DreamJob_1", { homepageResults: homepageResults, gridResults: gridResults, jobs: jobResults, jobstwo: jobResultstwo });
+                });
+            });
+        });
+    });
 });
 
 app.get('/ContactUs', (req, res) => {

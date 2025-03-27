@@ -116,14 +116,13 @@ body {
 
 #stbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
     text-decoration: none;
 }
+
 #jbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -169,8 +168,6 @@ body {
 }
 
 .container {
-    height: 615px;
-    width: 600px;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.1);
 }
@@ -186,9 +183,10 @@ body {
 }
 
 .updates {
+    width: 890px;
     margin-top: 20px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
 .updates ul {
@@ -226,49 +224,62 @@ body {
     text-align: center;
 }
 
-.item1 { 
+.grid-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid-item2 {
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.grid-item:nth-child(1) { 
     background-color: #4CAF50; 
     height: 100px;
     width: 350px;
 }
 
-.item2 { 
+.grid-item:nth-child(2) { 
     background-color: #FF5722;    
     height: 100px;
     width: 350px; 
 }
 
-.item3 { 
+.grid-item:nth-child(3) { 
     background-color: #2196F3;     
     height: 100px;
     width: 350px;
 }
 
-.item4 { 
+.grid-item:nth-child(4) { 
     background-color: #FF9800;     
     height: 100px;
     width: 350px;
 } 
 
-.item5 { 
+.grid-item2:nth-child(1) { 
     background-color: #8BC34A;     
     height: 100px;
     width: 350px;
 } 
 
-.item6 { 
+.grid-item2:nth-child(2) { 
     background-color: #00BCD4;     
     height: 100px;
     width: 350px;
 }
 
-.item7 { 
+.grid-item2:nth-child(3) { 
     background-color: #F44336;     
     height: 100px;
     width: 350px;
 } 
 
-.item8 { 
+.grid-item2:nth-child(4) { 
     background-color: #9C27B0;     
     height: 100px;
     width: 350px;
@@ -281,7 +292,7 @@ body {
 }
 
 .column2 {
-    width: 30%;
+    width: 95%;
 }
 
 .column2 h2 {
@@ -301,43 +312,6 @@ body {
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ddd;
-}
-
-.column2 a{
-    text-decoration: none;
-}
-
-.container3 {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 30px;
-}
-
-.column3 {
-    width: 30%;
-}
-
-.column3 h2 {
-    background-color: #4b6cb7;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.column3 ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.column3 li {
-    background-color: #f8f9fa;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.column3 a{
-    text-decoration: none;
 }
 
 footer {
