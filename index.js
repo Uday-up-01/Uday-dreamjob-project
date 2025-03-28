@@ -49,6 +49,33 @@ app.get('/ContactUs', (req, res) => {
     res.render('Contact_Us');
 });
 
+app.get('/search', (req, res) => {
+    const searchTerm = req.query.query;
+
+    const Pages = {
+        "contact us": "/ContactUs",
+        "home": "/",
+        "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
+        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
+        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
+        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "All india govt job": "/jobs/All_India_Govt_job",
+        "State govt job": "/jobs/State_Govt_Job",
+        "Bank job": "/jobs/Bank_Job",
+        "Teaching job": "/jobs/Teaching_Job",
+        "Engineering job": "/jobs/Engineering_Job",
+        "Railways job": "/jobs/Railways_Job",
+        "Police defence job": "/jobs/Police_Defence_Job",
+        "Admin login": "/AdminLogin",
+        "User login": "/UserLogin"
+    };
+
+    if (Pages[searchTerm]) {
+        return res.redirect(Pages[searchTerm]);
+    }
+});
+
 app.get('/state/:state', (req, res) => {
     let { state} = req.params;
     res.render(`${state}`);
@@ -125,6 +152,33 @@ app.get('/User', (req, res) => {
     res.render('User', { username: req.session.user.username });
 });
 
+app.get('/usersearch', (req, res) => {
+    const searchTerm = req.query.query;
+
+    const Pages = {
+        "contact us": "/ContactUs",
+        "home": "/",
+        "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
+        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
+        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
+        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "All india govt job": "/jobs/All_India_Govt_job",
+        "State govt job": "/jobs/State_Govt_Job",
+        "Bank job": "/jobs/Bank_Job",
+        "Teaching job": "/jobs/Teaching_Job",
+        "Engineering job": "/jobs/Engineering_Job",
+        "Railways job": "/jobs/Railways_Job",
+        "Police defence job": "/jobs/Police_Defence_Job",
+        "Admin login": "/AdminLogin",
+        "User login": "/UserLogin"
+    };
+
+    if (Pages[searchTerm]) {
+        return res.redirect(Pages[searchTerm]);
+    }
+});
+
 app.get('/AdminLogin', (req, res) => {
     res.render('Admin_Login', { post: {} });
 });
@@ -157,6 +211,33 @@ app.post('/AdminLogin', (req, res) => {
 app.get('/Admin', (req, res) => {
     if (!req.session.admin) return res.redirect('/AdminLogin');
     res.render('Admin', { username: req.session.admin.username });
+});
+
+app.get('/adminsearch', (req, res) => {
+    const searchTerm = req.query.query;
+
+    const Pages = {
+        "contact us": "/ContactUs",
+        "home": "/",
+        "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
+        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
+        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
+        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "All india govt job": "/jobs/All_India_Govt_job",
+        "State govt job": "/jobs/State_Govt_Job",
+        "Bank job": "/jobs/Bank_Job",
+        "Teaching job": "/jobs/Teaching_Job",
+        "Engineering job": "/jobs/Engineering_Job",
+        "Railways job": "/jobs/Railways_Job",
+        "Police defence job": "/jobs/Police_Defence_Job",
+        "Admin login": "/AdminLogin",
+        "User login": "/UserLogin"
+    };
+
+    if (Pages[searchTerm]) {
+        return res.redirect(Pages[searchTerm]);
+    }
 });
 
 app.get('/Adminmanageuser', (req, res) => {
@@ -206,6 +287,37 @@ app.delete('/Adminmanageuser/:id', (req, res) => {
         if (err) throw err;
         res.redirect('/Adminmanageuser');
     });
+});
+
+app.get('/Adminmanagecontent', (req,res) => {
+    res.render('Admin_manage_content');
+});
+
+app.get('/Admin_home', (req,res) => {
+    const homepageQuery = "SELECT title FROM homepagenewupdates";
+    const gridQuery = "SELECT title FROM homepagegridupdates";
+    const jobQuery = "SELECT title FROM homepagejobnotifications";  
+    const jobQuerytwo = "SELECT title FROM homepagejobnotificationstwo";
+
+    connection.query(homepageQuery, (err, homepageResults) => {
+        connection.query(gridQuery, (err, gridResults) => {
+            connection.query(jobQuery, (err, jobResults) => { 
+                connection.query(jobQuerytwo, (err, jobResultstwo) => { 
+                    res.render("Admin_home", { homepageResults: homepageResults, gridResults: gridResults, jobs: jobResults, jobstwo: jobResultstwo });
+                });
+            });
+        });
+    });
+});
+
+app.get('/adminstate/:state', (req, res) => {
+    let { state} = req.params;
+    res.render(`${state}`);
+});
+
+app.get('/adminjobs/:category', (req, res) => {
+    let {category} = req.params;
+    res.render(`${category}`);
 });
 
 app.get('/UserResetpassword', (req, res) => {
