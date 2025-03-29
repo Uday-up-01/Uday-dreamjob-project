@@ -37,6 +37,7 @@ body {
 .navbar-search {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .navbar-search input {
@@ -61,6 +62,13 @@ body {
     background-color: rgb(181, 135, 19);
 }
 
+.homebtn{
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
 #stbt{
     text-align: center;
     height: 50px;
@@ -74,6 +82,24 @@ body {
     height: 50px;
     padding-top: 10px;
     padding-left: 10px;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.Edithead {
+    display: inline-block;
+    color: white;
+    background-color: #4b6cb7;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container0 {
