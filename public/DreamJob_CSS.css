@@ -237,6 +237,19 @@ body {
     text-align: center;
 }
 
+.grid-container3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid-item3 {
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 .grid-item:nth-child(1) { 
     background-color: #4CAF50; 
     height: 100px;
@@ -280,6 +293,30 @@ body {
 } 
 
 .grid-item2:nth-child(4) { 
+    background-color: #9C27B0;     
+    height: 100px;
+    width: 350px;
+} 
+
+.grid-item3:nth-child(1) { 
+    background-color: #8BC34A;     
+    height: 100px;
+    width: 350px;
+} 
+
+.grid-item3:nth-child(2) { 
+    background-color: #00BCD4;     
+    height: 100px;
+    width: 350px;
+}
+
+.grid-item3:nth-child(3) { 
+    background-color: #F44336;     
+    height: 100px;
+    width: 350px;
+} 
+
+.grid-item3:nth-child(4) { 
     background-color: #9C27B0;     
     height: 100px;
     width: 350px;

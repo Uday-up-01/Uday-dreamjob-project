@@ -41,11 +41,11 @@ table {
 }
 
 .table-head{
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background-color: #4b6cb7;
 }
 
 .table-head:hover {
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background-color: #4b6cb7;
 }
 
 th {
@@ -66,7 +66,7 @@ tr:hover {
 }
 
 .editbtn {
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background-color: #4b6cb7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -75,7 +75,7 @@ tr:hover {
 }
 
 .delete-btn {
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background-color: #4b6cb7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -85,7 +85,7 @@ tr:hover {
 .adduser {
     margin-top: 20px;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background-color: #4b6cb7;
     color: white;
     border: none;
     border-radius: 5px;

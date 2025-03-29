@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/edituser.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit New Update</h2>
+        
+        <form method="POST" action="/homepagegrid/<%= gridResults.id %>?_method=PATCH">
+            <input type="text" name="Editgrid" value="<%= gridResults.title %>">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

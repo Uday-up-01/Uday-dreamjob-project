@@ -62,28 +62,6 @@ body {
     background-color: rgb(181, 135, 19);
 }
 
-.homebtn{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-#stbt{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-}
-
-#jbt{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 .parent {
     display: flex;
     justify-content: center;
@@ -135,20 +113,45 @@ body {
 }
 
 .updates li {
+    display: flex;
+    justify-content: space-between;
     margin: 10px 0;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
 
-.updates li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #007BFF;
+.actions {
+    display: flex;
 }
 
-.updates li a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+.editbtn {
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    display: inline;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    display: inline;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.addnewcontentbtn{
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px 10px;
 }
 
 .grid-container {
@@ -177,53 +180,137 @@ body {
     text-align: center;
 }
 
+.grid-container3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid-item3 {
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 .grid-item:nth-child(1) { 
     background-color: #4CAF50; 
-    height: 100px;
+    height: 130px;
     width: 350px;
 }
 
 .grid-item:nth-child(2) { 
     background-color: #FF5722;    
-    height: 100px;
+    height: 130px;
     width: 350px; 
 }
 
 .grid-item:nth-child(3) { 
     background-color: #2196F3;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 }
 
 .grid-item:nth-child(4) { 
     background-color: #FF9800;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 } 
 
 .grid-item2:nth-child(1) { 
     background-color: #8BC34A;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 } 
 
 .grid-item2:nth-child(2) { 
     background-color: #00BCD4;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 }
 
 .grid-item2:nth-child(3) { 
     background-color: #F44336;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 } 
 
 .grid-item2:nth-child(4) { 
     background-color: #9C27B0;     
-    height: 100px;
+    height: 130px;
     width: 350px;
 } 
+
+.grid-item3:nth-child(1) { 
+    background-color: #8BC34A;     
+    height: 130px;
+    width: 350px;
+} 
+
+.grid-item3:nth-child(2) { 
+    background-color: #00BCD4;     
+    height: 130px;
+    width: 350px;
+}
+
+.grid-item3:nth-child(3) { 
+    background-color: #F44336;     
+    height: 130px;
+    width: 350px;
+} 
+
+.grid-item3:nth-child(4) { 
+    background-color: #9C27B0;     
+    height: 130px;
+    width: 350px;
+} 
+
+.gridactions {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.grideditbtn {
+    font-size: 12px;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.griddelete-btn {
+    font-size: 12px;
+    display: inline-block;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.addnewgrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 590px;
+    background-color: #FF9800;     
+    height: 100px;
+    width: 350px;
+}
+
+.newgridbtn{
+    color: white;
+    background-color: #4b6cb7;
+    border-radius: 4px;
+    border: 0;
+}
 
 .container2 {
     display: flex;

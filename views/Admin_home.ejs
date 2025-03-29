@@ -25,43 +25,6 @@
         </div>
     </nav>
 
-    <div class="homebtn">
-        <button type="button" onclick="window.location.href='/Admin_home'" class="btn btn-outline-warning" id="hh"><i class="fa-solid fa-house"></i> Home</button>
-    </div>
-    <div id="stbt">
-        <button type="button" onclick="window.location.href='/adminstate/Admin_AP_state'" class="btn btn-outline-warning">AP</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_AS_state'" class="btn btn-outline-warning">AS</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_BR_state'" class="btn btn-outline-warning">BR</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_CG_state'" class="btn btn-outline-warning">CG</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_DL_state'" class="btn btn-outline-warning">DL</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_GJ_state'" class="btn btn-outline-warning">GJ</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_HP_state'" class="btn btn-outline-warning">HP</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_HR_state'" class="btn btn-outline-warning">HR</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_JH_state'" class="btn btn-outline-warning">JH</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_KA_state'" class="btn btn-outline-warning">KA</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_KL_state'" class="btn btn-outline-warning">KL</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_MH_state'" class="btn btn-outline-warning">MH</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_MP_state'" class="btn btn-outline-warning">MP</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_OD_state'" class="btn btn-outline-warning">OD</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_PB_state'" class="btn btn-outline-warning">PB</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_RJ_state'" class="btn btn-outline-warning">RJ</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_TN_state'" class="btn btn-outline-warning">TN</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_TS_state'" class="btn btn-outline-warning">TS</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_UK_state'" class="btn btn-outline-warning">UK</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_UP_state'" class="btn btn-outline-warning">UP</button>
-        <button type="button" onclick="window.location.href='/adminstate/Admin_WB_state'" class="btn btn-outline-warning">WB</button>
-    </div>
-    
-    <div id="jbt">
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_All_India_Govt_job'" class="btn btn-outline-warning">All India Govt Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_State_Govt_Job'" class="btn btn-outline-warning">State Govt Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_Bank_Job'" class="btn btn-outline-warning">Bank Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_Teaching_Job'" class="btn btn-outline-warning">Teaching Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_Engineering_Job'" class="btn btn-outline-warning">Engineering Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Admin_Admin_Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
-        <button type="button" onclick="window.location.href='/adminjobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
-    </div>
-
     <div class="parent">
         <h3 class="Edithead">Edit Home Page Contents</h3>
     </div>    
@@ -72,23 +35,67 @@
             <div class="updates">
                 <ul>
                     <% for (const update of homepageResults) { %>
-                        <li><a><%= update.title %></a></li>
+                        <li><a><%= update.title %></a>
+                            <div class="actions">
+                                <a class="editbtn" href="http://localhost:8080/homepageupdateedit/<%= update.id %>/edit">Edit</a>
+                                <form method="post" action="/homepageupdatedelete/<%= update.id %>?_method=DELETE">
+                                    <button class="delete-btn">Delete</button>
+                                </form>
+                            </div>
+                        </li>
                     <% } %>
+                    <li class="addnewcontent">
+                        <button onclick="window.location.href='/homepageupdatenew'" class="addnewcontentbtn">Add New</button>
+                    </li>
                 </ul>
             </div>
-        </div>
+    </div>
 </div>
         
 <div class="grid-container">
-    <% for (let i = 0; i < 4; i++) { %>
-        <div class="grid-item"><%= gridResults[i].title %></div>
+    <% for (let i = 0; i < Math.min(4, gridResults.length); i++) { %>
+        <div class="grid-item">
+            <span class="title"><%= gridResults[i].title %></span>
+            <div class="gridactions">
+                <a class="grideditbtn" href="http://localhost:8080/homepagegrid/<%= gridResults[i].id %>%>/edit">Edit</a>
+                <form method="post" action="/homepagegriddelete/<%= gridResults[i].id %>?_method=DELETE">
+                    <button class="griddelete-btn">Delete</button>
+                </form>
+            </div>
+        </div>
     <% } %>
 </div>
 
 <div class="grid-container2">
-    <% for (let i = 4; i < 8; i++) { %>
-        <div class="grid-item2"><%= gridResults[i].title %></div>
+    <% for (let i = 4; i < Math.min(8, gridResults.length); i++) { %>
+        <div class="grid-item2">
+            <span class="title"><%= gridResults[i].title %></span>
+            <div class="gridactions">
+                <a class="grideditbtn" href="http://localhost:8080/homepagegrid/<%= gridResults[i].id %>%>/edit">Edit</a>
+                <form method="post" action="/homepagegriddelete/<%= gridResults[i].id %>?_method=DELETE">
+                    <button class="griddelete-btn">Delete</button>
+                </form>
+            </div>
+        </div>
     <% } %>
+</div>
+
+<div class="grid-container3">
+    <% for (let i = 8; i < Math.min(12, gridResults.length); i++) { %>
+        <div class="grid-item3">
+            <span class="title"><%= gridResults[i].title %></span>
+            <div class="gridactions">
+                <a class="grideditbtn" href="http://localhost:8080/homepagegrid/<%= gridResults[i].id %>/edit">Edit</a>
+                <form method="post" action="/homepagegriddelete/<%= gridResults[i].id %>?_method=DELETE">
+                    <button class="griddelete-btn">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% } %>    
+</div>
+
+<div class="addnewgrid">
+        <button onclick="window.location.href='/homepagegridnew'" class="newgridbtn">Add New</button>
 </div>
 
 <div class="container2">
@@ -96,8 +103,18 @@
         <h2>Job Notifications</h2>
         <ul>
             <% for (let job of jobs) { %>
-                <li><a><%= job.title %></a></li>
+                <li><a><%= job.title %></a>
+                    <div class="actions">
+                        <a class="editbtn" href="http://localhost:8080/homepagejobs/<%= job.id %>/edit">Edit</a>
+                        <form method="post" action="/homepagejobsdelete/<%= job.id %>?_method=DELETE">
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </li>
             <% } %>
+            <li>
+                <button onclick="window.location.href='/homepagejobsnew'" class="addnewcontentbtn">Add New</button>
+            </li>
         </ul>
     </div>
 </div>

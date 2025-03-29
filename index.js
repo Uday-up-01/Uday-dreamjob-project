@@ -294,10 +294,10 @@ app.get('/Adminmanagecontent', (req,res) => {
 });
 
 app.get('/Admin_home', (req,res) => {
-    const homepageQuery = "SELECT title FROM homepagenewupdates";
-    const gridQuery = "SELECT title FROM homepagegridupdates";
-    const jobQuery = "SELECT title FROM homepagejobnotifications";  
-    const jobQuerytwo = "SELECT title FROM homepagejobnotificationstwo";
+    const homepageQuery = "SELECT id, title FROM homepagenewupdates";
+    const gridQuery = "SELECT id, title FROM homepagegridupdates";
+    const jobQuery = "SELECT id, title FROM homepagejobnotifications";  
+    const jobQuerytwo = "SELECT id, title FROM homepagejobnotificationstwo";
 
     connection.query(homepageQuery, (err, homepageResults) => {
         connection.query(gridQuery, (err, gridResults) => {
@@ -307,6 +307,132 @@ app.get('/Admin_home', (req,res) => {
                 });
             });
         });
+    });
+});
+
+app.get('/homepageupdatenew', (req, res) =>{
+    res.render("homepageupdatenew");
+});
+
+app.post('/homepageupdatesnew', (req, res) => {
+    const { NewUpdate } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO homepagenewupdates (id, title) VALUES (?, ?)', 
+    [id, NewUpdate], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.get('/homepageupdateedit/:id/edit', (req, res) => {
+    connection.query('SELECT * FROM homepagenewupdates WHERE id = ?', [req.params.id], (err, results) => {
+        if (err) throw err;
+        res.render('homepageupdateedit.ejs', { update: results[0] });
+    });
+});
+
+app.patch('/homepageupdateedit/:id', (req, res) => {
+    if (!req.session.admin) return res.redirect('/Admin_home');
+
+    const { id } = req.params;
+    const Editupdate = req.body.Editupdate;
+    connection.query('UPDATE homepagenewupdates SET title = ? WHERE id = ?', [Editupdate, id], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.delete('/homepageupdatedelete/:id', (req, res) => {
+    const { id } = req.params;
+    connection.query('DELETE FROM homepagenewupdates WHERE id = ?', [id], (err) => {
+        if (err) throw err;
+        req.session.destroy();
+        res.redirect('/Admin_home');
+    });
+});
+
+app.get('/homepagegridnew', (req, res) =>{
+    res.render("homepagegridnew");
+});
+
+app.post('/homepagegridnew', (req, res) => {
+    const { NewGrid } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO homepagegridupdates (id, title) VALUES (?, ?)', 
+    [id, NewGrid], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.get('/homepagegrid/:id/edit', (req, res) => {
+    connection.query('SELECT * FROM homepagegridupdates WHERE id = ?', [req.params.id], (err, results) => {
+        if (err) throw err;
+        res.render('homepagegridedit', { gridResults: results[0] });
+    });
+});
+
+app.patch('/homepagegrid/:id', (req, res) => {
+    if (!req.session.admin) return res.redirect('/Admin_home');
+
+    const { id } = req.params;
+    const Editgrid = req.body.Editgrid;
+    connection.query('UPDATE homepagegridupdates SET title = ? WHERE id = ?', [Editgrid, id], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.delete('/homepagegriddelete/:id', (req, res) => {
+    const { id } = req.params;
+    connection.query('DELETE FROM homepagegridupdates WHERE id = ?', [id], (err) => {
+        if (err) throw err;
+        req.session.destroy();
+        res.redirect('/Admin_home');
+    });
+});
+
+app.get('/homepagejobsnew', (req, res) =>{
+    res.render("homepagejobsnew");
+});
+
+app.post('/homepagejobsnew', (req, res) => {
+    const { Newjob } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO homepagejobnotifications (id, title) VALUES (?, ?)', 
+    [id, Newjob], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.get('/homepagejobs/:id/edit', (req, res) => {
+    connection.query('SELECT * FROM homepagejobnotifications WHERE id = ?', [req.params.id], (err, results) => {
+        if (err) throw err;
+        res.render('homepagejobsedit', { job: results[0] });
+    });
+});
+
+app.patch('/homepagejobs/:id', (req, res) => {
+    if (!req.session.admin) return res.redirect('/Admin_home');
+
+    const { id } = req.params;
+    const Editjob = req.body.Editjob;
+    connection.query('UPDATE homepagejobnotifications SET title = ? WHERE id = ?', [Editjob, id], (err) => {
+        if (err) throw err;
+        res.redirect('/Admin_home');
+    });
+});
+
+app.delete('/homepagejobsdelete/:id', (req, res) => {
+    const { id } = req.params;
+    connection.query('DELETE FROM homepagejobnotifications WHERE id = ?', [id], (err) => {
+        if (err) throw err;
+        req.session.destroy();
+        res.redirect('/Admin_home');
     });
 });
 

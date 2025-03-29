@@ -62,28 +62,6 @@ body {
     background-color: rgb(181, 135, 19);
 }
 
-.homebtn{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-#stbt{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-}
-
-#jbt{
-    text-align: center;
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 .parent {
     display: flex;
     justify-content: center;

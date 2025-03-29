@@ -101,14 +101,20 @@
 </div>
         
 <div class="grid-container">
-    <% for (let i = 0; i < 4; i++) { %>
+    <% for (let i = 0; i < Math.min(4, gridResults.length); i++) { %>
         <div class="grid-item"><%= gridResults[i].title %></div>
     <% } %>
 </div>
 
 <div class="grid-container2">
-    <% for (let i = 4; i < 8; i++) { %>
+    <% for (let i = 4; i < Math.min(8, gridResults.length); i++) { %>
         <div class="grid-item2"><%= gridResults[i].title %></div>
+    <% } %>
+</div>
+
+<div class="grid-container3">
+    <% for (let i = 8; i < Math.min(12, gridResults.length); i++) { %>
+        <div class="grid-item3"><%= gridResults[i].title %></div>
     <% } %>
 </div>
 
