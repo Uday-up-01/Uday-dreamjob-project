@@ -71,32 +71,25 @@ body {
 }
 
 .Edithead {
-    display: inline-block;
-    color: white;
-    background-color: #4b6cb7;
+    background: rgb(255, 255, 255);
+    max-width: 700px;
     text-align: center;
-    padding: 12px 24px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .homebtn{
     text-align: center;
     height: 50px;
-    padding-top: 10px;
     padding-left: 10px;
 }
 
 #stbt{
     text-align: center;
     height: 50px;
-    padding-top: 10px;
     padding-left: 10px;
 }
 
 #jbt{
     text-align: center;
     height: 50px;
-    padding-top: 10px;
     padding-left: 10px;
 }

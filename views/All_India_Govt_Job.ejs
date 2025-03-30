@@ -19,8 +19,10 @@
         </div>   
     
         <div class="navbar-search">
-            <input type="text" placeholder="Search...">
-            <button type="button" class="btn btn-warning" id="searchbtn">Search</button>
+            <form action="/search" method="GET" class="navbar-search">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." required>
+                <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+            </form>
             <button type="button" onclick="window.location.href='/UserLogin'" class="btn btn-warning" id="signup"><i class="fa-regular fa-circle-user"></i> User</button>
             <button type="button" onclick="window.location.href='/AdminLogin'" class="btn btn-warning" id="login"><i class="fa-regular fa-circle-user"></i> Admin</button>
         </div>
@@ -59,32 +61,32 @@
         <button type="button" onclick="window.location.href='/jobs/Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
         <button type="button" onclick="window.location.href='/jobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
     </div>
-    <div class="contfather">
-        <div class="container0">
-            <div class="row2">
-                <div class="column0">
-                    <h2>Notifications</h2>
-                    <ul>
-                        <li><a href="#">Latest Notifications</a></li>
-                        <li><a href="#">Upcoming Notifications</a></li>
-                        <li><a href="#">Notification Status</a></li>
-                    </ul>
-                </div>
-                <div class="column0">
-                    <h2>Latest Announcements</h2>
-                    <ul>
-                        <li><a href="#">Cutoff Marks</a></li>
-                        <li><a href="#">Interview Results</a></li>
-                    </ul>
-                </div>
-                <div class="column0">
-                    <h2>Others</h2>
-                    <ul>
-                        <li><a href="#">Eligibility</a></li>
-                        <li><a href="#">Selection Process</a></li>
-                    </ul>
-                </div>
+<div class="contfather">
+    <div class="container0">
+        <div class="row2">
+            <div class="column0">
+                <h2>Notifications</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Latestnotification'">Latest Notifications</a></li>
+                    <li><a onclick="window.location.href='/Upcomingnotification'">Upcoming Notifications</a></li>
+                    <li><a onclick="window.location.href='/Notificationstatus'">Notification Status</a></li>
+                </ul>
             </div>
+            <div class="column0">
+                <h2>Latest Announcements</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Cutoffmarks'">Cutoff Marks</a></li>
+                    <li><a onclick="window.location.href='/Interviewresults'">Interview Results</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Others</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Eligibility'">Eligibility</a></li>
+                    <li><a onclick="window.location.href='/Selectionprocess'">Selection Process</a></li>
+                </ul>
+            </div>
+        </div>
 
         </div>
         

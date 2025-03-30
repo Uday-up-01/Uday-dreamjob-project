@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamJob.com</title>
+    <link rel="stylesheet" href="upcoming notification.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h3>DreamJob.com</h3>
+        </div>
+        <div class="home-btn">
+            <button type="button" onclick="window.location.href='/'" class="btn btn-warning" id="hh"><i class="fa-solid fa-house"></i> Home</button>
+            <button type="button" onclick="window.location.href='/ContactUs'" class="btn btn-warning" id="dd">Contact Us</button>            
+        </div>   
+    
+        <div class="navbar-search">
+            <form action="/search" method="GET" class="navbar-search">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." required>
+                <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+            </form>
+            <button type="button" onclick="window.location.href='/UserLogin'" class="btn btn-warning" id="signup"><i class="fa-regular fa-circle-user"></i> User</button>
+            <button type="button" onclick="window.location.href='/AdminLogin'" class="btn btn-warning" id="login"><i class="fa-regular fa-circle-user"></i> Admin</button>
+        </div>
+    </nav>
+
+    <div id="stbt">
+        <button type="button" onclick="window.location.href='/state/AP_state'" class="btn btn-outline-warning">AP</button>
+        <button type="button" onclick="window.location.href='/state/AS_state'" class="btn btn-outline-warning">AS</button>
+        <button type="button" onclick="window.location.href='/state/BR_state'" class="btn btn-outline-warning">BR</button>
+        <button type="button" onclick="window.location.href='/state/CG_state'" class="btn btn-outline-warning">CG</button>
+        <button type="button" onclick="window.location.href='/state/DL_state'" class="btn btn-outline-warning">DL</button>
+        <button type="button" onclick="window.location.href='/state/GJ_state'" class="btn btn-outline-warning">GJ</button>
+        <button type="button" onclick="window.location.href='/state/HP_state'" class="btn btn-outline-warning">HP</button>
+        <button type="button" onclick="window.location.href='/state/HR_state'" class="btn btn-outline-warning">HR</button>
+        <button type="button" onclick="window.location.href='/state/JH_state'" class="btn btn-outline-warning">JH</button>
+        <button type="button" onclick="window.location.href='/state/KA_state'" class="btn btn-outline-warning">KA</button>
+        <button type="button" onclick="window.location.href='/state/KL_state'" class="btn btn-outline-warning">KL</button>
+        <button type="button" onclick="window.location.href='/state/MH_state'" class="btn btn-outline-warning">MH</button>
+        <button type="button" onclick="window.location.href='/state/MP_state'" class="btn btn-outline-warning">MP</button>
+        <button type="button" onclick="window.location.href='/state/OD_state'" class="btn btn-outline-warning">OD</button>
+        <button type="button" onclick="window.location.href='/state/PB_state'" class="btn btn-outline-warning">PB</button>
+        <button type="button" onclick="window.location.href='/state/RJ_state'" class="btn btn-outline-warning">RJ</button>
+        <button type="button" onclick="window.location.href='/state/TN_state'" class="btn btn-outline-warning">TN</button>
+        <button type="button" onclick="window.location.href='/state/TS_state'" class="btn btn-outline-warning">TS</button>
+        <button type="button" onclick="window.location.href='/state/UK_state'" class="btn btn-outline-warning">UK</button>
+        <button type="button" onclick="window.location.href='/state/UP_state'" class="btn btn-outline-warning">UP</button>
+        <button type="button" onclick="window.location.href='/state/WB_state'" class="btn btn-outline-warning">WB</button>
+    </div>
+    
+    <div id="jbt">
+        <button type="button" onclick="window.location.href='/jobs/All_India_Govt_job'" class="btn btn-outline-warning">All India Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/State_Govt_Job'" class="btn btn-outline-warning">State Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Bank_Job'" class="btn btn-outline-warning">Bank Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Teaching_Job'" class="btn btn-outline-warning">Teaching Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Engineering_Job'" class="btn btn-outline-warning">Engineering Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
+    </div>
+<div class="contfather">
+    <div class="container0">
+        <div class="row2">
+            <div class="column0">
+                <h2>Notifications</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Latestnotification'">Latest Notifications</a></li>
+                    <li><a onclick="window.location.href='/Upcomingnotification'">Upcoming Notifications</a></li>
+                    <li><a onclick="window.location.href='/Notificationstatus'">Notification Status</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Latest Announcements</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Cutoffmarks'">Cutoff Marks</a></li>
+                    <li><a onclick="window.location.href='/Interviewresults'">Interview Results</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Others</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Eligibility'">Eligibility</a></li>
+                    <li><a onclick="window.location.href='/Selectionprocess'">Selection Process</a></li>
+                </ul>
+            </div>
+        </div>
+
+                <div class="container" id="co">
+                    <div class="header">Upcoming Notification</div>
+                    <br>
+                    
+                </div>
+            </div>
+
+            
+            <h1 id="tbh1">Banks</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Post Date</th>
+                        <th>Exam Name</th>
+                         <th>More Information</th>
+                    </tr>
+            
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>18/01/2024</td>
+                        <td>IBPS Tentative Exam Calendar 2024-25</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>19/01/2023</td>
+                        <td>IBPS Exam Calendar</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                </tbody>
+             </table>
+                
+            <h1 id="tbh1">Other Govt Finance</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Post Date</th>
+                        <th>Exam Name</th>
+                         <th>More Information</th>
+                    </tr>
+            
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>LIC - Asst</td>
+                        <td></td>
+                    </tr>
+                    <tr id="pop">
+                        <td></td>
+                        <td>LIC - AAO</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>LIC - ADO</td>
+                        <td></td>
+                    </tr>
+        
+                </tbody>
+            </table>
+/
+             
+            <h1 id="tbh1">SSC</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Post Date</th>
+                        <th>Exam Name</th>
+                         <th>More Information</th>
+                    </tr>
+            
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>06/12/2024</td>
+                        <td>SSC - Tentative Calendar of Exams for 2025- 26</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>28/08/2024</td>
+                        <td>SSC - Constable 2024 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>18/06/2024</td>
+                        <td>SSC - Revised Exam Calendar 2024-25</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>30/12/2023</td>
+                        <td>SSC - Exam Calendar 2024-25</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>16/11/2023</td>
+                        <td>SSC - Tentative Calendar of Exams for 2024- 25</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>11/09/2023</td>
+                        <td>SSC - Tentative Calendar of Exams for 2023 - 24</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>20/05/2022</td>
+                        <td>RJ Central Cooperative Bank Asst - 440 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>14/03/2022</td>
+                        <td>IBPS Clerk XII 2022 Notification</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                </tbody>
+             </table>
+                
+             <h1 id="tbh1">UPSC</h1>
+             <table>
+                 <thead>
+                     <tr>
+                         <th>Post Date</th>
+                         <th>Exam Name</th>
+                          <th>More Information</th>
+                     </tr>
+             
+                 </thead>
+ 
+                 <tbody>
+                     <tr>
+                         <td>08/11/2024</td>
+                         <td>UPSC Revised - II Annual Exam Calendar 2025</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+                     <tr id="pop">
+                         <td>26/08/2024</td>
+                         <td>UPSC Revised Annual Exam Calendar 2025</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+                     <tr>
+                         <td>26/04/2024</td>
+                         <td>UPSC Exam Calendar 2025</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+                     <tr id="pop">
+                         <td>25/04/2024</td>
+                         <td>UPSC Revised Calendar 2024</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+                     <tr>
+                         <td>30/12/2023</td>
+                         <td>UPSC Annual Exam Calendar 2024</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+                     <tr id="pop">
+                         <td>04/05/2022</td>
+                         <td>UPSC Exam Calendar 2022 - 23</td>
+                         <td><a class="more-info" href="#">Get Details</a></td>
+                     </tr>
+            
+                 </tbody>
+              </table>
+                 
+              <h1 id="tbh1">UPSC</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Post Date</th>
+                          <th>Exam Name</th>
+                           <th>More Information</th>
+                      </tr>
+              
+                  </thead>
+  
+                  <tbody>
+                      <tr>
+                          <td>08/11/2024</td>
+                          <td>UPSC Revised - II Annual Exam Calendar 2025</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>26/08/2024</td>
+                          <td>UPSC Revised Annual Exam Calendar 2025</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>26/04/2024</td>
+                          <td>UPSC Exam Calendar 2025</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>25/04/2024</td>
+                          <td>UPSC Revised Calendar 2024</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>30/12/2023</td>
+                          <td>UPSC Annual Exam Calendar 2024</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>04/05/2022</td>
+                          <td>UPSC Exam Calendar 2022 - 23</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+             
+                  </tbody>
+               </table>
+
+               <h1 id="tbh1">Defence</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Post Date</th>
+                          <th>Exam Name</th>
+                           <th>More Information</th>
+                      </tr>
+              
+                  </thead>
+  
+                  <tbody>
+                      <tr>
+                          <td>04/01/2024</td>
+                          <td>BSF Constable (Tradesman) Notification 2024</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>02/01/2024</td>
+                          <td>Ordinance Factory New Vacancy Details 2023</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>02/01/2024</td>
+                          <td>CAG Variou Vcancy Details 2023</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>08/04/2023</td>
+                          <td>CRPF Constable 129929 Vacancy </td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>29/09/2022</td>
+                          <td>DRDO-SAC Notification Through GATE 2023</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>29/08/2022</td>
+                          <td>Army Ordinance Corps Civilian Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+             
+                      
+                  </tbody>
+               </table>
+
+               <h1 id="tbh1">Railways</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Post Date</th>
+                          <th>Exam Name</th>
+                           <th>More Information</th>
+                      </tr>
+              
+                  </thead>
+  
+                  <tbody>
+                      <tr>
+                          <td>01/08/2024</td>
+                          <td>RRB NTPC 2024 Tentative Vacancies</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>19/04/2024</td>
+                          <td>RRB Annual Planner</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>19/04/2024</td>
+                          <td>RRB NTPC Exam News</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>05/02/2024</td>
+                          <td>RRB Annual Calendar 2024 </td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>07/02/2023</td>
+                          <td>Information Regarding Vacancies in Indian Railways</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>20/05/2022</td>
+                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+             
+                      
+                  </tbody>
+               </table>
+
+               <h1 id="tbh1">Other All India</h1>
+               <table>
+                   <thead>
+                       <tr>
+                           <th>Post Date</th>
+                           <th>Exam Name</th>
+                            <th>More Information</th>
+                       </tr>
+               
+                   </thead>
+   
+                   <tbody>
+                       <tr>
+                           <td>01/08/2024</td>
+                           <td>RRB NTPC 2024 Tentative Vacancies</td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr id="pop">
+                           <td>19/04/2024</td>
+                           <td>RRB Annual Planner</td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr>
+                           <td>19/04/2024</td>
+                           <td>RRB NTPC Exam News</td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr id="pop">
+                           <td>05/02/2024</td>
+                           <td>RRB Annual Calendar 2024 </td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr>
+                           <td>07/02/2023</td>
+                           <td>Information Regarding Vacancies in Indian Railways</td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr id="pop">
+                           <td>20/05/2022</td>
+                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                           <td><a class="more-info" href="#">Get Details</a></td>
+                       </tr>
+                       <tr>
+                        <td>07/02/2023</td>
+                        <td>Information Regarding Vacancies in Indian Railways</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>20/05/2022</td>
+                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>07/02/2023</td>
+                        <td>Information Regarding Vacancies in Indian Railways</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>20/05/2022</td>
+                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>07/02/2023</td>
+                        <td>Information Regarding Vacancies in Indian Railways</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>20/05/2022</td>
+                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>07/02/2023</td>
+                        <td>Information Regarding Vacancies in Indian Railways</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                    <tr id="pop">
+                        <td>20/05/2022</td>
+                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                        <td><a class="more-info" href="#">Get Details</a></td>
+                    </tr>
+                   </tbody>
+                </table>
+
+                <h1 id="tbh1">Andaman and Nicobar</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recruitment Board</th>
+                            <th>Post Name</th>
+                             <th>Qualification</th>
+                        </tr>
+                
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                 </table>
+                  
+                 <h1 id="tbh1">Andhra Pradesh</h1>
+                 <table>
+                     <thead>
+                         <tr>
+                             <th>Post Date</th>
+                             <th>Exam Name</th>
+                              <th>More Information</th>
+                         </tr>
+                 
+                     </thead>
+     
+                     <tbody>
+                         <tr>
+                             <td>01/08/2024</td>
+                             <td>RRB NTPC 2024 Tentative Vacancies</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>19/04/2024</td>
+                             <td>RRB Annual Planner</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>19/04/2024</td>
+                             <td>RRB NTPC Exam News</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>05/02/2024</td>
+                             <td>RRB Annual Calendar 2024 </td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                          <td>07/02/2023</td>
+                          <td>Information Regarding Vacancies in Indian Railways</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>20/05/2022</td>
+                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>07/02/2023</td>
+                          <td>Information Regarding Vacancies in Indian Railways</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>20/05/2022</td>
+                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>07/02/2023</td>
+                          <td>Information Regarding Vacancies in Indian Railways</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>20/05/2022</td>
+                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr>
+                          <td>07/02/2023</td>
+                          <td>Information Regarding Vacancies in Indian Railways</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                      <tr id="pop">
+                          <td>20/05/2022</td>
+                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                          <td><a class="more-info" href="#">Get Details</a></td>
+                      </tr>
+                     </tbody>
+                  </table>
+  
+                  <h1 id="tbh1">Arunachal Pradesh</h1>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Post Date</th>
+                              <th>Exam Name</th>
+                               <th>More Information</th>
+                          </tr>
+                  
+                      </thead>
+      
+                      <tbody>
+                          <tr>
+                              <td></td>
+                              <td>Arunachal Pradesh PSC Circle Officers 101 Vacancy</td>
+                              <td></td>
+                          </tr>
+                          <tr id="pop">
+                              <td></td>
+                              <td>Arunachal Pradesh Civil Services (APCS) 42 Vacancy</td>
+                              <td></td>
+                          </tr>
+                      </tbody>
+                   </table>
+ 
+                   <h1 id="tbh1">Assam</h1>
+                   <table>
+                       <thead>
+                           <tr>
+                               <th>Post Date</th>
+                               <th>Exam Name</th>
+                                <th>More Information</th>
+                           </tr>
+                   
+                       </thead>
+       
+                       <tbody>
+                           <tr>
+                               <td>01/08/2024</td>
+                               <td>RRB NTPC 2024 Tentative Vacancies</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>19/04/2024</td>
+                               <td>RRB Annual Planner</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                               <td>19/04/2024</td>
+                               <td>RRB NTPC Exam News</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>05/02/2024</td>
+                               <td>RRB Annual Calendar 2024 </td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                               <td>07/02/2023</td>
+                               <td>Information Regarding Vacancies in Indian Railways</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>20/05/2022</td>
+                               <td>RPF - Constable, SI - 9000 Vacancy</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                            <td>07/02/2023</td>
+                            <td>Information Regarding Vacancies in Indian Railways</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr id="pop">
+                            <td>20/05/2022</td>
+                            <td>RPF - Constable, SI - 9000 Vacancy</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>07/02/2023</td>
+                            <td>Information Regarding Vacancies in Indian Railways</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr id="pop">
+                            <td>20/05/2022</td>
+                            <td>RPF - Constable, SI - 9000 Vacancy</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>07/02/2023</td>
+                            <td>Information Regarding Vacancies in Indian Railways</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr id="pop">
+                            <td>20/05/2022</td>
+                            <td>RPF - Constable, SI - 9000 Vacancy</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>07/02/2023</td>
+                            <td>Information Regarding Vacancies in Indian Railways</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                        <tr id="pop">
+                            <td>20/05/2022</td>
+                            <td>RPF - Constable, SI - 9000 Vacancy</td>
+                            <td><a class="more-info" href="#">Get Details</a></td>
+                        </tr>
+                       </tbody>
+                    </table>
+
+                    <h1 id="tbh1">Chhattisgarh</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Post Date</th>
+                                <th>Exam Name</th>
+                                 <th>More Information</th>
+                            </tr>
+                    
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>01/08/2024</td>
+                                <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>19/04/2024</td>
+                                <td>RRB Annual Planner</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>19/04/2024</td>
+                                <td>RRB NTPC Exam News</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>05/02/2024</td>
+                                <td>RRB Annual Calendar 2024 </td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                        </tbody>
+                     </table>
+
+                     <h1 id="tbh1">Chandigarh</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Post Date</th>
+                                <th>Exam Name</th>
+                                 <th>More Information</th>
+                            </tr>
+                    
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>01/08/2024</td>
+                                <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>19/04/2024</td>
+                                <td>RRB Annual Planner</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>19/04/2024</td>
+                                <td>RRB NTPC Exam News</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>05/02/2024</td>
+                                <td>RRB Annual Calendar 2024 </td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr>
+                             <td>07/02/2023</td>
+                             <td>Information Regarding Vacancies in Indian Railways</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                         <tr id="pop">
+                             <td>20/05/2022</td>
+                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                             <td><a class="more-info" href="#">Get Details</a></td>
+                         </tr>
+                        </tbody>
+                     </table>
+                    
+                     <h1 id="tbh1">Delhi</h1>
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>Post Date</th>
+                                 <th>Exam Name</th>
+                                  <th>More Information</th>
+                             </tr>
+                     
+                         </thead>
+         
+                         <tbody>
+                             <tr>
+                                 <td>01/08/2024</td>
+                                 <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>19/04/2024</td>
+                                 <td>RRB Annual Planner</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>19/04/2024</td>
+                                 <td>RRB NTPC Exam News</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>05/02/2024</td>
+                                 <td>RRB Annual Calendar 2024 </td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                         </tbody>
+                      </table>
+
+                      <h1 id="tbh1">Gujarat</h1>
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>Post Date</th>
+                                 <th>Exam Name</th>
+                                  <th>More Information</th>
+                             </tr>
+                     
+                         </thead>
+         
+                         <tbody>
+                             <tr>
+                                 <td>01/08/2024</td>
+                                 <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>19/04/2024</td>
+                                 <td>RRB Annual Planner</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>19/04/2024</td>
+                                 <td>RRB NTPC Exam News</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>05/02/2024</td>
+                                 <td>RRB Annual Calendar 2024 </td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr>
+                              <td>07/02/2023</td>
+                              <td>Information Regarding Vacancies in Indian Railways</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                          <tr id="pop">
+                              <td>20/05/2022</td>
+                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                              <td><a class="more-info" href="#">Get Details</a></td>
+                          </tr>
+                         </tbody>
+                      </table>
+
+                      <h1 id="tbh1">Haryana</h1>
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Post Date</th>
+                                  <th>Exam Name</th>
+                                   <th>More Information</th>
+                              </tr>
+                      
+                          </thead>
+          
+                          <tbody>
+                              <tr>
+                                  <td>01/08/2024</td>
+                                  <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>19/04/2024</td>
+                                  <td>RRB Annual Planner</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                                  <td>19/04/2024</td>
+                                  <td>RRB NTPC Exam News</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>05/02/2024</td>
+                                  <td>RRB Annual Calendar 2024 </td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                                  <td>07/02/2023</td>
+                                  <td>Information Regarding Vacancies in Indian Railways</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>20/05/2022</td>
+                                  <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                               <td>07/02/2023</td>
+                               <td>Information Regarding Vacancies in Indian Railways</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>20/05/2022</td>
+                               <td>RPF - Constable, SI - 9000 Vacancy</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                               <td>07/02/2023</td>
+                               <td>Information Regarding Vacancies in Indian Railways</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>20/05/2022</td>
+                               <td>RPF - Constable, SI - 9000 Vacancy</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                               <td>07/02/2023</td>
+                               <td>Information Regarding Vacancies in Indian Railways</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>20/05/2022</td>
+                               <td>RPF - Constable, SI - 9000 Vacancy</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr>
+                               <td>07/02/2023</td>
+                               <td>Information Regarding Vacancies in Indian Railways</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                           <tr id="pop">
+                               <td>20/05/2022</td>
+                               <td>RPF - Constable, SI - 9000 Vacancy</td>
+                               <td><a class="more-info" href="#">Get Details</a></td>
+                           </tr>
+                          </tbody>
+                       </table>
+
+                       <h1 id="tbh1">Himachal Pradesh</h1>
+                       <table>
+                           <thead>
+                               <tr>
+                                   <th>Post Date</th>
+                                   <th>Exam Name</th>
+                                    <th>More Information</th>
+                               </tr>
+                       
+                           </thead>
+           
+                           <tbody>
+                               <tr>
+                                   <td>01/08/2024</td>
+                                   <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>19/04/2024</td>
+                                   <td>RRB Annual Planner</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>19/04/2024</td>
+                                   <td>RRB NTPC Exam News</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>05/02/2024</td>
+                                   <td>RRB Annual Calendar 2024 </td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>07/02/2023</td>
+                                   <td>Information Regarding Vacancies in Indian Railways</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>20/05/2022</td>
+                                   <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                           </tbody>
+                        </table>
+
+                        <h1 id="tbh1">Jharkhand</h1>
+                       <table>
+                           <thead>
+                               <tr>
+                                   <th>Post Date</th>
+                                   <th>Exam Name</th>
+                                    <th>More Information</th>
+                               </tr>
+                       
+                           </thead>
+           
+                           <tbody>
+                               <tr>
+                                   <td>01/08/2024</td>
+                                   <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>19/04/2024</td>
+                                   <td>RRB Annual Planner</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>19/04/2024</td>
+                                   <td>RRB NTPC Exam News</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>05/02/2024</td>
+                                   <td>RRB Annual Calendar 2024 </td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>07/02/2023</td>
+                                   <td>Information Regarding Vacancies in Indian Railways</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>20/05/2022</td>
+                                   <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                           </tbody>
+                        </table>
+
+                        <h1 id="tbh1">Jammu and Kashmir</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Advt Date</th>
+                                    <th>Recruitment Board</th>
+                                     <th>Post Name</th>
+                                </tr>
+                        
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <td>JKPSC Calendar 2021</td>
+                                    <td></td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>JKSSB Calendar 2021</td>
+                                    <td></td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>JKSSB Calendar 2020</td>
+                                    <td></td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                            </tbody>
+                         </table>
+
+                         <h1 id="tbh1">Karnataka</h1>
+                       <table>
+                           <thead>
+                               <tr>
+                                   <th>Post Date</th>
+                                   <th>Recruitment Board</th>
+                                    <th>More Information</th>
+                               </tr>
+                       
+                           </thead>
+           
+                           <tbody>
+                               <tr>
+                                   <td>01/08/2024</td>
+                                   <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>19/04/2024</td>
+                                   <td>RRB Annual Planner</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>19/04/2024</td>
+                                   <td>RRB NTPC Exam News</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>05/02/2024</td>
+                                   <td>RRB Annual Calendar 2024 </td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                   <td>07/02/2023</td>
+                                   <td>Information Regarding Vacancies in Indian Railways</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr id="pop">
+                                   <td>20/05/2022</td>
+                                   <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                   <td><a class="more-info" href="#">Get Details</a></td>
+                               </tr>
+                               <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>07/02/2023</td>
+                                <td>Information Regarding Vacancies in Indian Railways</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                            <tr id="pop">
+                                <td>20/05/2022</td>
+                                <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                <td><a class="more-info" href="#">Get Details</a></td>
+                            </tr>
+                           </tbody>
+                        </table>
+
+                        <h1 id="tbh1">Kerala</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Post Date</th>
+                                    <th>Recruitment Board</th>
+                                     <th>More Information</th>
+                                </tr>
+                        
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <td>01/08/2024</td>
+                                    <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>19/04/2024</td>
+                                    <td>RRB Annual Planner</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>19/04/2024</td>
+                                    <td>RRB NTPC Exam News</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>05/02/2024</td>
+                                    <td>RRB Annual Calendar 2024 </td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                            </tbody>
+                         </table>
+
+                         <h1 id="tbh1">Madhya Pradesh</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Post Date</th>
+                                    <th>Exam Name</th>
+                                     <th>More Information</th>
+                                </tr>
+                        
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <td>01/08/2024</td>
+                                    <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>19/04/2024</td>
+                                    <td>RRB Annual Planner</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>19/04/2024</td>
+                                    <td>RRB NTPC Exam News</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>05/02/2024</td>
+                                    <td>RRB Annual Calendar 2024 </td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr>
+                                 <td>07/02/2023</td>
+                                 <td>Information Regarding Vacancies in Indian Railways</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                             <tr id="pop">
+                                 <td>20/05/2022</td>
+                                 <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                 <td><a class="more-info" href="#">Get Details</a></td>
+                             </tr>
+                            </tbody>
+                         </table>
+ 
+                         <h1 id="tbh1">Maharashtra</h1>
+                         <table>
+                             <thead>
+                                 <tr>
+                                     <th>Post Date</th>
+                                     <th>Exam Name</th>
+                                      <th>More Information</th>
+                                 </tr>
+                         
+                             </thead>
+             
+                             <tbody>
+                                 <tr>
+                                     <td>01/08/2024</td>
+                                     <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>19/04/2024</td>
+                                     <td>RRB Annual Planner</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                     <td>19/04/2024</td>
+                                     <td>RRB NTPC Exam News</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>05/02/2024</td>
+                                     <td>RRB Annual Calendar 2024 </td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                     <td>07/02/2023</td>
+                                     <td>Information Regarding Vacancies in Indian Railways</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>20/05/2022</td>
+                                     <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                  <td>07/02/2023</td>
+                                  <td>Information Regarding Vacancies in Indian Railways</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>20/05/2022</td>
+                                  <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                                  <td>07/02/2023</td>
+                                  <td>Information Regarding Vacancies in Indian Railways</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>20/05/2022</td>
+                                  <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                                  <td>07/02/2023</td>
+                                  <td>Information Regarding Vacancies in Indian Railways</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>20/05/2022</td>
+                                  <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr>
+                                  <td>07/02/2023</td>
+                                  <td>Information Regarding Vacancies in Indian Railways</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                              <tr id="pop">
+                                  <td>20/05/2022</td>
+                                  <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                  <td><a class="more-info" href="#">Get Details</a></td>
+                              </tr>
+                             </tbody>
+                          </table>
+
+                          <h1 id="tbh1">Manipur</h1>
+                          <table>
+                              <thead>
+                                  <tr>
+                                      <th>Post Date</th>
+                                      <th>Exam Name</th>
+                                       <th>Vacancies</th>
+                                  </tr>
+                          
+                              </thead>
+              
+                              <tbody>
+                                  <tr>
+                                      <td></td>
+                                      <td>Manipur Police SI & Constable</td>
+                                      <td><a class="more-info" href="#"></a></td>
+                                  </tr>
+                              </tbody>
+                           </table>
+
+                           <h1 id="tbh1">Odisha</h1>
+                           <table>
+                               <thead>
+                                   <tr>
+                                       <th>Post Date</th>
+                                       <th>Exam Name</th>
+                                        <th>More Information</th>
+                                   </tr>
+                           
+                               </thead>
+               
+                               <tbody>
+                                   <tr>
+                                       <td>01/08/2024</td>
+                                       <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>19/04/2024</td>
+                                       <td>RRB Annual Planner</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td>19/04/2024</td>
+                                       <td>RRB NTPC Exam News</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>05/02/2024</td>
+                                       <td>RRB Annual Calendar 2024 </td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td>07/02/2023</td>
+                                       <td>Information Regarding Vacancies in Indian Railways</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>20/05/2022</td>
+                                       <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>07/02/2023</td>
+                                    <td>Information Regarding Vacancies in Indian Railways</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                                <tr id="pop">
+                                    <td>20/05/2022</td>
+                                    <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                    <td><a class="more-info" href="#">Get Details</a></td>
+                                </tr>
+                               </tbody>
+                            </table>
+
+                            <h1 id="tbh1">Punjab</h1>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Post Date</th>
+                                        <th>Exam Name</th>
+                                         <th>More Information</th>
+                                    </tr>
+                            
+                                </thead>
+                
+                                <tbody>
+                                    <tr>
+                                        <td>01/08/2024</td>
+                                        <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>19/04/2024</td>
+                                        <td>RRB Annual Planner</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19/04/2024</td>
+                                        <td>RRB NTPC Exam News</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>05/02/2024</td>
+                                        <td>RRB Annual Calendar 2024 </td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>07/02/2023</td>
+                                        <td>Information Regarding Vacancies in Indian Railways</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>20/05/2022</td>
+                                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                     <td>07/02/2023</td>
+                                     <td>Information Regarding Vacancies in Indian Railways</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>20/05/2022</td>
+                                     <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                     <td>07/02/2023</td>
+                                     <td>Information Regarding Vacancies in Indian Railways</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>20/05/2022</td>
+                                     <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                     <td>07/02/2023</td>
+                                     <td>Information Regarding Vacancies in Indian Railways</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>20/05/2022</td>
+                                     <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr>
+                                     <td>07/02/2023</td>
+                                     <td>Information Regarding Vacancies in Indian Railways</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                 <tr id="pop">
+                                     <td>20/05/2022</td>
+                                     <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                     <td><a class="more-info" href="#">Get Details</a></td>
+                                 </tr>
+                                </tbody>
+                             </table>
+
+                             <h1 id="tbh1">Rajasthan</h1>
+                             <table>
+                                 <thead>
+                                     <tr>
+                                         <th>Post Date</th>
+                                         <th>Exam Name</th>
+                                          <th>More Information</th>
+                                     </tr>
+                             
+                                 </thead>
+                 
+                                 <tbody>
+                                     <tr>
+                                         <td>01/08/2024</td>
+                                         <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>19/04/2024</td>
+                                         <td>RRB Annual Planner</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                         <td>19/04/2024</td>
+                                         <td>RRB NTPC Exam News</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>05/02/2024</td>
+                                         <td>RRB Annual Calendar 2024 </td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                         <td>07/02/2023</td>
+                                         <td>Information Regarding Vacancies in Indian Railways</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>20/05/2022</td>
+                                         <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                      <td>07/02/2023</td>
+                                      <td>Information Regarding Vacancies in Indian Railways</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr id="pop">
+                                      <td>20/05/2022</td>
+                                      <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>07/02/2023</td>
+                                      <td>Information Regarding Vacancies in Indian Railways</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr id="pop">
+                                      <td>20/05/2022</td>
+                                      <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>07/02/2023</td>
+                                      <td>Information Regarding Vacancies in Indian Railways</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr id="pop">
+                                      <td>20/05/2022</td>
+                                      <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>07/02/2023</td>
+                                      <td>Information Regarding Vacancies in Indian Railways</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                  <tr id="pop">
+                                      <td>20/05/2022</td>
+                                      <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                      <td><a class="more-info" href="#">Get Details</a></td>
+                                  </tr>
+                                 </tbody>
+                              </table>
+ 
+                              <h1 id="tbh1">Telengana</h1>
+                              <table>
+                                  <thead>
+                                      <tr>
+                                          <th>Post Date</th>
+                                          <th>Exam Name</th>
+                                           <th>More Information</th>
+                                      </tr>
+                              
+                                  </thead>
+                  
+                                  <tbody>
+                                      <tr>
+                                          <td>01/08/2024</td>
+                                          <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>19/04/2024</td>
+                                          <td>RRB Annual Planner</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>19/04/2024</td>
+                                          <td>RRB NTPC Exam News</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>05/02/2024</td>
+                                          <td>RRB Annual Calendar 2024 </td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>07/02/2023</td>
+                                          <td>Information Regarding Vacancies in Indian Railways</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>20/05/2022</td>
+                                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                       <td>07/02/2023</td>
+                                       <td>Information Regarding Vacancies in Indian Railways</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>20/05/2022</td>
+                                       <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td>07/02/2023</td>
+                                       <td>Information Regarding Vacancies in Indian Railways</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>20/05/2022</td>
+                                       <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td>07/02/2023</td>
+                                       <td>Information Regarding Vacancies in Indian Railways</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>20/05/2022</td>
+                                       <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td>07/02/2023</td>
+                                       <td>Information Regarding Vacancies in Indian Railways</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                   <tr id="pop">
+                                       <td>20/05/2022</td>
+                                       <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                       <td><a class="more-info" href="#">Get Details</a></td>
+                                   </tr>
+                                  </tbody>
+                               </table>
+  
+                               <h1 id="tbh1">Tamil Nadu</h1>
+                               <table>
+                                   <thead>
+                                       <tr>
+                                           <th>Post Date</th>
+                                           <th>Exam Name</th>
+                                            <th>More Information</th>
+                                       </tr>
+                               
+                                   </thead>
+                   
+                                   <tbody>
+                                       <tr>
+                                           <td>01/08/2024</td>
+                                           <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>19/04/2024</td>
+                                           <td>RRB Annual Planner</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                           <td>19/04/2024</td>
+                                           <td>RRB NTPC Exam News</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>05/02/2024</td>
+                                           <td>RRB Annual Calendar 2024 </td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                           <td>07/02/2023</td>
+                                           <td>Information Regarding Vacancies in Indian Railways</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>20/05/2022</td>
+                                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                        <td>07/02/2023</td>
+                                        <td>Information Regarding Vacancies in Indian Railways</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>20/05/2022</td>
+                                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>07/02/2023</td>
+                                        <td>Information Regarding Vacancies in Indian Railways</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>20/05/2022</td>
+                                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>07/02/2023</td>
+                                        <td>Information Regarding Vacancies in Indian Railways</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>20/05/2022</td>
+                                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>07/02/2023</td>
+                                        <td>Information Regarding Vacancies in Indian Railways</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                    <tr id="pop">
+                                        <td>20/05/2022</td>
+                                        <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                        <td><a class="more-info" href="#">Get Details</a></td>
+                                    </tr>
+                                   </tbody>
+                                </table>
+   
+                                <h1 id="tbh1">Uttar Pradesh</h1>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Post Date</th>
+                                            <th>Exam Name</th>
+                                             <th>More Information</th>
+                                        </tr>
+                                
+                                    </thead>
+                    
+                                    <tbody>
+                                        <tr>
+                                            <td>01/08/2024</td>
+                                            <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr id="pop">
+                                            <td>19/04/2024</td>
+                                            <td>RRB Annual Planner</td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>19/04/2024</td>
+                                            <td>RRB NTPC Exam News</td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr id="pop">
+                                            <td>05/02/2024</td>
+                                            <td>RRB Annual Calendar 2024 </td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>07/02/2023</td>
+                                            <td>Information Regarding Vacancies in Indian Railways</td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr id="pop">
+                                            <td>20/05/2022</td>
+                                            <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                            <td><a class="more-info" href="#">Get Details</a></td>
+                                        </tr>
+                                        <tr>
+                                         <td>07/02/2023</td>
+                                         <td>Information Regarding Vacancies in Indian Railways</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>20/05/2022</td>
+                                         <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                         <td>07/02/2023</td>
+                                         <td>Information Regarding Vacancies in Indian Railways</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>20/05/2022</td>
+                                         <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                         <td>07/02/2023</td>
+                                         <td>Information Regarding Vacancies in Indian Railways</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>20/05/2022</td>
+                                         <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr>
+                                         <td>07/02/2023</td>
+                                         <td>Information Regarding Vacancies in Indian Railways</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                     <tr id="pop">
+                                         <td>20/05/2022</td>
+                                         <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                         <td><a class="more-info" href="#">Get Details</a></td>
+                                     </tr>
+                                    </tbody>
+                                 </table>
+    
+                                 <h1 id="tbh1">Uttarakhand</h1>
+                                 <table>
+                                     <thead>
+                                         <tr>
+                                             <th>Post Date</th>
+                                             <th>Exam Name</th>
+                                              <th>More Information</th>
+                                         </tr>
+                                 
+                                     </thead>
+                     
+                                     <tbody>
+                                         <tr>
+                                             <td>01/08/2024</td>
+                                             <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr id="pop">
+                                             <td>19/04/2024</td>
+                                             <td>RRB Annual Planner</td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr>
+                                             <td>19/04/2024</td>
+                                             <td>RRB NTPC Exam News</td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr id="pop">
+                                             <td>05/02/2024</td>
+                                             <td>RRB Annual Calendar 2024 </td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr>
+                                             <td>07/02/2023</td>
+                                             <td>Information Regarding Vacancies in Indian Railways</td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr id="pop">
+                                             <td>20/05/2022</td>
+                                             <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                             <td><a class="more-info" href="#">Get Details</a></td>
+                                         </tr>
+                                         <tr>
+                                          <td>07/02/2023</td>
+                                          <td>Information Regarding Vacancies in Indian Railways</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>20/05/2022</td>
+                                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>07/02/2023</td>
+                                          <td>Information Regarding Vacancies in Indian Railways</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>20/05/2022</td>
+                                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>07/02/2023</td>
+                                          <td>Information Regarding Vacancies in Indian Railways</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>20/05/2022</td>
+                                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>07/02/2023</td>
+                                          <td>Information Regarding Vacancies in Indian Railways</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                      <tr id="pop">
+                                          <td>20/05/2022</td>
+                                          <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                          <td><a class="more-info" href="#">Get Details</a></td>
+                                      </tr>
+                                     </tbody>
+                                  </table>
+     
+                                  <h1 id="tbh1">West Bengal</h1>
+                                  <table>
+                                      <thead>
+                                          <tr>
+                                              <th>Post Date</th>
+                                              <th>Exam Name</th>
+                                               <th>More Information</th>
+                                          </tr>
+                                  
+                                      </thead>
+                      
+                                      <tbody>
+                                          <tr>
+                                              <td>01/08/2024</td>
+                                              <td>RRB NTPC 2024 Tentative Vacancies</td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr id="pop">
+                                              <td>19/04/2024</td>
+                                              <td>RRB Annual Planner</td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>19/04/2024</td>
+                                              <td>RRB NTPC Exam News</td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr id="pop">
+                                              <td>05/02/2024</td>
+                                              <td>RRB Annual Calendar 2024 </td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>07/02/2023</td>
+                                              <td>Information Regarding Vacancies in Indian Railways</td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr id="pop">
+                                              <td>20/05/2022</td>
+                                              <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                              <td><a class="more-info" href="#">Get Details</a></td>
+                                          </tr>
+                                          <tr>
+                                           <td>07/02/2023</td>
+                                           <td>Information Regarding Vacancies in Indian Railways</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>20/05/2022</td>
+                                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                           <td>07/02/2023</td>
+                                           <td>Information Regarding Vacancies in Indian Railways</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>20/05/2022</td>
+                                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                           <td>07/02/2023</td>
+                                           <td>Information Regarding Vacancies in Indian Railways</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>20/05/2022</td>
+                                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr>
+                                           <td>07/02/2023</td>
+                                           <td>Information Regarding Vacancies in Indian Railways</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                       <tr id="pop">
+                                           <td>20/05/2022</td>
+                                           <td>RPF - Constable, SI - 9000 Vacancy</td>
+                                           <td><a class="more-info" href="#">Get Details</a></td>
+                                       </tr>
+                                      </tbody>
+                                   </table>
+      
+
+    <footer>
+        <p style="color: red;">Notice: Always type .Com after DreamJob. Beware of duplicate websites with DreamJob name. DreamJob.Com is the ONLY Official website of DreamJob.Com</p>
+        <p>DreamJob.Com provides free job alert service to job seekers in India on latest government jobs, on study material and on video lessons with online test. To get free job alert daily subscribe to our email job alert services.</p>
+        <a onclick="window.location.href='/ContactUs'">Contact Us</a>
+        <p>Copyright © 2024 DreamJob.Com All Rights Reserved.</p>
+    </footer>
+                    
+         <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>  
+    

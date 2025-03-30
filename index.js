@@ -56,10 +56,11 @@ app.get('/search', (req, res) => {
         "contact us": "/ContactUs",
         "home": "/",
         "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
-        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
-        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
-        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
-        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state",
+        "JH": "/state/JH_state", "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state",
+        "MP": "/state/MP_state", "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state",
+        "TN": "/state/TN_state", "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state",
+        "WB": "/state/WB_state",
         "All india govt job": "/jobs/All_India_Govt_job",
         "State govt job": "/jobs/State_Govt_Job",
         "Bank job": "/jobs/Bank_Job",
@@ -68,7 +69,14 @@ app.get('/search', (req, res) => {
         "Railways job": "/jobs/Railways_Job",
         "Police defence job": "/jobs/Police_Defence_Job",
         "Admin login": "/AdminLogin",
-        "User login": "/UserLogin"
+        "User login": "/UserLogin",
+        "Latest notification": "/Latestnotification",
+        "Upcoming notifications": "/Upcomingnotification",
+        "Notification status": "/Notificationstatus",
+        "Cutoff marks": "/Cutoffmarks",
+        "Interview results": "/Interviewresults",
+        "Eligibility": "/Eligibility",
+        "Selection process": "/Selectionprocess"
     };
 
     if (Pages[searchTerm]) {
@@ -84,6 +92,34 @@ app.get('/state/:state', (req, res) => {
 app.get('/jobs/:category', (req, res) => {
     let {category} = req.params;
     res.render(`${category}`);
+});
+
+app.get('/Latestnotification', (req, res) => {
+    res.render("Latest_notification");
+});
+
+app.get('/Upcomingnotification', (req, res) => {
+    res.render("Upcoming_notifications");
+});
+
+app.get('/Notificationstatus', (req, res) => {
+    res.render("Notification_status");
+});
+
+app.get('/Cutoffmarks', (req, res) => {
+    res.render("Cutoff_marks");
+});
+
+app.get('/Interviewresults', (req, res) => {
+    res.render("Interview_results");
+});
+
+app.get('/Eligibility', (req, res) => {
+    res.render('Eligibility');
+});
+
+app.get('/Selectionprocess', (req, res) => {
+    res.render('Selection_process');
 });
 
 app.get('/NewAdmin', (req, res) => {
@@ -159,10 +195,11 @@ app.get('/usersearch', (req, res) => {
         "contact us": "/ContactUs",
         "home": "/",
         "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
-        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
-        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
-        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
-        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state",
+        "JH": "/state/JH_state", "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state",
+        "MP": "/state/MP_state", "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state",
+        "TN": "/state/TN_state", "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state",
+        "WB": "/state/WB_state",
         "All india govt job": "/jobs/All_India_Govt_job",
         "State govt job": "/jobs/State_Govt_Job",
         "Bank job": "/jobs/Bank_Job",
@@ -171,7 +208,14 @@ app.get('/usersearch', (req, res) => {
         "Railways job": "/jobs/Railways_Job",
         "Police defence job": "/jobs/Police_Defence_Job",
         "Admin login": "/AdminLogin",
-        "User login": "/UserLogin"
+        "User login": "/UserLogin",
+        "Latest notification": "/Latestnotification",
+        "Upcoming notifications": "/Upcomingnotification",
+        "Notification status": "/Notificationstatus",
+        "Cutoff marks": "/Cutoffmarks",
+        "Interview results": "/Interviewresults",
+        "Eligibility": "/Eligibility",
+        "Selection process": "/Selectionprocess"
     };
 
     if (Pages[searchTerm]) {
@@ -220,10 +264,11 @@ app.get('/adminsearch', (req, res) => {
         "contact us": "/ContactUs",
         "home": "/",
         "AP": "/state/AP_state", "AS": "/state/AS_state", "BR": "/state/BR_state", "CG": "/state/CG_state",
-        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state", "JH": "/state/JH_state",
-        "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state", "MP": "/state/MP_state",
-        "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state", "TN": "/state/TN_state",
-        "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state", "WB": "/state/WB_state",
+        "DL": "/state/DL_state","GJ": "/state/GJ_state","HP": "/state/HP_state", "HR": "/state/HR_state",
+        "JH": "/state/JH_state", "KA": "/state/KA_state", "KL": "/state/KL_state", "MH": "/state/MH_state",
+        "MP": "/state/MP_state", "OD": "/state/OD_state", "PB": "/state/PB_state", "RJ": "/state/RJ_state",
+        "TN": "/state/TN_state", "TS": "/state/TS_state", "UK": "/state/UK_state", "UP": "/state/UP_state",
+        "WB": "/state/WB_state",
         "All india govt job": "/jobs/All_India_Govt_job",
         "State govt job": "/jobs/State_Govt_Job",
         "Bank job": "/jobs/Bank_Job",
@@ -232,7 +277,14 @@ app.get('/adminsearch', (req, res) => {
         "Railways job": "/jobs/Railways_Job",
         "Police defence job": "/jobs/Police_Defence_Job",
         "Admin login": "/AdminLogin",
-        "User login": "/UserLogin"
+        "User login": "/UserLogin",
+        "Latest notification": "/Latestnotification",
+        "Upcoming notifications": "/Upcomingnotification",
+        "Notification status": "/Notificationstatus",
+        "Cutoff marks": "/Cutoffmarks",
+        "Interview results": "/Interviewresults",
+        "Eligibility": "/Eligibility",
+        "Selection process": "/Selectionprocess"
     };
 
     if (Pages[searchTerm]) {
