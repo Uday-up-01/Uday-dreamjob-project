@@ -1,24 +1,72 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f5f5f5;
-    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 68px;
     display: flex;
-    justify-content: center;
-    align-items: start;
-    height: 720px;
-    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+}
+
+.nav-links {
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 350px;
+    margin-top: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    border: 2px solid #ddd;
+    background: transparent;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar-search input {
+    margin-right: 7px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+#searchbtn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#searchbtn:hover{
+    border: 2px solid #ddd;
+    background-color: rgb(239, 182, 36);
+}
+
+#searchbtn:active{
+    border: 2px solid #ddd;
+    background-color: rgb(181, 135, 19);
 }
 
 .container {
     width: 900px; 
     background: white;
     padding: 30px;
+    margin-top: 50px;
     border-radius: 12px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -63,6 +111,7 @@ td {
 
 tr:hover {
     background: #e6e6e6;
+    border-bottom: 1px solid #ddd;
 }
 
 .editbtn {

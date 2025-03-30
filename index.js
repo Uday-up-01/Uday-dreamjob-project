@@ -284,7 +284,31 @@ app.get('/adminsearch', (req, res) => {
         "Cutoff marks": "/Cutoffmarks",
         "Interview results": "/Interviewresults",
         "Eligibility": "/Eligibility",
-        "Selection process": "/Selectionprocess"
+        "Selection process": "/Selectionprocess",
+        "Manage users": "/Adminmanageuser",
+        "Manage content": "/Adminmanagecontent",
+        "Edit home page": "/Admin_home",
+        "Edit AP state page": "/adminstate/Admin_AP_state",
+        "Edit AS state page": "/adminstate/Admin_AS_state",
+        "Edit BR state page": "/adminstate/Admin_BR_state",
+        "Edit CG state page": "/adminstate/Admin_CG_state",
+        "Edit DL state page": "/adminstate/Admin_DL_state",
+        "Edit GJ state page": "/adminstate/Admin_GJ_state",
+        "Edit HP state page": "/adminstate/Admin_HP_state",
+        "Edit HR state page": "/adminstate/Admin_HR_state",
+        "Edit JH state page": "/adminstate/Admin_JH_state",
+        "Edit KA state page": "/adminstate/Admin_KA_state",
+        "Edit KL state page": "/adminstate/Admin_KL_state",
+        "Edit MH state page": "/adminstate/Admin_MH_state",
+        "Edit MP state page": "/adminstate/Admin_MP_state",
+        "Edit OD state page": "/adminstate/Admin_OD_state",
+        "Edit PB state page": "/adminstate/Admin_PB_state",
+        "Edit RJ state page": "/adminstate/Admin_RJ_state",
+        "Edit TN state page": "/adminstate/Admin_TN_state",
+        "Edit TS state page": "/adminstate/Admin_TS_state",
+        "Edit UK state page": "/adminstate/Admin_UK_state",
+        "Edit UP state page": "/adminstate/Admin_UP_state",
+        "Edit WB state page": "/adminstate/Admin_WB_state"
     };
 
     if (Pages[searchTerm]) {

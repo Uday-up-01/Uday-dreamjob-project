@@ -76,20 +76,40 @@ body {
     text-align: center;
 }
 
-.homebtn{
-    text-align: center;
-    height: 50px;
-    padding-left: 10px;
+
+.grid-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
-#stbt{
+.grid-item {
+    padding: 30px;
+    color: white;
+    font-size: 1.2em;
     text-align: center;
-    height: 50px;
-    padding-left: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #4B6CB7;  
+    height: 90px;
+    width: 260px;
 }
 
-#jbt{
-    text-align: center;
-    height: 50px;
-    padding-left: 10px;
+.grid-item:hover{
+    background-color: #3A5BA9; 
+}
+
+.grid-item:active{
+    background-color: #233B6C; 
+}
+
+.item22{
+    width: 260px;
+    margin-right: 10px;
+}
+
+.item23{
+    width: 260px;
+    margin-left: 10px;
 }
