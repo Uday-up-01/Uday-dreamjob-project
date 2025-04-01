@@ -10,7 +10,6 @@
     <div class="container">
         <h2>Edit User Details</h2>
         <p>User ID: <%= User.id %></p>
-        <p>User Username: <%= User.Username %></p>
         
         <form method="POST" action="/Adminmanageuser/<%= User.id %>?_method=PATCH">
             <input type="text" name="Username" value="<%= User.username %>">

@@ -13,6 +13,7 @@
         
         <form method="POST" action="/AlertUser/<%= Alert.id %>?_method=PATCH">
             <input type="text" name="Alert" value="<%= Alert.Alert %>">
+            <input type="text" name="link" value="<%= Alert.link %>">
             <button type="submit">Update</button>
         </form>
     </div>

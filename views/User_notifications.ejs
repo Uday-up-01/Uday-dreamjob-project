@@ -31,7 +31,10 @@
             <h2>Notifications</h2>
             <ul>
                 <% for(let Alert of Alertuser) { %>
-                    <li><a><%= Alert.Alert %></a></li>
+                <li class="notificationlist">
+                <%= Alert.Alert %>
+                <a href="<%= Alert.link %>" class="notification-link">More Detail</a>      
+                </li>
                 <% } %>
             </ul>
         </div>

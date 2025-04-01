@@ -83,8 +83,6 @@ h1 {
     letter-spacing: 1px;
 }
 
-
-
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -112,4 +110,19 @@ h1 {
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ddd;
+}
+
+.notificationlist {
+    position: relative;             
+    margin-bottom: 10px;               
+}
+
+.notification-link {
+    position: absolute;          
+    right: 20px;
+    text-decoration: none;         
+}
+
+.notification-link:hover {
+    text-decoration: underline;     
 }

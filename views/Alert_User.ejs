@@ -15,6 +15,7 @@
             <li><a onclick="window.location.href='/AdminResetpassword'"> Reset Password</a></li>
             <li><a onclick="window.location.href='/Adminmanageuser'"> Manage Users</a></li>
             <li><a onclick="window.location.href='/AlertUser'"> Alert User</a></li>
+            <li><a onclick="window.location.href='/Userissue'"> User Issue</a></li>
             <li><a onclick="window.location.href='/Adminmanagecontent'"> Manage Content</a></li>
             <li><a class="logout"> Logout</a></li>
         </ul>
@@ -35,6 +36,7 @@
                     <tr class="table-head">
                         <th>ID</th>
                         <th>Alert</th>
+                        <th>Link</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -44,6 +46,7 @@
                         <tr class="table-row">
                             <td><%= Alert.id %></td>
                             <td><%= Alert.Alert %></td>
+                            <td><%= Alert.link %></td>
                             <td><a class="editbtn" href="http://localhost:8080/AlertUser/<%= Alert.id %>/edit">Edit</a></td>
                             <td>
                                 <form method="post" action="/AlertUser/<%= Alert.id %>?_method=DELETE">

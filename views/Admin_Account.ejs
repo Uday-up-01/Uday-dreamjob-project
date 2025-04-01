@@ -15,6 +15,7 @@
             <li><a onclick="window.location.href='/AdminResetpassword'"> Reset Password</a></li>
             <li><a onclick="window.location.href='/Adminmanageuser'"> Manage Users</a></li>
             <li><a onclick="window.location.href='/AlertUser'"> Alert User</a></li>
+            <li><a onclick="window.location.href='/Userissue'"> User Issue</a></li>
             <li><a onclick="window.location.href='/Adminmanagecontent'"> Manage Content</a></li>
             <li><a class="logout"> Logout</a></li>
         </ul>
@@ -29,9 +30,8 @@
     <main class="content">
         <div class="welcome">
             <h1>Username: <%= admin.username %></h1>
-            <p>ID: <%= admin.id %></p>
-            <p>Email: <%= admin.email %></p>
-            <p>Password: <%= admin.password %></p>
+            <h5>Email: <%= admin.email %></h5>
+            <h5>Password: <%= admin.password %></h5>
         </div>
     </main>
 

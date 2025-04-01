@@ -13,7 +13,7 @@ body {
 }
 
 .nav-links {
-    color: white;
+    color: #ffffff;
     list-style: none;
     display: flex;
     align-items: center;
@@ -37,6 +37,7 @@ body {
 .navbar-search {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .navbar-search input {
@@ -49,7 +50,6 @@ body {
 #searchbtn{
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 20px;
 }
 
 #searchbtn:hover{
@@ -112,36 +112,4 @@ td {
     padding: 14px;
     font-size: 14px;
     color: #333;
-    border-bottom: 1px solid #ddd;
-}
-
-tr:hover {
-    background: #e6e6e6;
-    border-bottom: 1px solid #ddd;
-}
-
-.editbtn {
-    background-color: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    text-decoration: none;
-}
-
-.delete-btn {
-    background-color: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-.adduser {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
 }

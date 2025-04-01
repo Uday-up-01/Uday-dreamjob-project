@@ -217,14 +217,13 @@ app.get('/usersearch', (req, res) => {
         "Eligibility": "/Eligibility",
         "Selection process": "/Selectionprocess"
     };
-
     if (Pages[searchTerm]) {
         return res.redirect(Pages[searchTerm]);
     }
 });
 
 app.get("/Usernotifications", (req, res) => {
-    const Alertuser = "SELECT Alert FROM useralert";
+    const Alertuser = "SELECT * FROM useralert";
 
     connection.query(Alertuser, (err, useralert) => {
                     res.render("User_notifications", {Alertuser: useralert })
@@ -324,6 +323,32 @@ app.get('/adminsearch', (req, res) => {
     }
 });
 
+app.post('/contactus', (req, res) => {
+    const { message_type, name, email, message } = req.body;
+    const id = uuidv4();
+
+    connection.query(
+        'INSERT INTO Userissue (id, message_type, name, email, message) VALUES (?, ?, ?, ?, ?)',
+        [id, message_type, name, email, message],
+        (err) => {
+            if (err) throw err;
+            res.send(`
+                <script>
+                    alert("Your message has been sent successfully!");
+                    window.location.href = "/ContactUs";
+                </script>
+            `);
+        }
+    );
+});
+
+app.get('/Userissue', (req, res) => {
+    connection.query('SELECT * FROM Userissue', (err, results) => {
+        if (err) throw err;
+    res.render('User_issue', { Userissue: results });
+    });
+});
+
 app.get('/AlertUser', (req, res) => {
     connection.query('SELECT * FROM Useralert', (err, results) => {
         if (err) throw err;
@@ -336,11 +361,11 @@ app.get('/AlertUser/new', (req, res) => {
 });
 
 app.post('/AlertUser', (req, res) => {
-    const { Alert } = req.body;
+    const { Alert, link } = req.body;
     const id = uuidv4();
 
-    connection.query('INSERT INTO Useralert (id, Alert) VALUES (?, ?)', 
-    [id, Alert], (err) => {
+    connection.query('INSERT INTO Useralert (id, Alert, link) VALUES (?, ?, ?)', 
+    [id, Alert, link], (err) => {
         if (err) throw err;
         res.redirect('/AlertUser');
     });
@@ -354,11 +379,11 @@ app.get('/AlertUser/:id/edit', (req, res) => {
 });
 
 app.patch('/AlertUser/:id', (req, res) => {
-    const { Alert} = req.body;
+    const { Alert, link } = req.body;
 
     connection.query(
-        'UPDATE Useralert SET Alert = ? WHERE id = ?',
-        [Alert, req.params.id],
+        'UPDATE Useralert SET Alert = ?, link = ? WHERE id = ?',
+        [Alert, link,  req.params.id],
         (err) => {
             if (err) throw err;
             res.redirect('/AlertUser');
