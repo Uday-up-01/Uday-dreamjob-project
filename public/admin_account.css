@@ -13,10 +13,12 @@ body {
 }
 
 .nav-links {
+    color: white;
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: 350px;
+    margin-left: 260px;
+    margin-top: 15px;
 }
 
 .nav-links a {
@@ -45,8 +47,9 @@ body {
 }
 
 #searchbtn{
-    margin-top: 6px;
+    margin-top: 5px;
     margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 #searchbtn:hover{

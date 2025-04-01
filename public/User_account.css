@@ -16,9 +16,9 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: 400px;
+    margin-left: 260px;
+    margin-top: 15px;
 }
-
 
 .nav-links a {
     color: white;
@@ -31,6 +31,34 @@ body {
 .nav-links a:hover {
     border: 2px solid #ddd;
     background: transparent;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar-search input {
+    margin-right: 7px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+#searchbtn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#searchbtn:hover{
+    border: 2px solid #ddd;
+    background-color: rgb(239, 182, 36);
+}
+
+#searchbtn:active{
+    border: 2px solid #ddd;
+    background-color: rgb(181, 135, 19);
 }
 
 .content {

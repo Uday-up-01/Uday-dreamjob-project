@@ -13,7 +13,6 @@ body {
 }
 
 .nav-links {
-    color: white;
     list-style: none;
     display: flex;
     align-items: center;
@@ -29,6 +28,10 @@ body {
     border-radius: 8px;
 }
 
+.usernotification{
+    color: white;
+}
+
 .nav-links a:hover {
     border: 2px solid #ddd;
     background: transparent;
@@ -37,6 +40,7 @@ body {
 .navbar-search {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .navbar-search input {
@@ -49,7 +53,6 @@ body {
 #searchbtn{
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 10px;
 }
 
 #searchbtn:hover{
@@ -62,54 +65,51 @@ body {
     background-color: rgb(181, 135, 19);
 }
 
-.parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    width: 900px; 
+    background: white;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 20px;
+    border: 1px solid #ddd;
 }
 
-.Edithead {
-    background: rgb(255, 255, 255);
-    max-width: 700px;
-    text-align: center;
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+    letter-spacing: 1px;
 }
 
 
-.grid-container {
+
+.container {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px;
+    margin-top: 30px;
 }
 
-.grid-item {
-    padding: 30px;
+.column {
+    width: 95%;
+}
+
+.column h2 {
+    background-color: #4b6cb7;
     color: white;
-    font-size: 1.2em;
+    padding: 10px;
     text-align: center;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #4B6CB7;  
-    height: 90px;
-    width: 260px;
 }
 
-.grid-item:hover{
-    background-color: #3A5BA9; 
+.column ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.grid-item:active{
-    background-color: #233B6C; 
-}
-
-.item21{
-    width: 260px;
-    margin-right: 10px;
-}
-
-.item22{
-    width: 260px;
-    margin-left: 10px;
+.column li {
+    background-color: #f8f9fa;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
 }

@@ -223,6 +223,14 @@ app.get('/usersearch', (req, res) => {
     }
 });
 
+app.get("/Usernotifications", (req, res) => {
+    const Alertuser = "SELECT Alert FROM useralert";
+
+    connection.query(Alertuser, (err, useralert) => {
+                    res.render("User_notifications", {Alertuser: useralert })
+    });
+});
+
 app.get('/AdminLogin', (req, res) => {
     res.render('Admin_Login', { post: {} });
 });
@@ -314,6 +322,55 @@ app.get('/adminsearch', (req, res) => {
     if (Pages[searchTerm]) {
         return res.redirect(Pages[searchTerm]);
     }
+});
+
+app.get('/AlertUser', (req, res) => {
+    connection.query('SELECT * FROM Useralert', (err, results) => {
+        if (err) throw err;
+        res.render('Alert_User', { Alertuser: results });
+    });
+});
+
+app.get('/AlertUser/new', (req, res) => {
+    res.render('newalert.ejs');
+});
+
+app.post('/AlertUser', (req, res) => {
+    const { Alert } = req.body;
+    const id = uuidv4();
+
+    connection.query('INSERT INTO Useralert (id, Alert) VALUES (?, ?)', 
+    [id, Alert], (err) => {
+        if (err) throw err;
+        res.redirect('/AlertUser');
+    });
+});
+
+app.get('/AlertUser/:id/edit', (req, res) => {
+    connection.query('SELECT * FROM Useralert WHERE id = ?', [req.params.id], (err, results) => {
+        if (err) throw err;
+        res.render('editalert.ejs', { Alert: results[0] });
+    });
+});
+
+app.patch('/AlertUser/:id', (req, res) => {
+    const { Alert} = req.body;
+
+    connection.query(
+        'UPDATE Useralert SET Alert = ? WHERE id = ?',
+        [Alert, req.params.id],
+        (err) => {
+            if (err) throw err;
+            res.redirect('/AlertUser');
+        }
+    );
+});
+
+app.delete('/AlertUser/:id', (req, res) => {
+    connection.query('DELETE FROM Useralert WHERE id = ?', [req.params.id], (err) => {
+        if (err) throw err;
+        res.redirect('/AlertUser');
+    });
 });
 
 app.get('/Adminmanageuser', (req, res) => {
