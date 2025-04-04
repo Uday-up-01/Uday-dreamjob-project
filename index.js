@@ -447,8 +447,25 @@ app.delete('/Adminmanageuser/:id', (req, res) => {
     });
 });
 
+// app.get('/Adminmanagecontent', (req,res) => {
+//     res.render('Admin_manage_content');
+// });
+
 app.get('/Adminmanagecontent', (req,res) => {
-    res.render('Admin_manage_content');
+    const homepageQuery = "SELECT id, title FROM homepagenewupdates";
+    const gridQuery = "SELECT id, title FROM homepagegridupdates";
+    const jobQuery = "SELECT id, title FROM homepagejobnotifications";  
+    const jobQuerytwo = "SELECT id, title FROM homepagejobnotificationstwo";
+
+    connection.query(homepageQuery, (err, homepageResults) => {
+        connection.query(gridQuery, (err, gridResults) => {
+            connection.query(jobQuery, (err, jobResults) => { 
+                connection.query(jobQuerytwo, (err, jobResultstwo) => { 
+                    res.render("Admin_home", { homepageResults: homepageResults, gridResults: gridResults, jobs: jobResults, jobstwo: jobResultstwo });
+                });
+            });
+        });
+    });
 });
 
 app.get('/Admin_home', (req,res) => {
