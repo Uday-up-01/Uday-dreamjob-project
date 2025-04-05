@@ -85,7 +85,7 @@ app.get('/search', (req, res) => {
 });
 
 app.get('/state/:stateCode', (req, res) => {
-    const fullCode = req.params.stateCode.toLowerCase();
+    const fullCode = req.params.stateCode;
     const stateCode = fullCode.replace('_state', '');
 
     const stateQuery = `SELECT * FROM states WHERE state_code = ?`;
