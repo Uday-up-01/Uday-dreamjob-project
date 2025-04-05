@@ -84,9 +84,26 @@ app.get('/search', (req, res) => {
     }
 });
 
-app.get('/state/:state', (req, res) => {
-    let { state} = req.params;
-    res.render(`${state}`);
+app.get('/state/:stateCode', (req, res) => {
+    const fullCode = req.params.stateCode.toLowerCase();
+    const stateCode = fullCode.replace('_state', '');
+
+    const stateQuery = `SELECT * FROM states WHERE state_code = ?`;
+    const homepageQuery = `SELECT title FROM ${stateCode}newupdates`;
+    const gridQuery = `SELECT title FROM ${stateCode}grid`;
+    const jobQuery = `SELECT * FROM ${stateCode}job`;
+
+    connection.query(stateQuery, [stateCode], (err, stateResults) => {
+        const stateName = stateResults[0].state_name;
+
+        connection.query(homepageQuery, (err, newupdates) => {
+            connection.query(gridQuery, (err, gridResults) => {
+                connection.query(jobQuery, (err, jobs) => {
+                    res.render("state", { stateName, newupdates, gridResults, jobs});
+                });
+            });
+        });
+    });
 });
 
 app.get('/jobs/:category', (req, res) => {
