@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamJob.com</title>
+    <link rel="stylesheet" href="Selection Process.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h3>DreamJob.com</h3>
+        </div>
+        <div class="home-btn">
+            <button type="button" onclick="window.location.href='/'" class="btn btn-warning" id="hh"><i class="fa-solid fa-house"></i> Home</button>
+            <button type="button" onclick="window.location.href='/ContactUs'" class="btn btn-warning" id="dd"> Contact Us</button>            
+        </div>   
+    
+        <div class="navbar-search">
+            <form action="/search" method="GET" class="navbar-search">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." required>
+                <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+            </form>
+            <button type="button" onclick="window.location.href='/UserLogin'" class="btn btn-warning" id="signup"><i class="fa-regular fa-circle-user"></i> User</button>
+            <button type="button" onclick="window.location.href='/AdminLogin'" class="btn btn-warning" id="login"><i class="fa-regular fa-circle-user"></i> Admin</button>
+        </div>
+    </nav>
+
+    <div id="stbt">
+        <button type="button" onclick="window.location.href='/state/AP_state'" class="btn btn-outline-warning">AP</button>
+        <button type="button" onclick="window.location.href='/state/AS_state'" class="btn btn-outline-warning">AS</button>
+        <button type="button" onclick="window.location.href='/state/BR_state'" class="btn btn-outline-warning">BR</button>
+        <button type="button" onclick="window.location.href='/state/CG_state'" class="btn btn-outline-warning">CG</button>
+        <button type="button" onclick="window.location.href='/state/DL_state'" class="btn btn-outline-warning">DL</button>
+        <button type="button" onclick="window.location.href='/state/GJ_state'" class="btn btn-outline-warning">GJ</button>
+        <button type="button" onclick="window.location.href='/state/HP_state'" class="btn btn-outline-warning">HP</button>
+        <button type="button" onclick="window.location.href='/state/HR_state'" class="btn btn-outline-warning">HR</button>
+        <button type="button" onclick="window.location.href='/state/JH_state'" class="btn btn-outline-warning">JH</button>
+        <button type="button" onclick="window.location.href='/state/KA_state'" class="btn btn-outline-warning">KA</button>
+        <button type="button" onclick="window.location.href='/state/KL_state'" class="btn btn-outline-warning">KL</button>
+        <button type="button" onclick="window.location.href='/state/MH_state'" class="btn btn-outline-warning">MH</button>
+        <button type="button" onclick="window.location.href='/state/MP_state'" class="btn btn-outline-warning">MP</button>
+        <button type="button" onclick="window.location.href='/state/OD_state'" class="btn btn-outline-warning">OD</button>
+        <button type="button" onclick="window.location.href='/state/PB_state'" class="btn btn-outline-warning">PB</button>
+        <button type="button" onclick="window.location.href='/state/RJ_state'" class="btn btn-outline-warning">RJ</button>
+        <button type="button" onclick="window.location.href='/state/TN_state'" class="btn btn-outline-warning">TN</button>
+        <button type="button" onclick="window.location.href='/state/TS_state'" class="btn btn-outline-warning">TS</button>
+        <button type="button" onclick="window.location.href='/state/UK_state'" class="btn btn-outline-warning">UK</button>
+        <button type="button" onclick="window.location.href='/state/UP_state'" class="btn btn-outline-warning">UP</button>
+        <button type="button" onclick="window.location.href='/state/WB_state'" class="btn btn-outline-warning">WB</button>
+    </div>
+    
+    <div id="jbt">
+        <button type="button" onclick="window.location.href='/jobs/All_India_Govt_job'" class="btn btn-outline-warning">All India Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/State_Govt_Job'" class="btn btn-outline-warning">State Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Bank_Job'" class="btn btn-outline-warning">Bank Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Teaching_Job'" class="btn btn-outline-warning">Teaching Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Engineering_Job'" class="btn btn-outline-warning">Engineering Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
+    </div>
+<div class="contfather">
+    <div class="container0">
+        <div class="row2">
+            <div class="column0">
+                <h2>Notifications</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Latestnotification'">Latest Notifications</a></li>
+                    <li><a onclick="window.location.href='/Upcomingnotification'">Upcoming Notifications</a></li>
+                    <li><a onclick="window.location.href='/Notificationstatus'">Notification Status</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Latest Announcements</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Cutoffmarks'">Cutoff Marks</a></li>
+                    <li><a onclick="window.location.href='/Interviewresults'">Interview Results</a></li>
+                    <li><a onclick="window.location.href='/Admitcard'">Admit Card</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Others</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Eligibility'">Eligibility</a></li>
+                    <li><a onclick="window.location.href='/Selectionprocess'">Selection Process</a></li>
+                </ul>
+            </div>
+        </div>
+
+                <div class="container" id="co">
+                    <div class="header">Selection Process</div>
+                </div>
+            </div>
+        
+            <div class="grid-container">
+                <div class="grid-item item1">IBPS  PO Selection Process</div>
+                <div class="grid-item item2">UPSC   CDS (I) Selection Process</div>
+                <div class="grid-item item3">UPSC   NDA (I) Selection Process</div>
+                <div class="grid-item item4">UPSC CGS Selection Process</div>
+            </div>
+                <div class="grid-container2">
+                <div class="grid-item item5">SSC  Constable Selection Process</div>
+               <div class="grid-item item6">UPSC   ESE Selection Process</div>
+               <div class="grid-item item7">IBPS  PO Selection Process</div>
+               <div class="grid-item item8">RRB    JE Selection Process</div>
+            </div>
+          
+            <div class="grid-container3">
+              <div class="grid-item2 item9">SSC   MTS Selection Process</div>
+            </div>
+     
+        </div>
+        <br>
+
+        <h1 id="tbh1">Other Govt Finance</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>Apprentice Development Officers</td>
+                    <td>LIC</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>Assistant Administrative Officers</td>
+                    <td>LIC</td>
+                </tr>
+                <tr>
+                    <td>24/10/2017</td>
+                    <td>Asst</td>
+                    <td>RBI</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/05/2012</td>
+                    <td>Direct Sales Executives</td>
+                    <td>LIC</td>
+                </tr>
+            </tbody>
+        </table>
+    <br>
+        <h1 id="tbh1">Banks</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>19/01/2025</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/01/2025</td>
+                    <td>IDBI Bank</td>
+                    <td>Assistant Managers</td>
+                </tr>
+                <tr>
+                    <td>19/01/2025</td>
+                    <td>IDBI Bank</td>
+                    <td>Executives</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/01/2025</td>
+                    <td>IOB</td>
+                    <td>Specialist Officers</td>
+                </tr>
+                <tr>
+                    <td>19/01/2025</td>
+                    <td>IBPS</td>
+                    <td>Specialist Officers</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/01/2025</td>
+                    <td>SBI</td>
+                    <td>Clerks</td>
+                </tr>
+                <tr>
+                    <td>01/08/2024</td>
+                    <td>IBPS</td>
+                    <td>Specialist Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/08/2024</td>
+                    <td>IBPS</td>
+                    <td>Specialist Officer/SPL-XIV</td>
+                </tr>
+                <tr>
+                    <td>01/08/2024</td>
+                    <td>IBPS</td>
+                    <td>PO/ MT</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/07/2024</td>
+                    <td>IBPS</td>
+                    <td>CRP PO/ MT-XIV</td>
+                </tr>
+                <tr>
+                    <td>02/07/2024</td>
+                    <td>IBPS</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/11/2023</td>
+                    <td>SBI</td>
+                    <td>CBO</td>
+                </tr>
+                <tr>
+                    <td>17/11/2023</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/11/2023</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr>
+                    <td>07/09/2023</td>
+                    <td>SBI</td>
+                    <td>PO</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">UPSC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>UPSC – CDS (I) Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>UPSC – CDS Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>UPSC – CDS (II) Exam 2024</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>UPSC – CDS (II) Exam 2020</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>UPSC – NDA & NA I 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>UPSC – NDA Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>UPSC – NDA & NA (II) 2020</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>UPSC – NDA & NA (II) 2024</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>18/09/2024</td>
+                    <td>UPSC – Engineering Service Exam 2021</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>18/09/2024</td>
+                    <td>UPSC – Engineering Service Exam 2024</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>18/09/2024</td>
+                    <td>UPSC – ESE</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>18/09/2024</td>
+                    <td>UPSC – Engineering Service Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>06/09/2024</td>
+                    <td>UPSC – CGS Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2024</td>
+                    <td>UPSC – CPF (AC) Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>UPSC – CAPF (ACs) Exam 2020</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>UPSC – CAPF (ACs) Exam 2021</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>05/03/2021</td>
+                    <td>UPSC – Civil Service (Pre) Exam 2021</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">SSC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>SSC – CDS (I) Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>SSC – CDS Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>SSC – CDS (II) Exam 2024</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>SSC – CDS (II) Exam 2020</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>SSC – NDA & NA I 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>SSC – NDA Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>SSC – NDA & NA (II) 2020</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>SSC – NDA & NA (II) 2024</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>18/09/2024</td>
+                    <td>SSC – Engineering Service Exam 2021</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>18/09/2024</td>
+                    <td>SSC – Engineering Service Exam 2024</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>18/09/2024</td>
+                    <td>SSC – ESE</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>18/09/2024</td>
+                    <td>SSC – Engineering Service Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>06/09/2024</td>
+                    <td>SSC – CGS Exam 2025</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2024</td>
+                    <td>SSC – CPF (AC) Exam</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>SSC – CAPF (ACs) Exam 2020</td>
+                    <td> </td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>SSC – CAPF (ACs) Exam 2021</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>05/03/2021</td>
+                    <td>SSC – Civil Service (Pre) Exam 2021</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Andaman and Nicobar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+    
+        <h1 id="tbh1">Andhra Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>03/07/2024</td>
+                    <td>School Education Dept, AP</td>
+                    <td>APTET Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/12/2023</td>
+                    <td>APPSC</td>
+                    <td>Group – I Services</td>
+                </tr>
+                <tr>
+                    <td>11/12/2023</td>
+                    <td>APPSC</td>
+                    <td>Group – I</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/12/2023</td>
+                    <td>APPSC</td>
+                    <td>Group II Services</td>
+                </tr>
+                <tr>
+                    <td>08/12/2023</td>
+                    <td>APPSC</td>
+                    <td>Group – II</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>Andhra Pradesh Police Department</td>
+                    <td>Police Constable</td>
+                </tr>
+                <tr>
+                    <td>31/12/2018</td>
+                    <td>APPSC</td>
+                    <td>Panchayat Secretary</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/11/2018</td>
+                    <td>Andhra Pradesh Police Department</td>
+                    <td>Police Sub Inspector</td>
+                </tr>
+                <tr>
+                    <td>29/10/2018</td>
+                    <td>Commissioner and Director of School Education, AP</td>
+                    <td>School Asst, SGT, LP, PET</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/10/2018</td>
+                    <td>APTET</td>
+                    <td>TET</td>
+                </tr>
+                <tr>
+                    <td>29/10/2018</td>
+                    <td>DSC</td>
+                    <td>SGT, School Assistant, LP, PET</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/02/2014</td>
+                    <td>APPSC</td>
+                    <td>Group – IV</td>
+                </tr>
+                <tr>
+                    <td>08/02/2014</td>
+                    <td>APPSC</td>
+                    <td>Group – IV</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+   
+    
+        <h1 id="tbh1">Arunachal Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>23/04/2014 </td>
+                    <td>Arunachal Pradesh Police </td>
+                    <td>Constable </td>
+                </tr>
+                <tr id="pop">
+                    <td>23/04/2014 </td>
+                    <td>Arunachal Pradesh Police </td>
+                    <td>Sub Inspector </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Other All India Exams</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>20/01/2025</td>
+                    <td>RRCAT</td>
+                    <td>Stipendiary Trainee Category – I & II (Medium English)</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/01/2025</td>
+                    <td>RRCAT</td>
+                    <td>Stipendiary Trainee Category – I & II (Medium Hindi)</td>
+                </tr>
+                <tr>
+                    <td>20/01/2025</td>
+                    <td>Mazagon Dock Shipbuilders Limited</td>
+                    <td>Senior Engineer</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/11/2023</td>
+                    <td>IB</td>
+                    <td>ACIO</td>
+                </tr>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>BSF</td>
+                    <td>ASI (RM), HC(RO)</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/10/2016</td>
+                    <td>Indian Army</td>
+                    <td>Technical Entry Scheme (TES)</td>
+                </tr>
+                <tr>
+                    <td>07/07/2015</td>
+                    <td>Indian Army</td>
+                    <td>NCC Special Entry Scheme</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/05/2013</td>
+                    <td>DRDO (CEPTAM)</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                </tr>
+                <tr>
+                    <td>15/05/2013</td>
+                    <td>Indian Army</td>
+                    <td>Technical Graduate Course (TGC)</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/09/2012</td>
+                    <td>Indian Army</td>
+                    <td>Havildar Education in Group ‘X’ & Group ‘Y’</td>
+                </tr>
+                <tr>
+                    <td>29/06/2012</td>
+                    <td>Indian Navy</td>
+                    <td>SSC Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/06/2012</td>
+                    <td>CISF</td>
+                    <td>Constable (Fire)</td>
+                </tr>
+                <tr>
+                    <td>22/06/2012</td>
+                    <td>CISF</td>
+                    <td>Constable (Tradesmen)</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Assam</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/05/2014</td>
+                    <td>Gauhati High Court</td>
+                    <td>Programmer</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/04/2014</td>
+                    <td>Assam PSC</td>
+                    <td>Combined Competitive Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Defence</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/12/2020</td>
+                    <td>Indian Air Force</td>
+                    <td>AFCAT</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Bihar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Chandigarh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Railways</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>31/07/2024</td>
+                    <td>RRB</td>
+                    <td>JE, DMS, CMA & Other (CEN No. 03/2024)</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/10/2012</td>
+                    <td>RRC Kolkata (South Eastern Railway)</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>09/10/2012</td>
+                    <td>RRC Western Railway</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/09/2012</td>
+                    <td>RRC Guwahati</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>14/09/2012</td>
+                    <td>RRC Jaipur</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/09/2012</td>
+                    <td>RRC Delhi</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>28/08/2012</td>
+                    <td>RRC Bilaspur</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/08/2012</td>
+                    <td>RRC Bhubaneswar</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>28/08/2012</td>
+                    <td>RRC Hubli</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/08/2012</td>
+                    <td>RRC Hajipur</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>27/08/2012</td>
+                    <td>RRC Mumbai</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/08/2012</td>
+                    <td>RRC Allahabad</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>27/08/2012</td>
+                    <td>RRC Chennai</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/08/2012</td>
+                    <td>RRC Kolkata</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>27/08/2012</td>
+                    <td>RRC Gorakhpur</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/08/2012</td>
+                    <td>RRC Jabalpur</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>25/08/2012</td>
+                    <td>RRC Secunderabad</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/06/2012</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Chhattisgarh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> 24/12/2019</td>
+                    <td>CGPSC </td>
+                    <td>State Service Exam </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Delhi</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>10/02/2025 </td>
+                    <td>UPSC</td>
+                    <td>Civil Services Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Goa</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Gujarat</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Haryana</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>05/03/2021</td>
+                    <td>Haryana Public Service Commission</td>
+                    <td>Haryana Civil Services & Other Allied Service Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/01/2021</td>
+                    <td>Haryana Police</td>
+                    <td>Constable (Male & Female)</td>
+                </tr>
+                <tr>
+                    <td>10/10/2019	</td>
+                    <td>BSE, Haryana</td>
+                    <td>Haryana Teacher Eligibility Test (HTET)</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+
+        <h1 id="tbh1">Dadra and Nagar Haveli and Daman and Diu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+
+        <h1 id="tbh1">Himachal Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>07/02/2020</td>
+                    <td>HPPSC</td>
+                    <td>HP Administrative Combined Competitive Examination (HPAS)</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/04/2014</td>
+                    <td>HPPSC</td>
+                    <td>Naib Tehsildar</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Jammu and Kashmir</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>JK Police</td>
+                    <td>Constable</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/04/2014</td>
+                    <td>JKPSC</td>
+                    <td>Combined Competitive Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Jharkhand</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>23/05/2014</td>
+                    <td>JPSC</td>
+                    <td>Civil Services Combined Competitive Exam 2021</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Karnataka</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Kerala</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Lakshadweep</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Madhya Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>14/12/2017</td>
+                    <td>MPPSC</td>
+                    <td>State Services Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/05/2013</td>
+                    <td>MP Professional Examination Board</td>
+                    <td>Staff Nurse</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        
+        <h1 id="tbh1">Maharashtra</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>29/04/2014</td>
+                    <td>Maharashtra Police</td>
+                    <td>Sub Inspector</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/04/2014</td>
+                    <td>MPSC</td>
+                    <td>State Service Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Manipur</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>25/04/2014</td>
+                    <td>Manipur PSC</td>
+                    <td>Manipur Civil Services Combined Competitive Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Meghalaya</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>03/05/2014</td>
+                    <td>Meghalaya PSC</td>
+                    <td>Meghalaya Police Service Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/05/2014</td>
+                    <td>Meghalaya Police</td>
+                    <td>Sub Inspector</td>
+                </tr>
+                <tr>
+                    <td>30/04/2014</td>
+                    <td>Meghalaya Police</td>
+                    <td>Constable</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Ladakh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Mizoram</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Nagaland</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>03/05/2014 </td>
+                    <td>Nagaland PSC </td>
+                    <td>Nagaland Civil Service Exam </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Odisha</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>28/11/2018</td>
+                    <td>OPSC</td>
+                    <td>Assistant Section Officer </td>
+                </tr>
+                <tr id="pop">
+                    <td>29/11/2017 </td>
+                    <td>OPSC </td>
+                    <td> Odisha Civil Services Exam</td>
+                </tr>
+                <tr>
+                    <td>25/02/2014 </td>
+                    <td> OPSC</td>
+                    <td>Jr Lecturer </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+        
+        <h1 id="tbh1">Puducherry</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Punjab</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>Punjab Police Department</td>
+                    <td>Constable (Male & Female)</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/06/2020</td>
+                    <td>PPSC</td>
+                    <td>Punjab State Civil Services Combined Competitive Exam 2020 </td>
+                </tr>
+                <tr>
+                    <td>08/06/2020 </td>
+                    <td>PPSC</td>
+                    <td>Punjab Civil Service Combined Competitive Exam </td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2014</td>
+                    <td>Punjab Police Department</td>
+                    <td>Sub Inspector (Male & Female) </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Rajasthan</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>Rajasthan Police</td>
+                    <td>Constable</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/05/2014</td>
+                    <td>RPSC</td>
+                    <td> Lower Divisional Clerk Competitive Exam</td>
+                </tr>
+                <tr>
+                    <td>28/04/2014</td>
+                    <td>RPSC</td>
+                    <td>Physical Training Instructor Competitive Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/04/2014</td>
+                    <td>RPSC</td>
+                    <td>RAS and RTS Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Sikkim</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Tamil Nadu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>TRB</td>
+                    <td>Post Graduate Assistants/ Physical Education Directors</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/02/2020</td>
+                    <td>TNPSC</td>
+                    <td>Group I</td>
+                </tr>
+                <tr>
+                    <td>07/02/2020</td>
+                    <td>TNPSC</td>
+                    <td>Group I</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/06/2019</td>
+                    <td>TNPSC</td>
+                    <td>Group IV</td>
+                </tr>
+                <tr>
+                    <td>22/06/2019</td>
+                    <td>TNPSC</td>
+                    <td>Village Administration Officers</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/06/2019</td>
+                    <td>TNPSC</td>
+                    <td>Group IV</td>
+                </tr>
+                <tr>
+                    <td>14/10/2015</td>
+                    <td>TNPSC</td>
+                    <td>Group II</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/04/2014</td>
+                    <td>TNPSC</td>
+                    <td>Combined Engineering Services Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+
+        <h1 id="tbh1">Telangana</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>Telangana Police</td>
+                    <td>Sub Inspector</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>Telangana Police</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>TSSPDCL</td>
+                    <td>Assistant Engineer</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>TSNPDCL</td>
+                    <td>Assistant Engineer</td>
+                </tr>
+                <tr>
+                    <td>09/07/2022</td>
+                    <td>TSTRANSCO</td>
+                    <td>Assistant Engineer</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>TSGENCO</td>
+                    <td>Assistant Engineer</td>
+                </tr>
+                <tr>
+                    <td>01/01/2016</td>
+                    <td>TSPSC</td>
+                    <td>Group 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/08/2015</td>
+                    <td>TSPSC</td>
+                    <td>Assistant Engineer</td>
+                </tr>
+                <tr>
+                    <td>20/08/2015</td>
+                    <td>TSPSC</td>
+                    <td>Assistant Executive Engineer</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Tripura</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>08/05/2014</td>
+                    <td>Tripura PSC</td>
+                    <td>Sub Inspector</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/05/2014</td>
+                    <td>Tripura PSC</td>
+                    <td>Junior Engineer, TES Grade V and Jr Engineer Grade I & II Exam</td>
+                </tr>
+                <tr>
+                    <td>03/05/2014</td>
+                    <td>Tripura PSC</td>
+                    <td>Tripura Civil Service Gr-II & Tripura Police Service Gr-II Exam</td>
+                </tr>
+
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">Uttar Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>22/02/2023</td>
+                    <td>UPPSC</td>
+                    <td>Combined State/ Upper Subordinate Services Exam</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/07/2022</td>
+                    <td>UP Police</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>05/04/2014</td>
+                    <td>UPPSC</td>
+                    <td>Combined Lower Subordinate Services Exam</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+
+        <h1 id="tbh1">Uttarakhand</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">West Bengal</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                     <th>Exam Name</th>
+                </tr>
+        
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>28/12/2024 </td>
+                    <td>WBPSC </td>
+                    <td> Civil Service (Executive) Exam (Advt No. 22/2019)</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/11/2019 </td>
+                    <td>WBPSC </td>
+                    <td>WB Civil Service Executive Exam </td>
+                </tr>
+                <tr>
+                    <td>12/08/2019 </td>
+                    <td> WB Police</td>
+                    <td>Sub Inspector </td>
+                </tr>
+                <tr id="pop">
+                    <td>12/08/2019 </td>
+                    <td>West Bengal Police </td>
+                    <td> WB Sub Inspector/Lady Sub Inspector</td>
+                </tr>
+                <tr>
+                    <td>13/03/2014 </td>
+                    <td>West Bengal Police</td>
+                    <td>Police Constable </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+
+    <footer>
+        <p style="color: red;">Notice: Always type .Com after DreamJob. Beware of duplicate websites with DreamJob name. DreamJob.Com is the ONLY Official website of DreamJob.Com</p>
+        <p>DreamJob.Com provides free job alert service to job seekers in India on latest government jobs, on study material and on video lessons with online test. To get free job alert daily subscribe to our email job alert services.</p>
+        <a onclick="window.location.href='/ContactUs'">Contact Us</a>
+        <p>Copyright © 2024 DreamJob.Com All Rights Reserved.</p>
+    </footer>
+          
+        <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

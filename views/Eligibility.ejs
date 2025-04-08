@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamJob.com</title>
+    <link rel="stylesheet" href="Eligibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h3>DreamJob.com</h3>
+        </div>
+        <div class="home-btn">
+            <button type="button" onclick="window.location.href='/'" class="btn btn-warning" id="hh"><i class="fa-solid fa-house"></i> Home</button>
+            <button type="button" onclick="window.location.href='/ContactUs'" class="btn btn-warning" id="dd"> Contact Us</button>            
+        </div>   
+    
+        <div class="navbar-search">
+            <form action="/search" method="GET" class="navbar-search">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." required>
+                <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+            </form>
+            <button type="button" onclick="window.location.href='/UserLogin'" class="btn btn-warning" id="signup"><i class="fa-regular fa-circle-user"></i> User</button>
+            <button type="button" onclick="window.location.href='/AdminLogin'" class="btn btn-warning" id="login"><i class="fa-regular fa-circle-user"></i> Admin</button>
+        </div>
+    </nav>
+
+    <div id="stbt">
+        <button type="button" onclick="window.location.href='/state/AP_state'" class="btn btn-outline-warning">AP</button>
+        <button type="button" onclick="window.location.href='/state/AS_state'" class="btn btn-outline-warning">AS</button>
+        <button type="button" onclick="window.location.href='/state/BR_state'" class="btn btn-outline-warning">BR</button>
+        <button type="button" onclick="window.location.href='/state/CG_state'" class="btn btn-outline-warning">CG</button>
+        <button type="button" onclick="window.location.href='/state/DL_state'" class="btn btn-outline-warning">DL</button>
+        <button type="button" onclick="window.location.href='/state/GJ_state'" class="btn btn-outline-warning">GJ</button>
+        <button type="button" onclick="window.location.href='/state/HP_state'" class="btn btn-outline-warning">HP</button>
+        <button type="button" onclick="window.location.href='/state/HR_state'" class="btn btn-outline-warning">HR</button>
+        <button type="button" onclick="window.location.href='/state/JH_state'" class="btn btn-outline-warning">JH</button>
+        <button type="button" onclick="window.location.href='/state/KA_state'" class="btn btn-outline-warning">KA</button>
+        <button type="button" onclick="window.location.href='/state/KL_state'" class="btn btn-outline-warning">KL</button>
+        <button type="button" onclick="window.location.href='/state/MH_state'" class="btn btn-outline-warning">MH</button>
+        <button type="button" onclick="window.location.href='/state/MP_state'" class="btn btn-outline-warning">MP</button>
+        <button type="button" onclick="window.location.href='/state/OD_state'" class="btn btn-outline-warning">OD</button>
+        <button type="button" onclick="window.location.href='/state/PB_state'" class="btn btn-outline-warning">PB</button>
+        <button type="button" onclick="window.location.href='/state/RJ_state'" class="btn btn-outline-warning">RJ</button>
+        <button type="button" onclick="window.location.href='/state/TN_state'" class="btn btn-outline-warning">TN</button>
+        <button type="button" onclick="window.location.href='/state/TS_state'" class="btn btn-outline-warning">TS</button>
+        <button type="button" onclick="window.location.href='/state/UK_state'" class="btn btn-outline-warning">UK</button>
+        <button type="button" onclick="window.location.href='/state/UP_state'" class="btn btn-outline-warning">UP</button>
+        <button type="button" onclick="window.location.href='/state/WB_state'" class="btn btn-outline-warning">WB</button>
+    </div>
+    
+    <div id="jbt">
+        <button type="button" onclick="window.location.href='/jobs/All_India_Govt_job'" class="btn btn-outline-warning">All India Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/State_Govt_Job'" class="btn btn-outline-warning">State Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Bank_Job'" class="btn btn-outline-warning">Bank Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Teaching_Job'" class="btn btn-outline-warning">Teaching Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Engineering_Job'" class="btn btn-outline-warning">Engineering Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
+    </div>
+<div class="contfather">
+    <div class="container0">
+        <div class="row2">
+            <div class="column0">
+                <h2>Notifications</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Latestnotification'">Latest Notifications</a></li>
+                    <li><a onclick="window.location.href='/Upcomingnotification'">Upcoming Notifications</a></li>
+                    <li><a onclick="window.location.href='/Notificationstatus'">Notification Status</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Latest Announcements</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Cutoffmarks'">Cutoff Marks</a></li>
+                    <li><a onclick="window.location.href='/Interviewresults'">Interview Results</a></li>
+                    <li><a onclick="window.location.href='/Admitcard'">Admit Card</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Others</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Eligibility'">Eligibility</a></li>
+                    <li><a onclick="window.location.href='/Selectionprocess'">Selection Process</a></li>
+                </ul>
+            </div>
+        </div>
+
+                <div class="container" id="co">
+                    <div class="header">Eligibility</div>
+                </div>
+            </div>
+    </div>
+        
+        <div class="grid-container">
+            <div class="grid-item item1">SSC CGL Eligibility</div>
+            <div class="grid-item item2">SSC Constable Eligibility</div>
+            <div class="grid-item item3">UPSC CGS Eligibility</div>
+            <div class="grid-item item4">IBPS Clerk Eligibility</div>
+        </div>
+            <div class="grid-container">
+            <div class="grid-item item5">UPSC NDA & NA Eligibility</div>
+           <div class="grid-item item6">IBPS PO/MTEligibility</div>
+           <div class="grid-item item7">UPSC CDS Eligibility</div>
+           <div class="grid-item item8">UPSC ESE Eligibility</div>
+        </div>
+      
+        <div class="grid-container2">
+          <div class="grid-item2 item9">SSC MTS Eligibility</div>
+        </div>
+    
+        <h1 id="tbh1">Banks</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Name Of The Bank</th>
+                    <th>Exam Name</th>
+                    <th>More Information</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                 <tr>
+                     <td>14/03/2025</td>
+                     <td>Karnataka Bank</td>
+                     <td>PO Result 2025</td>
+                     <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr id="pop">
+                       <td>28/02/2025</td>
+                       <td>Karnataka Bank</td>
+                       <td>CSA Result 2025</td>
+                       <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr>
+                    <td>09/02/2024</td>
+                    <td>UCO Bank</td>
+                    <td>Various Vacancy 2023 Interview Result</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2024</td>
+                    <td>IDBI Bank</td>
+                    <td>SO (Advt No 11/2023-24) 2023 Interview Result</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                   <td>23/01/2024</td>
+                   <td>IDBI Bank</td>
+                   <td>Specialist Cadre Officer 2023 Interview Result</td>
+                  <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+    
+           </tbody>
+     </table>
+     <br>
+    
+     <h1 id="tbh1">Other Govt Financial Institute</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Exam Name</th>
+                    <th>More Information</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                 <tr>
+                     <td>24/12/2019</td>
+                     <td>RBI</td>
+                     <td>Asst</td>
+                     <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr id="pop">
+                       <td></td>
+                       <td>LIC</td>
+                       <td>Assistant Administrative Officers</td>
+                       <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr>
+                    <td></td>
+                    <td>LIC</td>
+                    <td>Apprentice Development Officers</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td></td>
+                    <td>LIC</td>
+                    <td>Direct Sales Executives</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+           </tbody>
+        </table>
+     <br>
+    
+            <h1 id="tbh1">SSC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Exam Name</th>
+                    <th>More Information</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                 <tr>
+                     <td>14/03/2025</td>
+                     <td>SSC - Constable (GD) 2025</td>
+                     <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr id="pop">
+                       <td>28/02/2025</td>
+                       <td>SSC - Stenographer</td>
+                       <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr>
+                    <td>09/02/2024</td>
+                    <td>Various Vacancy 2023 Interview Result</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2024</td>
+                    <td>SO (Advt No 11/2023-24) 2023 Interview Result</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                   <td>23/01/2024</td>
+                   <td>Specialist Cadre Officer 2023 Interview Result</td>
+                  <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2024</td>
+                    <td>SO (Advt No 11/2023-24) 2023 Interview Result</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                    <td>23/01/2024</td>
+                    <td>Specialist Cadre Officer 2023 Interview Result</td>
+                   <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+    
+           </tbody>
+        </table>
+     <br>
+    
+     
+     <h1 id="tbh1">UPSC</h1>
+     <table>
+         <thead>
+             <tr>
+                 <th>Post Date</th>
+                 <th>Exam Name</th>
+                 <th>More Information</th>
+             </tr>
+         </thead>
+    
+         <tbody>
+              <tr>
+                  <td>14/03/2025</td>
+                  <td>UPSC - Civil Services Exam 2025</td>
+                  <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+              <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>UPSC - IFS Exam 2025</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+              <tr>
+                 <td>09/02/2024</td>
+                 <td>UPSC - CDS (I) Exam 2025</td>
+                 <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr id="pop">
+                 <td>23/01/2024</td>
+                 <td>UPSC - NDA & NA (I) 2025</td>
+                 <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr>
+                <td>23/01/2024</td>
+                <td>UPSC - Engineering Service Exam 2025</td>
+               <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr id="pop">
+                 <td>23/01/2024</td>
+                 <td>UPSC - CGS Exam 2025</td>
+                 <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr>
+                 <td>23/01/2024</td>
+                 <td>UPSC - CAPF (ACs) Exam 2021</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+              <tr id="pop">
+                <td>23/01/2024</td>
+                <td>UPSC - CGS Exam 2025</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+              <tr>
+                <td>23/01/2024</td>
+                <td>UPSC - CAPF (ACs) Exam 2021</td>
+               <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr id="pop">
+                <td>23/01/2024</td>
+                <td>UPSC - CGS Exam 2025</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+              <tr>
+                <td>23/01/2024</td>
+                <td>UPSC - CAPF (ACs) Exam 2021</td>
+               <td><a class="more-info" href="#">Get Details</a></td>
+             </tr>
+             <tr id="pop">
+                <td>23/01/2024</td>
+                <td>UPSC - CGS Exam 2025</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+              </tr>
+          </tbody>
+      </table>
+    <br>
+    
+    
+    
+     <h1 id="tbh1">Other All India</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Exam Name</th>
+                    <th>More Information</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                 <tr>
+                     <td>06/09/2019</td>
+                     <td>CBSE</td>
+                     <td>CTET 2019</td>
+                     <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr id="pop">
+                       <td></td>
+                       <td>KVS</td>
+                       <td>TGT, PGT, PRT</td>
+                       <td><a class="more-info" href="#">Get Details</a></td>
+                 </tr>
+                 <tr>
+                    <td></td>
+                    <td>DRDO (CEPTAM)</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Direct Sales Executives</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Direct Sales Executives</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Direct Sales Executives</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr id="pop">
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Direct Sales Executives</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Indian Army</td>
+                    <td>Sr Technical Asst, Technician, Administrative & Allied Cadre</td>
+                    <td><a class="more-info" href="#">Get Details</a></td>
+                </tr>
+           </tbody>
+        </table>
+     <br>
+    
+     <h1 id="tbh1">Railways</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr> 
+             <td>31/12/2018</td>
+             <td>RRB</td>
+             <td>JE, CMA & DMS</td> 
+             <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td>RRB</td>
+                <td> JR,Sr Section Engineer, Depot Material Superintendent, Chief Depot Material Superintendent, Chemical & Metallurgical Asst Posts</td> 
+                <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td>RRB</td>
+                <td> JR,Sr Section Engineer, Depot Material Superintendent, Chief Depot Material Superintendent, Chemical & Metallurgical Asst Posts</td> 
+                <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td>RRB</td>
+                <td> JR,Sr Section Engineer, Depot Material Superintendent, Chief Depot Material Superintendent, Chemical & Metallurgical Asst Posts</td> 
+                <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td>RRB</td>
+                <td> JR,Sr Section Engineer, Depot Material Superintendent, Chief Depot Material Superintendent, Chemical & Metallurgical Asst Posts</td> 
+                <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr> 
+                <td>31/12/2018</td>
+                <td>RRB</td>
+                <td>JE, CMA & DMS</td> 
+                <td><a class="more-info" href="#">Get Details</a></td> 
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>RRB</td>
+                <td>Technicians</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+        </tbody>
+      </table>
+    <br>
+    
+    <h1 id="tbh1">Andaman & Nicobar</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Andaman and Nicobar Police</td>
+                <td>Constable Driver (Executive)</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Andhra Pradesh</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>03/07/2024</td>
+                <td>Dept of School Education, AP</td>
+                <td>APTET Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td>14/01/2019</td>
+                <td>APPSC</td>
+                <td>Group I</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td>14/01/2019</td>
+                <td>APPSC</td>
+                <td>Group II</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td>31/12/2018</td>
+                <td>APPSC</td>
+                <td>Panchayat Secretary</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Andhra Pradesh School Education Department</td>
+                <td>Andhra Pradesh Teacher Eligibility Test</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Commissioner and Director of School Education, AP</td>
+                <td>School Assts, SGT, LP, PET</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Andhra Pradesh Police Department</td>
+                <td>Police Sub Inspector</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Andhra Pradesh Police Department</td>
+                <td>Police Constable</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>APPSC</td>
+                <td>Group IV</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>APTET</td>
+                <td>TET</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+    
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Arunachal Pradesh</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Arunachal Pradesh Police</td>
+                <td>Constable</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Arunachal Pradesh Police</td>
+                <td>Sub Inspector</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Arunachal Pradesh TET</td>
+                <td>TET</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Assam</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Assam TET</td>
+                <td>Teachers Eligibility Test</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Assam PSC</td>
+                <td>Combined Competitive Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Chhattisgarh</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>24/12/2019</td>
+                <td>CGPSC</td>
+                <td>State Service Exam (Prelims) 2019</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Goa</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Goa Police</td>
+                <td>Constable</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Haryana</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>10/10/2019</td>
+                <td>BSE, Haryana</td>
+                <td>Haryana Teacher Eligibility Test (HTET)</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td>19/11/2018</td>
+                <td>HSSC</td>
+                <td>Constable</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HPSC</td>
+                <td>Haryana Civil Services & Other Allied Service Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Himachal Pradesh</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>17/06/2020</td>
+                <td>HP Bose</td>
+                <td>HP Teacher Eligibility Test June 2020</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td>10/02/2020</td>
+                <td>HPPSC</td>
+                <td>HP Administrative Combined Competitive Examination (HPAS)</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HPPSC</td>
+                <td>Naib Tehsildar</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Jammu & Kashmir</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>JKPSC</td>
+                <td>Combined Competitive Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>JK Police</td>
+                <td>Constable</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Jharkhand</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>15/02/2021</td>
+                <td>JPSC</td>
+                <td>Civil Services Combined Competitive Exam 2021</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Karnataka</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Karnataka TET</td>
+                <td>Karnataka Teacher Eligibility Test (TET)</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Kerala</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Kerala PSC</td>
+                <td>Lower Division Clerk/ Village Assistant</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Kerala TET</td>
+                <td>Kerala Teacher Eligibility Test</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Madhya Pradesh</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>MPPSC</td>
+                <td>State Services Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Maharashtra</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Maharashtra Police</td>
+                <td>Sub Inspector</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Maharashtra TET</td>
+                <td>Maharashtra Teacher Eligibility Test</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>MPSC</td>
+                <td>State Service Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Manipur</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>Manipur PSC</td>
+                <td>Manipur Civil Services Combined Competitive Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>Manipur TET</td>
+                <td>Manipur Teacher Eligibility Test (TET)</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+    
+    <h1 id="tbh1">Meghalaya</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>Meghalaya PSC</td>
+            <td>Meghalaya Police Service Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Meghalaya Police</td>
+            <td>Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Meghalaya Police</td>
+            <td>Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <br>
+    
+    <h1 id="tbh1">Nagaland</h1>
+        <table>
+          <thead>
+             <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Exam Name</th>
+                <th>More Information</th>   
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td></td>
+                <td>NPSC</td>
+                <td>Combined Technical Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            <tr id="pop">
+                <td></td>
+                <td>NPSC</td>
+                <td>Nagaland Civil Service Exam</td>
+                <td><a class="more-info" href="#">Get Details</a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    <br>
+      
+    <h1 id="tbh1">Odisha</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>30/11/2018</td>
+            <td>OPSC</td>
+            <td>Assistant Section Officer</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>BSE, Odisha</td>
+            <td>Odisha Teacher Eligibility Test (OTET)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>OPSC</td>
+            <td>Odisha Civil Services Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <br> 
+    
+    <h1 id="tbh1">Punjab</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>06/06/2020</td>
+            <td>PPSC</td>
+            <td>Punjab State Civil Services Combined Competitive Exam, 2020</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>PPSC</td>
+            <td>Punjab Civil Service Combined Competitive Examination</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Dept of School Education, Punjab</td>
+            <td>Punjab State Teacher Eligibility Test (PSTET)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Punjab Police Department</td>
+            <td>Sub Inspector (Male & Female)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Punjab Police Department</td>
+            <td>Constable (Male & Female)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+    
+      </tbody>
+    </table>
+    <br> 
+    
+    <h1 id="tbh1">Rajasthan</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>RPSC</td>
+            <td>Physical Training Instructor Competitive Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>RPSC</td>
+            <td>RPSC I & II Grade Teacher</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>RPSC</td>
+            <td>Lower Divisional Clerk Competitive Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>RPSC</td>
+            <td>RAS and RTS Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Rajasthan Police</td>
+            <td>Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>RTET</td>
+            <td>Rajasthan Teacher Eligibility Test (RTET)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+    
+      </tbody>
+    </table>
+    <br> 
+    
+    <h1 id="tbh1">Sikkim</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>Sikkim Police</td>
+            <td>Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Sikkim Police</td>
+            <td>Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Sikkim PSC -</td>
+            <td>Asst Engineers and Junior Engineer</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Sikkim TET</td>
+            <td>Sikkim Teacher’s Eligibility Test</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <br> 
+    
+    <h1 id="tbh1">Tamil Nadu</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+    <tr>
+        <td>07/02/2020</td>
+        <td>TNPSC</td>
+        <td>Group I</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr id="pop">
+        <td>22/06/2019</td>
+        <td>TNPSC</td>
+        <td>Group IV</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr>
+        <td>22/06/2019</td>
+        <td>TNPSC</td>
+        <td>Group IV</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr id="pop">
+        <td></td>
+        <td>TNPSC</td>
+        <td>Combined Engineering Services Exam</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>TRB</td>
+        <td>Tamil Nadu Teacher Eligibility Test (TNTET)</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr id="pop">
+        <td></td>
+        <td>TRB</td>
+        <td>Post Graduate Assistants/ Physical Education Directors</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>TNPSC</td>
+        <td>Village Administrative Officer Exam</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr id="pop">
+        <td></td>
+        <td>TNPSC</td>
+        <td>Group I</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    <tr id="pop">
+        <td></td>
+        <td>TNPSC</td>
+        <td>Group II</td>
+        <td><a class="more-info" href="#">Get Details</a></td>
+    </tr>
+    </tbody>
+    </table>
+    
+    <h1 id="tbh1">Telangana</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>Telangana Police</td>
+            <td>Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Telangana Police</td>
+            <td>Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TSPSC</td>
+            <td>Group 2</td>
+            <td><a  class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>TSGENCO</td>
+            <td>Assistant Engineer</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TSTRANSCO</td>
+            <td>Assistant Engineer</td>
+            <td><a  class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>TSNPDCL</td>
+            <td>Assistant Engineer</td>
+            <td><a class="more-info"  href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TSSPDCL</td>
+            <td>Assistant Engineer</td>
+            <td><a  class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>TSPSC</td>
+            <td>Assistant Engineer</td>
+            <td><a  class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TSPSC</td>
+            <td>Assistant Executive Engineer</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <h1 id="tbh1">Tripura</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>Tripura Police</td>
+            <td>Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Tripura PSC</td>
+            <td>Junior Engineer, TES Grade V and Jr Engineer Grade I & II Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Tripura PSC</td>
+            <td>Tripura Civil Service Grade-II & Tripura Police Service Grade-II Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <h1 id="tbh1">Uttar Pradesh</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td>UPPSC</td>
+            <td>Combined State/ Upper Subordinate Services Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>UPPSC</td>
+            <td>Combined Lower Subordinate Services Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>UP Police</td>
+            <td>Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>UPTET</td>
+            <td>Uttar Pradesh Teacher Eligibility Test (UPTET)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        
+    </tbody>
+    </table>
+    
+    <h1 id="tbh1">West Bengal</h1>
+    <table>
+      <thead>
+         <tr>
+            <th>Post Date</th>
+            <th>Recruitment Board</th>
+            <th>Exam Name</th>
+            <th>More Information</th>   
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>11/11/2019</td>
+            <td>WBPSC</td>
+            <td>Civil Service (Executive) Exam (Advt No. 22/2019)</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td>12/08/2019</td>
+            <td>WB Police</td>
+            <td>Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>WBPSC</td>
+            <td>WB Civil Service (Executive) Exam</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr id="pop">
+            <td></td>
+            <td>Government of West Bengal, Department of Police</td>
+            <td>Police Constable</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Government of West Bengal, Department of Police</td>
+            <td>WB Sub Inspector/Lady Sub Inspector</td>
+            <td><a class="more-info" href="#">Get Details</a></td>
+        </tr>
+    </tbody>
+    </table>
+
+    <footer>
+        <p style="color: red;">Notice: Always type .Com after DreamJob. Beware of duplicate websites with DreamJob name. DreamJob.Com is the ONLY Official website of DreamJob.Com</p>
+        <p>DreamJob.Com provides free job alert service to job seekers in India on latest government jobs, on study material and on video lessons with online test. To get free job alert daily subscribe to our email job alert services.</p>
+        <a onclick="window.location.href='/ContactUs'">Contact Us</a>
+        <p>Copyright © 2024 DreamJob.Com All Rights Reserved.</p>
+    </footer>
+    
+    <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+</html>
+
+
+
+    

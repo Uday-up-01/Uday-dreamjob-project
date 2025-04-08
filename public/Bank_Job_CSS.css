@@ -116,22 +116,15 @@ body {
 
 #stbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
     text-decoration: none;
 }
+
 #jbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
-}
-
-#headname{
-    max-width: 800px;
-    margin: 10px auto;
-    text-align: center;
 }
 
 .container0 {
@@ -174,94 +167,117 @@ body {
     margin-left: 30px;
 }
 
-footer {
-    padding: 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-    margin-top: 20px;
+.container {
+    height: 610px;
+    width: 600px;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0,);
 }
 
-footer p {
-    margin: 10px 0;
-}
-
-footer a {
-    color: #2196F3;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-#banknav{
-    font-size: 35px;
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+.header {
+    background-color: #4b6cb7;
     color: white;
-    padding: 20px;
-    position: relative;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .grid-container {
     display: flex;
     justify-content: space-evenly;
-    gap: 5px;
-    padding: 8px;
-}
-.grid-item {
     padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
     color: white;
     font-size: 1.2em;
     text-align: center;
 }
+
+.grid-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid-item2 {
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.grid-container3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid-item3 {
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 .item1 { 
     background-color: #4CAF50; 
     height: 100px;
-    width: 480px;
-} 
+    width: 350px;
+}
+
 .item2 { 
     background-color: #FF5722;    
     height: 100px;
-    width: 480px; 
+    width: 350px; 
 }
+
 .item3 { 
     background-color: #2196F3;     
     height: 100px;
-    width: 480px;
-} 
+    width: 350px;
+}
+
 .item4 { 
     background-color: #FF9800;     
     height: 100px;
-    width: 480px;
+    width: 350px;
 } 
+
 .item5 { 
     background-color: #8BC34A;     
     height: 100px;
-    width: 480px;
+    width: 350px;
 } 
+
 .item6 { 
     background-color: #00BCD4;     
     height: 100px;
-    width: 480px;
-} 
+    width: 350px;
+}
+
 .item7 { 
     background-color: #F44336;     
     height: 100px;
-    width: 480px;
+    width: 350px;
 } 
+
 .item8 { 
     background-color: #9C27B0;     
     height: 100px;
-    width: 480px;
-} 
-.item9{
-    background-color: #F44336;
-    height: 100px;
-    width: 480px;
+    width: 350px;
 }
-#tb1{
+
+.item9 { 
+    background-color: #4a6cc3;     
+    height: 100px;
+    width: 350px;
+} 
+
+#tbh1 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -274,6 +290,7 @@ table {
 }
 
 th{
+    height: 70px;
     border: 1px solid #ddd;
     padding: 8px;
     background-color: #2196F3;
@@ -293,11 +310,22 @@ tr:hover {
     background-color: #ddd;
 }
 
-a {
-    color: #00f;
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #2196F3;
     text-decoration: none;
 }
 
-a:hover {
+footer a:hover {
     text-decoration: underline;
 }

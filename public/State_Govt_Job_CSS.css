@@ -116,7 +116,6 @@ body {
 
 #stbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
     text-decoration: none;
@@ -124,7 +123,6 @@ body {
 
 #jbt{
     height: 50px;
-    width: 1550px;
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -165,6 +163,69 @@ body {
     text-decoration: none;
 }
 
+#co{
+    margin-left: 30px;
+}
+
+.container {
+    height: 610px;
+    width: 600px;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0,);
+}
+
+.header {
+    background-color: #4b6cb7;
+    color: white;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#tbh1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 95%;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    border: 0.1px solid #ddd;
+}
+
+th{
+    height: 70px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #2196F3;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.th2{
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    color: #00f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 footer {
     padding: 20px;
     background-color: #f1f1f1;
@@ -183,40 +244,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-#lt-nav{
-    font-size: 35px;
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(90deg, #4b6cb7, #182848);
-    color: white;
-    padding: 20px;
-    position: relative;
-}
-
-#tb1{
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
-table {
-    width: 95%;
-    margin-left: 35px;
-    margin-bottom: 20px;
-    border: 0.1px solid #57d9eb;
-}
-
-th{
-    border: 1px solid #ddd;
-    padding: 8px;
-    background-color: #2196F3;
-    text-align: left;
-}
-
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
 }

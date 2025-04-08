@@ -115,20 +115,6 @@ body {
     background-color: #182848;
 }
 
-#mimi{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-}
-#lily{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 .container0 {
     display: flex;
     justify-content: space-evenly;
@@ -186,45 +172,6 @@ body {
     font-weight: bold;
 }
 
-#stbt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-}
-#ddt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-#ppt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-#jbt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-#kgt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-#ggt{
-    height: 50px;
-    width: 1550px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-
 #tbh1 {
     text-align: center;
     margin-bottom: 20px;
@@ -238,6 +185,7 @@ table {
 }
 
 th{
+    height: 70px;
     border: 1px solid #ddd;
     padding: 8px;
     background-color: #2196F3;
@@ -249,23 +197,13 @@ td {
     padding: 8px;
 }
 
-.pop{
+.th2{
     background-color: #f9f9f9;
 }
 
-tr:hover{
+tr:hover {
     background-color: #ddd;
 }
-
-.more-info{
-    color: #00f;
-    text-decoration: none;
-}
-
-.more-info:hover{
-    text-decoration: underline;
-}
-
 
 footer {
     padding: 20px;

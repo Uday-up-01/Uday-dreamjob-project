@@ -69,60 +69,71 @@ body {
     width: 900px; 
     background: white;
     padding: 30px;
-    margin-top: 50px;
+    margin-top: 40px;
     border-radius: 12px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border: 1px solid #ddd;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #2c3e50;
-    letter-spacing: 1px;
-}
-
-.container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 30px;
 }
 
-.column {
-    width: 95%;
+.notification-title {
+    margin-right: 650px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #222;
 }
 
-.column h2 {
-    background-color: #4b6cb7;
-    color: white;
-    padding: 10px;
-    text-align: center;
+.timeline {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    padding-left: 30px;
+    border-left: 2px solid #e0e0e0;
 }
 
-.column ul {
-    list-style-type: none;
-    padding: 0;
+.timeline-item {
+    margin-bottom: 24px;
+    position: relative;
 }
 
-.column li {
-    background-color: #f8f9fa;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 100%;
+    position: absolute;
+    left: -7px;
+    top: 5px;
 }
 
-.notificationlist {
-    position: relative;             
-    margin-bottom: 10px;               
+.timeline-content {
+    background: rgb(253, 253, 253);
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.notification-link {
-    position: absolute;          
-    right: 20px;
-    text-decoration: none;         
+.timeline-alert {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
 }
 
-.notification-link:hover {
-    text-decoration: underline;     
+.timeline-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.timeline-link:hover {
+    text-decoration: underline;
 }

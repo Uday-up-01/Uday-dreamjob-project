@@ -11,6 +11,7 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
+            <li><a href='/'><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a onclick="window.location.href='/Useraccount'" class="Account"> Account</a></li>
             <li><a onclick="window.location.href='/UserResetpassword'" class="edit-content"> Reset Password</a></li>
             <li><a onclick="window.location.href='/ContactUs'" class="update-content"> Contact Us</a></li>
@@ -27,18 +28,24 @@
     </nav>
 
     <div class="container">
-        <div class="column">
-            <h2>Notifications</h2>
-            <ul>
-                <% for(let Alert of Alertuser) { %>
-                <li class="notificationlist">
-                <%= Alert.Alert %>
-                <a href="<%= Alert.link %>" class="notification-link">More Detail</a>      
-                </li>
-                <% } %>
-            </ul>
-        </div>
+        <h2 class="notification-title">Latest Alerts
+            <div class="timeline">
+                <% Alertuser.forEach(alert => { %>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-alert"><%= alert.Alert %></h4>
+                            <a href="<%= alert.link %>" class="timeline-link" target="_blank">View More</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </h2>
+        
+
     </div>
+    
+
 
 
 </body>

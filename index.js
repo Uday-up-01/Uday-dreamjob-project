@@ -85,8 +85,7 @@ app.get('/search', (req, res) => {
 });
 
 app.get('/state/:stateCode', (req, res) => {
-    const fullCode = req.params.stateCode;
-    const stateCode = fullCode.replace('_state', '');
+    const stateCode = req.params.stateCode.replace('_state', '');
 
     const stateQuery = `SELECT * FROM states WHERE state_code = ?`;
     const homepageQuery = `SELECT title FROM ${stateCode}newupdates`;
@@ -195,7 +194,12 @@ app.post('/UserLogin', (req, res) => {
                 `);
             }
             req.session.user = results[0];
-            res.redirect('/User');
+            res.send(`
+                <script>
+                    alert("Welcome!");
+                    window.location.href = "/User";
+                </script>
+            `);
         }
     );
 });
@@ -271,7 +275,12 @@ app.post('/AdminLogin', (req, res) => {
                 `);
             }
             req.session.admin = results[0];
-            res.redirect('/Admin');
+            res.send(`
+                    <script>
+                        alert("Welcome!");
+                        window.location.href = "/Admin";
+                    </script>
+                `);
         }
     );
 });
