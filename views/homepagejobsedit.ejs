@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User</title>
+    <title>Edit Job</title>
     <link rel="stylesheet" href="/edituser.css">
 </head>
 <body>
     <div class="container">
-        <h2>Edit New job</h2>
+        <h2>Edit job</h2>
         
-        <form method="POST" action="/homepagejobs/<%= job.id %>?_method=PATCH">
+        <form method="POST" target = '_blank' action="/homepagejobs/<%= job.id %>?_method=PATCH">
             <input type="text" name="Editjob" value="<%= job.title %>">
             <button type="submit">Update</button>
         </form>

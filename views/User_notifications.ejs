@@ -30,7 +30,7 @@
     <div class="container">
         <h2 class="notification-title">Latest Alerts
             <div class="timeline">
-                <% Alertuser.forEach(alert => { %>
+                <% for (const alert of Alertuser) { %>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -38,7 +38,8 @@
                             <a href="<%= alert.link %>" class="timeline-link" target="_blank">View More</a>
                         </div>
                     </div>
-                <% }) %>
+                <% } %>
+                
             </div>
         </h2>
         

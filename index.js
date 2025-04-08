@@ -522,7 +522,7 @@ app.post('/homepageupdatesnew', (req, res) => {
     connection.query('INSERT INTO homepagenewupdates (id, title) VALUES (?, ?)', 
     [id, NewUpdate], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 
@@ -540,7 +540,7 @@ app.patch('/homepageupdateedit/:id', (req, res) => {
     const Editupdate = req.body.Editupdate;
     connection.query('UPDATE homepagenewupdates SET title = ? WHERE id = ?', [Editupdate, id], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 
@@ -564,7 +564,7 @@ app.post('/homepagegridnew', (req, res) => {
     connection.query('INSERT INTO homepagegridupdates (id, title) VALUES (?, ?)', 
     [id, NewGrid], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 
@@ -582,7 +582,7 @@ app.patch('/homepagegrid/:id', (req, res) => {
     const Editgrid = req.body.Editgrid;
     connection.query('UPDATE homepagegridupdates SET title = ? WHERE id = ?', [Editgrid, id], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 
@@ -606,7 +606,7 @@ app.post('/homepagejobsnew', (req, res) => {
     connection.query('INSERT INTO homepagejobnotifications (id, title) VALUES (?, ?)', 
     [id, Newjob], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 
@@ -624,7 +624,7 @@ app.patch('/homepagejobs/:id', (req, res) => {
     const Editjob = req.body.Editjob;
     connection.query('UPDATE homepagejobnotifications SET title = ? WHERE id = ?', [Editjob, id], (err) => {
         if (err) throw err;
-        res.redirect('/Admin_home');
+        res.redirect('/');
     });
 });
 

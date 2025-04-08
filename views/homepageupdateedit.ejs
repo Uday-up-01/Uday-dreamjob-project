@@ -10,7 +10,7 @@
     <div class="container">
         <h2>Edit New Update</h2>
         
-        <form method="POST" action="/homepageupdateedit/<%= update.id %>?_method=PATCH">
+        <form method="POST" target = '_blank' action="/homepageupdateedit/<%= update.id %>?_method=PATCH">
             <input type="text" name="Editupdate" value="<%= update.title %>">
             <button type="submit">Update</button>
         </form>
