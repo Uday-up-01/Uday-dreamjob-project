@@ -1,0 +1,4772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Defence Job</title>
+    <link rel="stylesheet" href="/Police_Defence_Job_CSS.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h3>DreamJob.com</h3>
+        </div>
+        <div class="home-btn">
+            <button type="button" onclick="window.location.href='/'" class="btn btn-warning" id="hh"><i class="fa-solid fa-house"></i> Home</button>
+            <button type="button" onclick="window.location.href='/ContactUs'" class="btn btn-warning" id="dd"> Contact Us</button>            
+        </div>   
+    
+        <div class="navbar-search">
+            <form action="/search" method="GET" class="navbar-search">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." required>
+                <button type="submit" class="btn btn-warning" id="searchbtn">Search</button>
+            </form>
+            <button type="button" onclick="window.location.href='/UserLogin'" class="btn btn-warning" id="signup"><i class="fa-regular fa-circle-user"></i> User</button>
+            <button type="button" onclick="window.location.href='/AdminLogin'" class="btn btn-warning" id="login"><i class="fa-regular fa-circle-user"></i> Admin</button>
+        </div>
+    </nav>
+
+    <div id="stbt">
+        <button type="button" onclick="window.location.href='/state/AP_state'" class="btn btn-outline-warning">AP</button>
+        <button type="button" onclick="window.location.href='/state/AS_state'" class="btn btn-outline-warning">AS</button>
+        <button type="button" onclick="window.location.href='/state/BR_state'" class="btn btn-outline-warning">BR</button>
+        <button type="button" onclick="window.location.href='/state/CG_state'" class="btn btn-outline-warning">CG</button>
+        <button type="button" onclick="window.location.href='/state/DL_state'" class="btn btn-outline-warning">DL</button>
+        <button type="button" onclick="window.location.href='/state/GJ_state'" class="btn btn-outline-warning">GJ</button>
+        <button type="button" onclick="window.location.href='/state/HP_state'" class="btn btn-outline-warning">HP</button>
+        <button type="button" onclick="window.location.href='/state/HR_state'" class="btn btn-outline-warning">HR</button>
+        <button type="button" onclick="window.location.href='/state/JH_state'" class="btn btn-outline-warning">JH</button>
+        <button type="button" onclick="window.location.href='/state/KA_state'" class="btn btn-outline-warning">KA</button>
+        <button type="button" onclick="window.location.href='/state/KL_state'" class="btn btn-outline-warning">KL</button>
+        <button type="button" onclick="window.location.href='/state/MH_state'" class="btn btn-outline-warning">MH</button>
+        <button type="button" onclick="window.location.href='/state/MP_state'" class="btn btn-outline-warning">MP</button>
+        <button type="button" onclick="window.location.href='/state/OD_state'" class="btn btn-outline-warning">OD</button>
+        <button type="button" onclick="window.location.href='/state/PB_state'" class="btn btn-outline-warning">PB</button>
+        <button type="button" onclick="window.location.href='/state/RJ_state'" class="btn btn-outline-warning">RJ</button>
+        <button type="button" onclick="window.location.href='/state/TN_state'" class="btn btn-outline-warning">TN</button>
+        <button type="button" onclick="window.location.href='/state/TS_state'" class="btn btn-outline-warning">TS</button>
+        <button type="button" onclick="window.location.href='/state/UK_state'" class="btn btn-outline-warning">UK</button>
+        <button type="button" onclick="window.location.href='/state/UP_state'" class="btn btn-outline-warning">UP</button>
+        <button type="button" onclick="window.location.href='/state/WB_state'" class="btn btn-outline-warning">WB</button>
+    </div>
+    
+    <div id="jbt">
+        <button type="button" onclick="window.location.href='/jobs/All_India_Govt_job'" class="btn btn-outline-warning">All India Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/State_Govt_Job'" class="btn btn-outline-warning">State Govt Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Bank_Job'" class="btn btn-outline-warning">Bank Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Teaching_Job'" class="btn btn-outline-warning">Teaching Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Engineering_Job'" class="btn btn-outline-warning">Engineering Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Railways_Job'" class="btn btn-outline-warning">Railways Jobs</button>
+        <button type="button" onclick="window.location.href='/jobs/Police_Defence_Job'" class="btn btn-outline-warning">Police/Defence Jobs</button>
+    </div>
+<div class="contfather">
+    <div class="container0">
+        <div class="row2">
+            <div class="column0">
+                <h2>Notifications</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Latestnotification'">Latest Notifications</a></li>
+                    <li><a onclick="window.location.href='/Upcomingnotification'">Upcoming Notifications</a></li>
+                    <li><a onclick="window.location.href='/Notificationstatus'">Notification Status</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Latest Announcements</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Cutoffmarks'">Cutoff Marks</a></li>
+                    <li><a onclick="window.location.href='/Interviewresults'">Interview Results</a></li>
+                    <li><a onclick="window.location.href='/Admitcard'">Admit Card</a></li>
+                </ul>
+            </div>
+            <div class="column0">
+                <h2>Others</h2>
+                <ul>
+                    <li><a onclick="window.location.href='/Eligibility'">Eligibility</a></li>
+                    <li><a onclick="window.location.href='/Selectionprocess'">Selection Process</a></li>
+                </ul>
+            </div>
+        </div>
+
+                <div class="container" id="co">
+                    <div class="header">Admit Card</div>
+                </div>
+            </div>
+    <div class="grid-container">
+        <div class="grid-item item1">SBI Clerk Mains Admit Card 2025</div>
+        <div class="grid-item item2">Central Bank of India Credit Officer Admit Card 2025 OUT</div>
+        <div class="grid-item item3">RPSC  EO RO Admit Card 2025</div>
+        <div class="grid-item item4">UPPSC  Agriculture Services Mains Admit Card 2025 Released</div>
+    </div>
+        <div class="grid-container">
+        <div class="grid-item item5">MAH  MCA CET Hall Ticket 2025 Released</div>
+       <div class="grid-item item6">MPPKVVCL  Various Post Admit Card 2025</div>
+       <div class="grid-item item7">RRB ALP CBT 2 Admit Card 2025</div>
+       <div class="grid-item item8">RSMSSB Stenographer Phase 2 Admit Card 2025</div>
+    </div>
+  
+    <div class="grid-container2">
+      <div class="grid-item2 item9">BSF HCM ASI Admit Card 2025</div>
+    </div>
+
+
+    <h1 id="tbh1">Banks</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Post/Exam Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08/04/2025</td>
+                <td>SBI</td>
+                <td>Clerk</td>
+            </tr>
+            <tr id="pop">
+                <td>07/04/2025</td>
+                <td>SBI</td>
+                <td>PO</td>
+            </tr>
+            <tr>
+                <td>07/04/2025</td>
+                <td>Punjab and Sind Bank</td>
+                <td>LBO</td>
+            </tr>
+            <tr id="pop">
+                <td>07/04/2025</td>
+                <td>SBI</td>
+                <td>Clerk</td>
+            </tr>
+            <tr>
+                <td>01/04/2025</td>
+                <td>IBPS</td>
+                <td>CRP Clerk XIV 2024 Online Preliminary Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>01/04/2025</td>
+                <td>IBPS</td>
+                <td>IBPS Specialist Officer-XIV 2024 Online Preliminary Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>01/04/2025</td>
+                <td>IBPS</td>
+                <td>CRP PO/MT-XIV 2024 Online Preliminary Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>01/04/2025</td>
+                <td>Union Bank</td>
+                <td>LBO</td>
+            </tr>
+            <tr>
+                <td>01/04/2025</td>
+                <td>Central Bank of India</td>
+                <td>Credit Officer</td>
+            </tr>
+            <tr id="pop">
+                <td>31/03/2025</td>
+                <td>SBI</td>
+                <td>Clerk</td>
+            </tr>
+            <tr>
+                <td>29/03/2025</td>
+                <td>IDBI</td>
+                <td>Junior Assistant Manager</td>
+            </tr>
+            <tr id="pop">
+                <td>28/03/2025</td>
+                <td>Union Bank of India</td>
+                <td>Local Bank Officer 2024 Online Written Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>25/03/2025</td>
+                <td>GIC of India</td>
+                <td>Assistant Manager (Scale-I) Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>22/03/2025</td>
+                <td>IPPB</td>
+                <td>SO</td>
+            </tr>
+            <tr>
+                <td>18/03/2025</td>
+                <td>IDBI</td>
+                <td>JAM & AAO 2024 Online Test Call Letter</td>
+            </tr>
+            <tr id="pop"> 
+                <td>17/03/2025</td>
+                <td>Indian Bank</td>
+                <td>Apprentice 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>14/03/2025</td>
+                <td>Karnataka Bank</td>
+                <td>PO (Scale I) 2024 Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>10/03/2025</td>
+                <td>BOB</td>
+                <td>SO</td>
+            </tr>
+            <tr>
+                <td>07/03/2025</td>
+                <td>SBI</td>
+                <td>PO Admit Card 2025 OUT</td>
+            </tr>
+            <tr id="pop">
+                <td>19/02/2025</td>
+                <td>UCO Bank</td>
+                <td>LBO Admit Card 2025 OUT</td>
+            </tr>
+            <tr>
+                <td>17/02/2025</td>
+                <td>Canara Bank</td>
+                <td>Specialist Officer Admit Card</td>
+            </tr>
+            <tr id="pop">
+                <td>11/02/2025</td>
+                <td>IDBI Bank</td>
+                <td>JAM and AAO Admit Card 2025 Released</td>
+            </tr>
+            <tr>
+                <td>11/02/2025</td>
+                <td>IBPS</td>
+                <td>SO Admit Card 2025 Release</td>
+            </tr>
+            <tr id="pop"> 
+                <td>11/02/2025</td>
+                <td>SBI</td>
+                <td>Clerk Pre Admit Card 2025 Released</td>
+            </tr>
+            <tr>
+                <td>08/02/2025</td>
+                <td>SBI</td>
+                <td>Clerks Admit Card 2025 will be Released</td>
+            </tr>
+            <tr id="pop">
+                <td>07/02/2025</td>
+                <td>IPPB</td>
+                <td>IPPB Specialist Officer 2025 Admit Card</td>
+            </tr>
+            <tr>
+                <td>07/02/2025</td>
+                <td>Indian Post Payment Bank</td>
+                <td>IPPB IT Executive 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>03/02/2025</td>
+                <td>Nainital Bank Limited</td>
+                <td>IT-Officer, Manager-IT & Other 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>23/01/2025</td>
+                <td>Mandya DCC Bank</td>
+                <td>Driver, Jr Asst & Other Posts Written Exam Admit Card Download</td>
+            </tr>
+            <tr id="pop">
+                <td>21/01/2025</td>
+                <td>Indian Bank</td>
+                <td>Local Bank Officer 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>18/01/2025</td>
+                <td>MSC Bank</td>
+                <td>Trainee Jr Officer & Trainee Associate 2025 Admit Card</td>
+            </tr>
+            <tr id="pop">
+                <td>11/01/2025</td>
+                <td>SBI</td>
+                <td>Specialist Cadre Officer Admit Card 2025</td>
+            </tr>
+            <tr>
+                <td>11/01/2025</td>
+                <td>SBI</td>
+                <td>Specialist Cadre Officer 2024 Online Written Test Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>10/01/2025</td>
+                <td>Punjab and Sind Bank</td>
+                <td>Specialist Officer 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>03/01/2025</td>
+                <td>SBI</td>
+                <td>SCO (Assistant Manager) 2025 Online Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>02/01/2025</td>
+                <td>IBPS</td>
+                <td>CRP RRB XIII 2024 Online Preliminary Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>02/01/2025</td>
+                <td>IBPS</td>
+                <td>CRP RRB (Officers Scale I, II & III) XIII 2024 Online Main Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>02/01/2025</td>
+                <td>IBPS</td>
+                <td>CRP RRB XIII Office Assistant (Multipurpose) 2024 Online Main Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>02/01/2025</td>
+                <td>IBPS</td>
+                <td>CRP RRB XIII (Officer Scale I, II & III) 2024 Interview Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>28/12/2024</td>
+                <td>IDBI</td>
+                <td>Bank Executive 2024 Online Exam Call letter</td>
+            </tr>
+            <tr>
+                <td>28/12/2024</td>
+                <td>IDBI Bank</td>
+                <td>Executive 2024 DV & Personal Interview Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>27/11/2024</td>
+                <td>MP Rajya Sahakari Bank</td>
+                <td>Banking Assistant 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>23/08/2024</td>
+                <td>National Housing Bank</td>
+                <td>Assistant Manager (Scale-I) (Generalist) 2024 Online Exam Call Letter</td>
+            </tr>
+
+        </tbody>
+        </table>
+        <br>
+
+        
+    <h1 id="tbh1">Other Govt Financial Institutes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Post/Exam Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>09/04/2025</td>
+                <td>BMC Bank</td>
+                <td>PO and JEA</td>
+            </tr>
+            <tr id="pop">
+                <td>27/02/2025</td>
+                <td>NIACL</td>
+                <td>Assistant Admit Card 2025 OUT</td>
+            </tr>
+            <tr>
+                <td>25/02/2025</td>
+                <td>NABARD</td>
+                <td>Assistant Manager Grade A 2024 Mains Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>25/02/2025</td>
+                <td>NABARD</td>
+                <td>NABARD Assistant Manager Grade A 2024 Call Letter</td>
+            </tr>
+            <tr>
+                <td>18/02/2025</td>
+                <td>NICL</td>
+                <td>Assistants Admit Card 2025 OUT</td>
+            </tr>
+            <tr id="pop">
+                <td>12/02/2025</td>
+                <td>RBI</td>
+                <td>Officer Grade B (DR) 2024 Online Exam (Phase-II) Call Letter</td>
+            </tr>
+            <tr>
+                <td>08/02/2025</td>
+                <td>IAF</td>
+                <td>AFCAT Admit Card 2025 Released</td>
+            </tr>
+            <tr id="pop">
+                <td>07/02/2025</td>
+                <td>UIIC</td>
+                <td>Administrative Officer (Scale I) 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>30/01/2025</td>
+                <td>NICL</td>
+                <td>Administrative Officer 2024 Interview Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>30/01/2025</td>
+                <td>RBI</td>
+                <td>Junior Engineer 2025 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>18/01/2025</td>
+                <td>NABARD</td>
+                <td>Office Attendant 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>17/01/2025</td>
+                <td>NIACL</td>
+                <td>Administrative Officer 2025 Interview Call Letter</td>
+            </tr>
+            <tr>
+                <td>17/01/2025</td>
+                <td>NIACL</td>
+                <td>Administrative Officer 2024 Online Phase-II (Main) Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>17/01/2025</td>
+                <td>NIACL</td>
+                <td>Administrative Officer 2024 Online Phase I Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>08/01/2025</td>
+                <td>SIDBI</td>
+                <td>SIDBI Officer (Grade A & B) 2024 Phase-I Online Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>21/12/2024</td>
+                <td>NIACL</td>
+                <td>Assistant 2025 Phase-I Online Exam Admit Card</td>
+            </tr>
+            <tr>
+                <td>07/11/2024</td>
+                <td>LIC HFL</td>
+                <td>Junior Assistant 2024 Interview Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>07/11/2024</td>
+                <td>LIC HFL</td>
+                <td>Junior Assistant 2024 Online Exam Call Letter</td>
+            </tr>
+            <tr>
+                <td>17/10/2024</td>
+                <td>India Exim Bank</td>
+                <td>Management Trainee 2024 Written Exam Call Letter</td>
+            </tr>
+        
+        </tbody>
+        </table> 
+        <br>
+
+        <h1 id="tbh1">SSC</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Post Date</th>
+                <th>Recruitment Board</th>
+                <th>Post/Exam Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08/04/2025</td>
+                <td>SSC</td>
+                <td>Stenographer Grade C & D 2024 Paper-I Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>08/04/2025</td>
+                <td>SSC</td>
+                <td>Stenographer Grade C and D</td>
+            </tr>
+            <tr>
+                <td>26/03/2025</td>
+                <td>SSC</td>
+                <td>CGL 2024 Tier-I Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>26/03/2025</td>
+                <td>SSC</td>
+                <td>SSC CGL 2024 Tier-II Admit Card</td>
+            </tr>
+            <tr>
+                <td>20/03/2025</td>
+                <td>SSC</td>
+                <td>CHT</td>
+            </tr>
+            <tr id="pop">
+                <td>13/03/2025</td>
+                <td>SSC</td>
+                <td>MTS & Havaldar 2024 Call Letter</td>
+            </tr>
+            <tr>
+                <td>13/03/2025</td>
+                <td>SSC</td>
+                <td>MTS & Havaldar 2024 PET/PST Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>07/03/2025</td>
+                <td>SSC</td>
+                <td>CHSL (10+2) 2024 Tier-II Call Letter</td>
+            </tr>
+            <tr>
+                <td>07/03/2025</td>
+                <td>SSC</td>
+                <td>CHSL (10+2) 2024 Tier-I (CBE) Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>06/03/2025</td>
+                <td>SSC</td>
+                <td>CPO</td>
+            </tr>
+            <tr>
+                <td>06/03/2025</td>
+                <td>SSC</td>
+                <td>SI in Delhi Police & CAPFs 2024 PET/ PST Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>06/03/2025</td>
+                <td>SSC</td>
+                <td>SI in Delhi Police & CAPFs 2024 Call Letter</td>
+            </tr>
+            <tr>
+                <td>04/03/2025</td>
+                <td>SSC</td>
+                <td>CHTE 2024 Paper-I Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>28/02/2025</td>
+                <td>SSC</td>
+                <td>Constable GD 2023 PET/PST and DV/DME Call Letter</td>
+            </tr>
+            <tr>
+                <td>28/02/2025</td>
+                <td>SSC</td>
+                <td>Constable GD 2023 Re Exam Call Letter</td>
+            </tr>
+            <tr id="pop">
+                <td>20/02/2025</td>
+                <td>SSC</td>
+                <td>Junior Engineer 2024 Paper I Call Letter</td>
+            </tr>
+            <tr>
+                <td>15/02/2025</td>
+                <td>SSC</td>
+                <td>Constable (GD) 2024 Admit Card</td>
+            </tr>
+            <tr id="pop">
+                <td>13/02/2025</td>
+                <td>SSC</td>
+                <td>Selection Posts (Phase-XII/2024) Paper- I (CBE) Call Letter</td>
+            </tr>
+            <tr>
+                <td>17/01/2025</td>
+                <td>SSC</td>
+                <td>SSC Selection Posts (Phase-XI) 2023 Admit Card</td>
+            </tr>
+            <tr id="pop">
+                <td>25/01/2024</td>
+                <td>SSC</td>
+                <td>Constable (Executive) 2023 PE&MT Call Letter</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+
+        <h1 id="tbh1">UPSC</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>05/04/2025</td>
+                    <td>UPSC</td>
+                    <td>CAPF (ACs) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/04/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA</td>
+                </tr>
+                <tr>
+                    <td>03/04/2025</td>
+                    <td>UPSC</td>
+                    <td>CDS (I)</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/04/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA 1</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>UPSC</td>
+                    <td>CDS (II) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/03/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA 1</td>
+                </tr>
+                <tr>
+                    <td>20/02/2025</td>
+                    <td>UPSC</td>
+                    <td>Deputy Architect 2023 Call Letter</td>
+                </tr> 
+                <tr id="pop">
+                    <td>20/02/2025</td>
+                    <td>UPSC</td>
+                    <td>Various Vacancy (20/2023) Combined Recruitment Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/01/2025</td>
+                    <td>UPSC</td>
+                    <td>CDS (I) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/01/2025</td>
+                    <td>UPSC</td>
+                    <td>Indian Forest Services Exam 2024 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>15/01/2025</td>
+                    <td>UPSC</td>
+                    <td>Civil Services Exam 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>15/01/2025</td>
+                    <td>UPSC</td>
+                    <td>Civil Services 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/12/2024</td>
+                    <td>UPSC</td>
+                    <td>IES/ ISS 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/12/2024</td>
+                    <td>UPSC</td>
+                    <td>Combined Geo-Scientist Exam 2024 Main Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/12/2024</td>
+                    <td>UPSC</td>
+                    <td>Engineering Services Exam 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/11/2024</td>
+                    <td>UPSC</td>
+                    <td>Nursing Officer 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/11/2024</td>
+                    <td>UPSC</td>
+                    <td>CMS 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/11/2024</td>
+                    <td>UPSC</td>
+                    <td>NDA & NA (I) 2024 Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/09/2024</td>
+                    <td>UPSC</td>
+                    <td>NDA & NA (II) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/09/2024</td>
+                    <td>UPSC</td>
+                    <td>Personal Assistant 2024 Call Letter</td>
+                </tr>
+         
+            </tbody>
+         </table>
+         <br>
+
+         <h1 id="tbh1">Other All India Exams</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>03/04/2025</td>
+                    <td>BIS</td>
+                    <td>Group A, B & C 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/03/2025</td>
+                    <td>Supreme Court of India</td>
+                    <td>Law Clerk Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>24/02/2025</td>
+                    <td>AIIMS</td>
+                    <td>CRE Admit Card 2025 OUT</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>BCCL</td>
+                    <td>Junior Overman 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>ECGC Ltd</td>
+                    <td>Probationary Officer 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/02/2025</td>
+                    <td>Supreme Court of India</td>
+                    <td>Various Vacancy 2025 Admit Card</td>
+                </tr>
+                <tr>
+                    <td>17/02/2025</td>
+                    <td>ISRO-HSFC</td>
+                    <td>Various Vacancy 2024 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/02/2025</td>
+                    <td>NTA</td>
+                    <td>UGC NET Dec 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/02/2025</td>
+                    <td>NTA</td>
+                    <td>UGC NET Dec 2024 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>IWAI</td>
+                    <td>Various Vacancy 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>23/01/2025</td>
+                    <td>IOCL</td>
+                    <td>Non Executive 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/01/2025</td>
+                    <td>IRDAI</td>
+                    <td>Assistant Manager 2024 Phase – II Main Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/01/2025</td>
+                    <td>IRDAI</td>
+                    <td>Assistant Manager 2024 Phase – I Preliminary Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/01/2025</td>
+                    <td>CBSE</td>
+                    <td>CTET Dec 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/01/2025</td>
+                    <td>CBSE</td>
+                    <td>CTET Dec 2024 Re-Scheduled Exam Date</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/01/2025</td>
+                    <td>SEBI</td>
+                    <td>Officer Grade A (Assistant Manager) 2024 Online Phase-I Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/01/2025</td>
+                    <td>SEBI</td>
+                    <td>Officer Grade A (Assistant Manager) 2024 Online Phase-II Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/12/2024</td>
+                    <td>NBCC India Ltd</td>
+                    <td>Manager, Dy Manager & Other Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/12/2024</td>
+                    <td>National Seeds Corporation Limited</td>
+                    <td>Various Vacancy 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/12/2024</td>
+                    <td>JUTE Corporation of India Ltd</td>
+                    <td>Non Executive 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>07/12/2024</td>
+                    <td>SAIL, Bokaro Steel Plant</td>
+                    <td>Various Vacancy 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/12/2024</td>
+                    <td>CSIR-CASE</td>
+                    <td>SO & ASO 2023 Stage II Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/12/2024</td>
+                    <td>NFL</td>
+                    <td>Non-Executive 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/12/2024</td>
+                    <td>GAIL (India) Ltd</td>
+                    <td>Non Executive 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/12/2024</td>
+                    <td>NPCIL</td>
+                    <td>Various Vacancy (01/2024) Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/12/2024</td>
+                    <td>NTA</td>
+                    <td>NTET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/11/2024</td>
+                    <td>NMDC Limited</td>
+                    <td>Junior Officer (Trainee) 2024 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/11/2024</td>
+                    <td>JIPMER, Puducherry</td>
+                    <td>Group B & C 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/11/2024</td>
+                    <td>AIIMS</td>
+                    <td>Nursing Officer (NORCET-7) 2024 Online CBT Stage I Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/10/2024</td>
+                    <td>Supreme Court of India</td>
+                    <td>Jr Court Attendant (Cooking Knowing) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/10/2024</td>
+                    <td>Supreme Court of India</td>
+                    <td>Jr Court Attendant 2024 Skill Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/10/2024</td>
+                    <td>NTA</td>
+                    <td>UGC NET June 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/10/2024</td>
+                    <td>NFL</td>
+                    <td>Management Trainee 2024 OMR Based Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/09/2024</td>
+                    <td>CBSE</td>
+                    <td>Group A, B & C 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>14/09/2024</td>
+                    <td>Cotton Corporation of India</td>
+                    <td>Asst Manager, MT, Jr Commercial Executive & Other Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/08/2024</td>
+                    <td>CBSE</td>
+                    <td>CTET July 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>31/07/2024</td>
+                    <td>RCF Ltd</td>
+                    <td>Management Trainee 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/07/2024</td>
+                    <td>BARC</td>
+                    <td>Technical Officer, Scientific Asst, Category I 2023 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/07/2024</td>
+                    <td>Hal</td>
+                    <td>Operator 2024 Call Letter</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>  
+
+        <h1 id="tbh1">Railways</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>RRB</td>
+                    <td>ALP 2024 CBT-1 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>JE, CMA, DMS & Other 2024 CBT-1 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/03/2025</td>
+                    <td>RRC Northern Railway</td>
+                    <td>Group D</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>12/03/2025</td>
+                    <td>RRC NR</td>
+                    <td>Sports Quota Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/03/2025</td>
+                    <td>RPF</td>
+                    <td>Sub Inspector (Executive) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/03/2025</td>
+                    <td>RRC, Northern Railway</td>
+                    <td>Sports Quota Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>RRC, North Western Railway</td>
+                    <td>Sports Quota</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>RRC, Eastern Railway</td>
+                    <td>Act Apprentice 2025 Call letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/01/2025</td>
+                    <td>RRC, Northern Railway</td>
+                    <td>Act Apprentice Admit Card</td>
+                </tr>
+            </tbody>
+        </table> 
+
+        <h1 id="tbh1">Defence</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>BSF</td>
+                    <td>HCM Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>CRPF</td>
+                    <td>Assistant Commandant/GD Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>15/02/2025</td>
+                    <td>Indian Navy</td>
+                    <td>Tradesman Mate Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/02/2025</td>
+                    <td>SSB</td>
+                    <td>Assistant Commandant PST, DME, RME Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>23/01/2025</td>
+                    <td>CRPF</td>
+                    <td>Constable (Technical & Tradesmen) 2023 PST/PET/Trade Test/DV/DME/RME Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2025</td>
+                    <td>CRPF</td>
+                    <td>Constable (Technical & Tradesmen) 2023 PST / PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/01/2025</td>
+                    <td>ITBP</td>
+                    <td>Constable (Pioneer) 2025 PET/PST Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/12/2024</td>
+                    <td>Indian Air Force</td>
+                    <td>Agniveer Vayu Intake (02/2025) Phase I Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/12/2024</td>
+                    <td>Indian Navy</td>
+                    <td>INCET-01/2024 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/12/2024</td>
+                    <td>Indian Navy</td>
+                    <td>INCET-01/2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/12/2024</td>
+                    <td>CISF</td>
+                    <td>Constable/ Fire (Male) 2024 PET/PST/DV Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>AWES</td>
+                    <td>PGT, TGT & PRT 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/11/2024</td>
+                    <td>SSB</td>
+                    <td>Constable (Tradesman) 2023 DME/RME Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/11/2024</td>
+                    <td>SSB</td>
+                    <td>Head Constable (Electrician) 2023 DV/ DME/ RME Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/11/2024</td>
+                    <td>Indian Air Force</td>
+                    <td>Agniveer Vayu Intake (01/2025) Phase II Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/10/2024</td>
+                    <td>Indian Coast Guard</td>
+                    <td>Navik (General Duty) 02/2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>11/10/2024</td>
+                    <td>GRSE Ltd</td>
+                    <td>Various Vacancy 2024 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/09/2024</td>
+                    <td>Indian Air Force</td>
+                    <td>AFCAT 02/2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/09/2024</td>
+                    <td>Indian Navy</td>
+                    <td>SSR Medical Assistant 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/09/2024</td>
+                    <td>Indian Army</td>
+                    <td>Agniveer (ARO) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/09/2024</td>
+                    <td>Indian Army</td>
+                    <td>Agniveer 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/09/2024</td>
+                    <td>HAL</td>
+                    <td>Non Executive Cadre 2024 Written Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/08/2024</td>
+                    <td>AFMS</td>
+                    <td>Medical Officer 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/08/2024</td>
+                    <td>Indian Navy</td>
+                    <td>Agniveer (MR) 02/2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/08/2024</td>
+                    <td>Indian Navy</td>
+                    <td>Agniveer (SSR) 02/2024 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/07/2024</td>
+                    <td>Mazagon Dock Shipbuilders Ltd</td>
+                    <td>Trade Apprentice 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/06/2024</td>
+                    <td>Indian Air Force</td>
+                    <td>Airmen (Group Y) Intake 01/2025 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/06/2024</td>
+                    <td>Indian Air Force</td>
+                    <td>Agniveer (Musician) Intake 01/2025 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/05/2024</td>
+                    <td>CISF</td>
+                    <td>Head Constable (General Duty) 2023 PT, PST & DV Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Andaman and Nicobar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>  
+
+        <h1 id="tbh1">Andhra Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>19/03/2025</td>
+                    <td>APPSC</td>
+                    <td>Deputy Educational Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/03/2025</td>
+                    <td>APPSC</td>
+                    <td>Analyst Grade II</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>APPSC</td>
+                    <td>Assistant Librarian</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/03/2025</td>
+                    <td>APPSC</td>
+                    <td>Junior Assistant</td>
+                </tr>
+                <tr>
+                    <td>10/03/2025</td>
+                    <td>APPSC</td>
+                    <td>Forest Range Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/02/2025</td>
+                    <td>APPSC</td>
+                    <td>Deputy Educational Officer 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/02/2025</td>
+                    <td>APPSC</td>
+                    <td>Group 2 Mains Admit Card 2025 Out</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/12/2024</td>
+                    <td>AP Police</td>
+                    <td>Constable 2022 Stage II PMT/ PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/11/2024</td>
+                    <td>Dept of School Education, AP</td>
+                    <td>APTET July 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/05/2024</td>
+                    <td>Andhra University</td>
+                    <td>AP SET 2024 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Arunachal Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>27/03/2025</td>
+                    <td>Arunachal Pradesh PSC</td>
+                    <td>CCE</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2025</td>
+                    <td>Arunachal Pradesh PSC</td>
+                    <td>Laboratory Assistant</td>
+                </tr>
+                <tr>
+                    <td>18/02/2025</td>
+                    <td>APSSB</td>
+                    <td>Combined Graduate Level Exam 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/02/2025</td>
+                    <td>APSSB</td>
+                    <td>Combined Graduate Level Exam 2024 Stenography Proficiency Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/02/2025</td>
+                    <td>APSSB</td>
+                    <td>Head Constable, H/C Driver & Other Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/02/2025</td>
+                    <td>APSSB</td>
+                    <td>APSSB MTS Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>28/12/2024</td>
+                    <td>Arunachal Pradesh PSC</td>
+                    <td>GDMO 2024 Interview Viva-voce Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/12/2024</td>
+                    <td>Arunachal Pradesh PSC</td>
+                    <td>General Duty Medical Officer 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/12/2024</td>
+                    <td>APSSB</td>
+                    <td>CHSL (10+2) Exam 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/03/2024</td>
+                    <td>APSSB</td>
+                    <td>Personal Asst (Stenographer Gr III) 2023 Proficiency Test Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Assam</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>RRB Guwahati</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/04/2025</td>
+                    <td>Assam Police</td>
+                    <td>Sub Inspector</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/04/2025</td>
+                    <td>Assam Police</td>
+                    <td>Constable, Sub-Officer & Emergency Rescuer 2023 PST & PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>Assam Police</td>
+                    <td>Constable</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/04/2025</td>
+                    <td>APSC</td>
+                    <td>AAO AEGCL</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>Assam Police</td>
+                    <td>SI</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/03/2025</td>
+                    <td>Assam Police</td>
+                    <td>Constable Commando</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/03/2025</td>
+                    <td>DME Assam</td>
+                    <td>Grade III</td>
+                </tr>
+                <tr>
+                    <td>19/03/2025</td>
+                    <td>Gauhati High Court</td>
+                    <td>Chauffeur (Driver)</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>APDCL</td>
+                    <td>AAO</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/03/2025</td>
+                    <td>SLPRB Assam</td>
+                    <td>SI PST & PET</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/03/2025</td>
+                    <td>Assam</td>
+                    <td>SLET</td>
+                </tr>
+                <tr>
+                    <td>03/03/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Lecturer</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/03/2025</td>
+                    <td>DME, Assam</td>
+                    <td>Grade III (Non Technical)</td>
+                </tr>
+                <tr>
+                    <td>26/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>TDO</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Junior Engineer (Mechanical) 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Asst Manager 2023 Interview Intimation Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Junior Engineer (Civil) (Advt. No 06/2019) Interview/Viva-Voce Intimation Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Assistant Engineer 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Assistant Engineer 2023 Interview/Viva-Voce Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Stenographer 2024 Stenography Proficiency Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Enforcement Inspector Admit Card</td>
+                </tr>
+                <tr>
+                    <td>12/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>CDPO Admit Card 2025 Released</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Research Assistant 2025 Interview Admit Card</td>
+                </tr>
+                <tr>
+                    <td>05/02/2025</td>
+                    <td>DSE, Assam</td>
+                    <td>Assam TET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/02/2025</td>
+                    <td>Assam PSC</td>
+                    <td>Motor Vehicle Inspector 2025 Interview Admit Card</td>
+                </tr>
+                <tr>
+                    <td>03/02/2025</td>
+                    <td>Gauhati High Court</td>
+                    <td>Computer Assistant 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/01/2025</td>
+                    <td>DME, Assam</td>
+                    <td>Assam Grade III (Technical) 2025 Admit Card</td>
+                </tr>
+                <tr>
+                    <td>14/12/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Junior Engineer 2023 New Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/12/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Combined Competitive Exam 2023 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/12/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Combined Competitive Exam 2023 Interview/Personality Test Intimation Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/12/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Combined Competitive Exam 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/10/2024</td>
+                    <td>Assam Police</td>
+                    <td>Constable (Grade III) 2024 PST & PET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/06/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Financial Management Officer 2023 Interview/Viva–Voce Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/05/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Urban Technical Officer 2023 Interview/ Viva – Voce Intimation Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/05/2024</td>
+                    <td>Assam PSC</td>
+                    <td>Junior Manager (14/2023) Interview/Viva-Voce Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Bihar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>Bihar Vidhan Sabha</td>
+                    <td>Security Guard</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/04/2025</td>
+                    <td>BPSC</td>
+                    <td>70th Mains</td>
+                </tr>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>BSSC</td>
+                    <td>Inter Level</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/04/2025</td>
+                    <td>Bihar Vidhan Sabha</td>
+                    <td>PA, Steno and Reporter</td>
+                </tr>
+                <tr>
+                    <td>29/03/2025</td>
+                    <td>BPSSC</td>
+                    <td>ASI Steno</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/03/2025</td>
+                    <td>Patna High Court</td>
+                    <td>Assistant Cashier</td>
+                </tr>
+                <tr>
+                    <td>14/03/2025</td>
+                    <td>BPSC</td>
+                    <td>Lecturer</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/03/2025</td>
+                    <td>Bihar Police</td>
+                    <td>Constable 2023 New Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>11/03/2025</td>
+                    <td>Bihar Police</td>
+                    <td>Constable 2023 PET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/03/2025</td>
+                    <td>BPSC</td>
+                    <td>School Teacher 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>BPSC</td>
+                    <td>School Teacher 2024 Written (Objective) Re Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>Bihar Police</td>
+                    <td>Sub Inspector 2023 Physical Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>Bihar Police</td>
+                    <td>Sub Inspector 2023 Main Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Assistant Architect Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>22/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Assistant Architect 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Secondary & Higher Secondary Teacher 2024 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Vice Principal 2024 New Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Drug Inspector 2022 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>BPSC</td>
+                    <td>70th CCE 2024 Prelims Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>BPSC</td>
+                    <td>70th CCE 2024 Prelims Re-Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/02/2025</td>
+                    <td>Bihar Vidhan Sabha</td>
+                    <td>Library Assistant, Urdu Translator, Urdu Assistant and Translator Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/02/2025</td>
+                    <td>BPSC</td>
+                    <td>Asst Engineer (Civil, Mechanical) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/02/2025</td>
+                    <td>Bihar Police</td>
+                    <td>Steno Assistant Sub Inspector 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/02/2025</td>
+                    <td>BPSSC</td>
+                    <td>ASI Steno Admit Card 2025 will be Released</td>
+                </tr>
+                <tr>
+                    <td>06/02/2025</td>
+                    <td>Bihar Vidhan Sabha</td>
+                    <td>Assistant Section Officer, Junior Clerk and Other Posts 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/01/2025</td>
+                    <td>BPSC</td>
+                    <td>Various Vacancy (18 to 21/2024) Interview Letter</td>
+                </tr>
+                <tr>
+                    <td>30/01/2025</td>
+                    <td>BPSC</td>
+                    <td>Various Vacancy (18 to 21/2024) Interview Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>15/01/2025</td>
+                    <td>BPSC</td>
+                    <td>Block Horticulture Officer 2024 Interview Admit Card</td>
+                </tr>
+                <tr>
+                    <td>15/01/2025</td>
+                    <td>BPSC</td>
+                    <td>Block Horticulture Officer 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/12/2024</td>
+                    <td>Bihar Civil Court</td>
+                    <td>Clerk (01/2022) Preliminary Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/12/2024</td>
+                    <td>Bihar Civil Court</td>
+                    <td>Stenographer, Court Reader Cum Deposition Writer 2022 Skill Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/12/2024</td>
+                    <td>BPSC</td>
+                    <td>Head Teacher 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>11/12/2024</td>
+                    <td>BPSC</td>
+                    <td>Bihar 32nd Judicial Service Exam 2023 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/12/2024</td>
+                    <td>BPSC</td>
+                    <td>69 CCE 2023 Interview Letter</td>
+                </tr>
+                <tr>
+                    <td>03/12/2024</td>
+                    <td>State Health Society, Bihar</td>
+                    <td>CHO 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/11/2024</td>
+                    <td>BSEB</td>
+                    <td>Bihar STET 2024 Paper 2 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/11/2024</td>
+                    <td>BSEB</td>
+                    <td>Bihar STET 2024 Paper 1 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/11/2024</td>
+                    <td>BPSC</td>
+                    <td>Head Master 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/08/2024</td>
+                    <td>Patna HC</td>
+                    <td>Translator & Translator cum Proof Reader 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/08/2024</td>
+                    <td>Bihar Police</td>
+                    <td>Sub Inspector 2023 PET Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Chandigarh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>Chandigarh Education Department</td>
+                    <td>Nursery Teacher 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/12/2024</td>
+                    <td>Chandigarh Education Department</td>
+                    <td>Lecturer (PGT) 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>23/11/2024</td>
+                    <td>Chandigarh Education Department</td>
+                    <td>Jr Basic Teacher 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/11/2024</td>
+                    <td>Chandigarh Education Department</td>
+                    <td>TGT 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td>Chandigarh Police</td>
+                    <td>Constable (Executive) (IT) 2024 New PE&MT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/10/2024</td>
+                    <td>Chandigarh Police</td>
+                    <td>Constable (Executive) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/08/2024</td>
+                    <td>Chandigarh Transport Undertaking</td>
+                    <td>Workshop Staff 2024 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Chhattisgarh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>CG Forest</td>
+                    <td>Driver</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>CGPSC</td>
+                    <td>State Service Exam 2024</td>
+                </tr>
+                <tr>
+                    <td>24/02/2025</td>
+                    <td>Chhattisgarh Police</td>
+                    <td>Constable 2023 PMT/ PET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/02/2025</td>
+                    <td>CGPSC</td>
+                    <td>Civil Judge 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/12/2024</td>
+                    <td>Municipal Army Fire & Emergency Services Dept, Chhattisgarh</td>
+                    <td>Chhattisgarh Home Guard 2024 Physical Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/12/2024</td>
+                    <td>CGPSC</td>
+                    <td>Professor 2021 DV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/12/2024</td>
+                    <td>Chhattisgarh</td>
+                    <td>Forest Dept Forest Guard 2023 PMT/PET Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/11/2024</td>
+                    <td>CGPSC</td>
+                    <td>State Service Exam 2023 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/11/2024</td>
+                    <td>CGPSC</td>
+                    <td>State Service Exam 2023 Mains Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/11/2024</td>
+                    <td>CGPSC</td>
+                    <td>State Service Exam 2023 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td>CGPEB</td>
+                    <td>Fisheries Inspector 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/10/2024</td>
+                    <td>CGPEB</td>
+                    <td>Hostel Superintendent 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/10/2024</td>
+                    <td>CGPEB</td>
+                    <td>Laboratory Technician 2024 New Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/09/2024</td>
+                    <td>CGPEB</td>
+                    <td>CG TET 2024 Re Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/09/2024</td>
+                    <td>CGPEB</td>
+                    <td>CG TET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/09/2024</td>
+                    <td>CGPEB</td>
+                    <td>CGSET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>02/02/2024</td>
+                    <td>CGPEB</td>
+                    <td>Rural Agriculture Extension Officer 2023 Call Letter</td>
+                </tr>
+            
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Dadra and Nagar Haveli and Daman and Diu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Delhi</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>AIIMS</td>
+                    <td>NORCET 8</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/04/2025</td>
+                    <td>SCI</td>
+                    <td>Junior Court Assistant</td>
+                </tr>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>AAI</td>
+                    <td>Non Executive</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/04/2025</td>
+                    <td>BHEL</td>
+                    <td>Engineer Trainee and Supervisor Trainee</td>
+                </tr>
+                <tr>
+                    <td>08/04/2025</td>
+                    <td>SSC</td>
+                    <td>Stenographer Grade C and D</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/04/2025</td>
+                    <td>BSF</td>
+                    <td>HCM ASI</td>
+                </tr>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>Punajb and Sind Bank</td>
+                    <td>LBO</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>AIIMS</td>
+                    <td>Nursing Officer (NORCET-8)</td>
+                </tr>
+                <tr>
+                    <td>04/04/2025</td>
+                    <td>AIC</td>
+                    <td>MT</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/04/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA</td>
+                </tr>
+                <tr>
+                    <td>03/04/2025</td>
+                    <td>UPSC</td>
+                    <td>CDS (I)</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/04/2025</td>
+                    <td>SCI</td>
+                    <td>Junior Court Assistant</td>
+                </tr>
+                <tr>
+                    <td>02/04/2025</td>
+                    <td>DSSSB</td>
+                    <td>Sr PA, PA & JJA 2024 Online Test (Tier-II) Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/04/2025</td>
+                    <td>NTPC</td>
+                    <td>Magazine Incharge, Mechanical Supervisor and Other Posts</td>
+                </tr>
+                <tr>
+                    <td>02/04/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA 1</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/03/2025</td>
+                    <td>SCI</td>
+                    <td>Junior Court Assistant</td>
+                </tr>
+                <tr>
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Various Vacancy (03/2023) Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Assistant, Music Teacher and Other Posts</td>
+                </tr>
+                <tr>
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Hindi Translator</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Section Officer</td>
+                </tr>
+                <tr>
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Group B C</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2025</td>
+                    <td>DSSSB</td>
+                    <td>Pharmacist, Driver and Other Posts</td>
+                </tr>
+                <tr>
+                    <td>28/03/2025</td>
+                    <td>ONGC</td>
+                    <td>AEE, Geophysicist</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>IOCL</td>
+                    <td>Non Executive</td>
+                </tr>
+                <tr>
+                    <td>24/03/2025</td>
+                    <td>UPSC</td>
+                    <td>NDA 1</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/03/2025</td>
+                    <td>IPPB</td>
+                    <td>SO</td>
+                </tr>
+                <tr>
+                    <td>20/03/2025</td>
+                    <td>SSC</td>
+                    <td>CHT</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/03/2025</td>
+                    <td>Delhi High Court</td>
+                    <td>HJS Mains</td>
+                </tr>
+                <tr> 
+                    <td>19/03/2025</td>
+                    <td>RRC Northern Railway</td>
+                    <td>Group D</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/03/2025</td>
+                    <td>BHEL</td>
+                    <td>Engineer Trainee and Supervisor Trainee</td>
+                </tr>
+                <tr>
+                    <td>18/03/2025</td>
+                    <td>NTPC</td>
+                    <td>Assistant Executive</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>Supreme Court of India</td>
+                    <td>Court Master (Shorthand)</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>BSF</td>
+                    <td>HCM</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>RRC NR</td>
+                    <td>Sports Quota Group D</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>SSC</td>
+                    <td>CPO</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/03/2025</td>
+                    <td>Supreme Court Of India</td>
+                    <td>Law Clerk</td>
+                </tr>
+                <tr>
+                    <td>03/03/2025</td>
+                    <td>RRC NR</td>
+                    <td>Sports Quota</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>CRPF</td>
+                    <td>Assistant Commandant/GD</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>Delhi High Court</td>
+                    <td>Judicial Services 2023 Mains (Written) Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>Delhi High Court</td>
+                    <td>Higher Judicial Service 2024 Prelims Hall Ticket</td>
+                </tr>
+                <tr>
+                    <td>20/02/2025</td>
+                    <td>NPS TRUST</td>
+                    <td>Manager And Assistant Manager Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/02/2025</td>
+                    <td>ONGC</td>
+                    <td>CBT Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>06/02/2025</td>
+                    <td>Delhi High Court</td>
+                    <td>Sr Personal Assistant 2023 Stage III Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/02/2025</td>
+                    <td>CWC</td>
+                    <td>Various Vacancy 2025 Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>CWC</td>
+                    <td>Various Vacancy 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/01/2025</td>
+                    <td>DDA</td>
+                    <td>ASO & JSA 2023 Stage II Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/12/2024</td>
+                    <td>DSSSB</td>
+                    <td>Sr Laboratory Asst, Asst Dietician, Dental Hygienist, Book Binder & Other 2023 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/12/2024</td>
+                    <td>DSSSB</td>
+                    <td>Various Vacancy (03/2023) Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/12/2024</td>
+                    <td>DSSSB</td>
+                    <td>Warder, Technical Asst, Jr Radiotherapy Technician (03/2023) Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/12/2024</td>
+                    <td>DSSSB</td>
+                    <td>TGT 2024 Online CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/12/2024</td>
+                    <td>DGHG, New Delhi</td>
+                    <td>Delhi Home Guard 2024 PMET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/12/2024</td>
+                    <td>DGHG, New Delhi</td>
+                    <td>Delhi Home Guard 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/12/2024</td>
+                    <td>DGHG, New Delhi</td>
+                    <td>Delhi Home Guard 2024 PEMT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/08/2024</td>
+                    <td>DSSSB</td>
+                    <td>PGT 2023 Online Exam Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>  
+        
+        <h1 id="tbh1">Goa</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Gujarat</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>12/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/03/2025</td>
+                    <td>GPSC</td>
+                    <td>Private Secretary 2024 Preliminary Call Letter</td>
+                </tr>
+                <tr>
+                    <td>11/03/2025</td>
+                    <td>GPSC</td>
+                    <td>Horticulture Supervisor & Office Superintendent 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/03/2025</td>
+                    <td>GPSC</td>
+                    <td>Designated Officer & Chief Fire Officer 2024 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/03/2025</td>
+                    <td>BOB</td>
+                    <td>SO</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>GPSC</td>
+                    <td>Assistant Conservator of Forest 2022 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>GPSC</td>
+                    <td>Various Vacancy (18, 19, 20, 22, 23, 25, 26, 27/2024-25) Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>GPSC</td>
+                    <td>State Tax Inspector (28/2024-25) Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/02/2025</td>
+                    <td>GPSC</td>
+                    <td>GPSC Civil Services 2023 Interview Admit Card</td>
+                </tr>
+                <tr>
+                    <td>01/02/2025</td>
+                    <td>GPSC</td>
+                    <td>JMC Various Vacancy 2023 Prelims Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>Gujarat High Court</td>
+                    <td>Court Manager 2024 Stage I Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>Gujarat High Court</td>
+                    <td>Driver 2024 Stage 1 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/01/2025</td>
+                    <td>GPSC</td>
+                    <td>Accounts Officer (22/2022-23) Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/01/2025</td>
+                    <td>GPSC</td>
+                    <td>Dy Executive Engineer 2022 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/01/2025</td>
+                    <td>Gujarat High Court</td>
+                    <td>Court Attendant 2024 Stage-I Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>13/01/2025</td>
+                    <td>Maharaja Sayajirao University of Baroda, Vadodara</td>
+                    <td>Gujarat SET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>Assistant & Asst /Cashier 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>English Stenographer 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>Deputy Section Officer 2024 Stage-I Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>16/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>Gujarat High Court Gujarati Stenographer 2024 Stage-I Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>Computer Operator (Information Technology Cell) 2024 Stage-I Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>14/12/2024</td>
+                    <td>Gujarat High Court</td>
+                    <td>Gujarat High Court Process Server/ Bailiff 2024 Stage-I Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/12/2024</td>
+                    <td>GPSC</td>
+                    <td>Deputy Section Officer 2023 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/12/2024</td>
+                    <td>GSRTC</td>
+                    <td>Conductor 2023 OMR Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/11/2024</td>
+                    <td>GSSSB</td>
+                    <td>Gujarat Subordinate Services Exam 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/11/2024</td>
+                    <td>GSSSB</td>
+                    <td>Gujarat Subordinate Services Exam 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/07/2024</td>
+                    <td>GPSC</td>
+                    <td>Assistant Engineer (15/2022-23) Interview Call Letter</td>
+                </tr>
+            
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Haryana</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08/04/2025</td>
+                    <td>BSEH</td>
+                    <td>HTET</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>PGCIL</td>
+                    <td>Diploma Trainee, Junior Officer Trainee and Other Posts</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>HPSC</td>
+                    <td>Assistant Professor</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/03/2025</td>
+                    <td>RCRB</td>
+                    <td>RAJFED</td>
+                </tr>
+                <tr>
+                    <td>04/03/2025</td>
+                    <td>HPSC</td>
+                    <td>PGT 2024 Subject Knowledge Test Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/03/2025</td>
+                    <td>HPSC</td>
+                    <td>PGT 2024 Skill Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/03/2025</td>
+                    <td>HPSC</td>
+                    <td>PGT 2024 Subject Knowledge Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/03/2025</td>
+                    <td>HPSC</td>
+                    <td>PGT 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/03/2025</td>
+                    <td>HPSC</td>
+                    <td>PGT 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>HPSC</td>
+                    <td>Motor Vehicle Officer 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>HPSC</td>
+                    <td>Asst Environmental Engineer (Group-B) Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>HPSC</td>
+                    <td>AEE (Group-B) 2023 Subject Knowledge Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/02/2025</td>
+                    <td>HPSC</td>
+                    <td>AMO (Group - B) 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/02/2025</td>
+                    <td>HPSC</td>
+                    <td>AMO (Group-B) 2024 Re Scheduled Subject Knowledge Test Admit Card</td>
+                </tr>
+                <tr>
+                    <td>20/12/2024</td>
+                    <td>HPSC</td>
+                    <td>Assistant Engineer 2023 Subject Knowledge Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/12/2024</td>
+                    <td>HPSC</td>
+                    <td>Assistant Engineer 2023 Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>14/12/2024</td>
+                    <td>HSSC</td>
+                    <td>Constable 2024 PST Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/12/2024</td>
+                    <td>HSSC</td>
+                    <td>Constable 2024 PMT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>14/12/2024</td>
+                    <td>HSSC</td>
+                    <td>Constable 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/11/2024</td>
+                    <td>HSSC</td>
+                    <td>Haryana CET (Group C) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/11/2024</td>
+                    <td>HSSC</td>
+                    <td>Haryana CET (Group C) (Group 56 & 57) 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/10/2024</td>
+                    <td>HPSC</td>
+                    <td>HCS (Judicial Branch) Exam 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/09/2024</td>
+                    <td>HSSC</td>
+                    <td>Primary Teacher (Mewat Cadre) 2024 Written Exam/ Skill Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/08/2024</td>
+                    <td>HPSC</td>
+                    <td>Veterinary Surgeon 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/07/2024</td>
+                    <td>HPSC</td>
+                    <td>HCS (Executive Branch) & Other Allied Services 2023 Mains Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Himachal Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>14/03/2025</td>
+                    <td>HPPSC</td>
+                    <td>Lecturer (School-New) 2023 DV Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/03/2025</td>
+                    <td>HPPSC</td>
+                    <td>Medical Officer</td>
+                </tr>
+                <tr>
+                    <td>28/02/2025</td>
+                    <td>HPPSC</td>
+                    <td>Veterinary Officer 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/02/2025</td>
+                    <td>HPPSC</td>
+                    <td>Allied Services Mains Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>25/02/2025</td>
+                    <td>HPPSC</td>
+                    <td>HP Subordinate Allied Services (Group C) 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/02/2025</td>
+                    <td>HPPSC</td>
+                    <td>Assistant Law officer, Class-II 2023 Admit Card</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>HPPSC</td>
+                    <td>Constable (Female) 2024 PET/ PST Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>HPPSC</td>
+                    <td>Constable (Male) 2024 PET/ PST Admit Card</td>
+                </tr>
+                <tr>
+                    <td>15/01/2025</td>
+                    <td>HP BOSE</td>
+                    <td>HP TET November 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/01/2025</td>
+                    <td>HPPSC</td>
+                    <td>Administrative Service CCE 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/12/2024</td>
+                    <td>HPPSC</td>
+                    <td>Administrative Service CCE 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/11/2024</td>
+                    <td>HPPSC</td>
+                    <td>HP SET 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/09/2024</td>
+                    <td>HP BOSE</td>
+                    <td>HP TET June 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2024</td>
+                    <td>HPPSC</td>
+                    <td>Administrative CCE 2023 Interview Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Jammu and Kashmir</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>04/04/2025</td>
+                    <td>JKSSB</td>
+                    <td>Table Boy, Katib, Cameraman, Assistant Seamer man (01 of 2021) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Driver</td>
+                </tr>
+                <tr>
+                    <td>21/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>PBX Operator, Junior Grader & Rakhoverseer (04 of 2021) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (04 of 2021) Type Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (05 of 2021) Type Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Photographer, Record Keeper (04 of 2020) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>14/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Binder (04 of 2020) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Patwari (02 of 2021) Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>07/03/2025</td>
+                    <td>JK High Court</td>
+                    <td>Junior Assistant and Steno Typist</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Various Vacancy (06 of 2020) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/03/2025</td>
+                    <td>JKSSB</td>
+                    <td>Table Boy, Waiter, Room Bearer, Telephone Operator, Orderly, Chowkidar (06 of 2020) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Various Posts Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (04 of 2022) Phase II Type Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (02 of 2022) Type Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (04 of 2022) Type Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Junior Assistant (02 of 2022) Phase II Type Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>JKSSB</td>
+                    <td>Computer Asst (04 of 2022) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>15/02/2025</td>
+                    <td>JKPSC</td>
+                    <td>CCE Admit Card</td>
+                </tr>
+                <tr>
+                    <td>23/01/2025</td>
+                    <td>JKSSB</td>
+                    <td>Constable (Telecommunication) 2024 OMR Based Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2025</td>
+                    <td>JKSSB</td>
+                    <td>JKSSB Constable 2024 Admit Card</td>
+                </tr>
+                <tr>
+                    <td>28/12/2024</td>
+                    <td>JKSSB</td>
+                    <td>JKSSB Various Vacancy (05 of 2020) OMR Based Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/12/2024</td>
+                    <td>JKPSC</td>
+                    <td>Veterinary Assistant Surgeon 2024 Admit Card</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br> 
+
+        <h1 id="tbh1">Jharkhand</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>06/02/2025</td>
+                    <td>JSSC</td>
+                    <td>JCCE 2023 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/12/2024</td>
+                    <td>JSSC</td>
+                    <td>Lady Supervisor 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>07/12/2024</td>
+                    <td>JSSC</td>
+                    <td>JGGLCCE 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/10/2024</td>
+                    <td>JPSC</td>
+                    <td>Child Development Project Officer 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>07/10/2024</td>
+                    <td>JPSC</td>
+                    <td>Child Development Project Officer 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/10/2024</td>
+                    <td>JPSC</td>
+                    <td>Food Safety Officer 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/09/2024</td>
+                    <td>JSSC</td>
+                    <td>JMLCCE 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/09/2024</td>
+                    <td>JSSC</td>
+                    <td>JMLCCE 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/09/2024</td>
+                    <td>JSSC</td>
+                    <td>Excise Constable 2023 Rescheduled Physical Eligibility Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/08/2024</td>
+                    <td>JSSC</td>
+                    <td>JPSTAACCE 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/08/2024</td>
+                    <td>Jharkhand High Court</td>
+                    <td>Jharkhand of High Court Various Vacancy 2024 Typist Skill Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/08/2024</td>
+                    <td>JPSC</td>
+                    <td>Combined Civil Services 2023 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/06/2024</td>
+                    <td>JPSC</td>
+                    <td>Combined Civil Services 2023 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/06/2024</td>
+                    <td>Jharkhand High Court</td>
+                    <td>Stenographer 2024 English Stenography Skill Test Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Karnataka</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>KPSC</td>
+                    <td>PDO (RPC) 2024 Kannada Language & Competitive Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>KPSC</td>
+                    <td>Group C</td>
+                </tr>
+                <tr>
+                    <td>12/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/03/2025</td>
+                    <td>KPSC</td>
+                    <td>Junior Engineer and Assistant Librarian</td>
+                </tr>
+                <tr>
+                    <td>10/02/2025</td>
+                    <td>KPSC</td>
+                    <td>Group-B Admit Card 2025 Released</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>KPSC</td>
+                    <td>Group A & B (Gazetted Probationers) 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>KPSC</td>
+                    <td>Group A & B (Gazetted Probationers) 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/01/2025</td>
+                    <td>KPSC</td>
+                    <td>KPSC Assistant Director (Civil) 2024 Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>30/12/2024</td>
+                    <td>KEA</td>
+                    <td>Karnataka SET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>KEA</td>
+                    <td>KEA VAO 2024 Paper I & II Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/12/2024</td>
+                    <td>KEA</td>
+                    <td>Village Administrative Officer 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>KPSC</td>
+                    <td>PDO (HK) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/10/2024</td>
+                    <td>KEA</td>
+                    <td>Manager Grade – III Non Supervisory (RPC) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/09/2024</td>
+                    <td>KSP</td>
+                    <td>Civil Police Constable (KK) (06-4/2022-23) Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/09/2024</td>
+                    <td>KSP</td>
+                    <td>Armed Police Constable (CAR/DAR) (09-4/2022-23) Medical Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/08/2024</td>
+                    <td>School Education Dept, Karnataka</td>
+                    <td>KARTET 2024 Call Letter</td>
+                </tr>
+           
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Kerala</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02/04/2025</td>
+                    <td>Rubber Board</td>
+                    <td>Field Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/03/2025</td>
+                    <td>Rubber Board</td>
+                    <td>Field Officer</td>
+                </tr>
+                <tr>
+                    <td>07/02/2025</td>
+                    <td>Kerala PSC</td>
+                    <td>Industries Extension Officer Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/02/2025</td>
+                    <td>Kerala High Court</td>
+                    <td>Assistant 2024 Written Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/01/2025</td>
+                    <td>LBS Centre for Science & Technology</td>
+                    <td>Kerala SET Jan 2025 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/09/2024</td>
+                    <td>LBS Centre for Science & Technology</td>
+                    <td>Kerala SET July 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/09/2024</td>
+                    <td>Kerala Pareeksha Bhavan</td>
+                    <td>Kerala TET April 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/03/2024</td>
+                    <td>LBS Centre for Science & Technology</td>
+                    <td>Kerala SET Jan 2024 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Ladakh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Lakshadweep</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                   </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Madhya Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr>
+                    <td>18/03/2025</td>
+                    <td>MPPKVVCL</td>
+                    <td>Office Assistant, Line Attendant, Junior Engineer, Manager and Other Various Post</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>MP</td>
+                    <td>Mahila Supervisor</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/03/2025</td>
+                    <td>MPPEB</td>
+                    <td>Constable 2023 PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>MPESB</td>
+                    <td>Mahila Paryavekshak</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor (English) Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor Admit Card 2025 Release</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor (Hindi) 2025 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor (44/2022) Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor 2022 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor 2022 OMR Sheet Based Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Assistant Professor 2022 OMR Sheet Based Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>Lecturer 2023 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/02/2025</td>
+                    <td>MPESB</td>
+                    <td>Group 5 Admit Card 2025 Released</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/02/2025</td>
+                    <td>MPPSC</td>
+                    <td>State Service Exam Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>07/02/2025</td>
+                    <td>MPESB</td>
+                    <td>Anganwadi Worker and Supervisor 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/01/2025</td>
+                    <td>MP High Court</td>
+                    <td>Junior Judicial Translator 2024 Online Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/01/2025</td>
+                    <td>MPPSC</td>
+                    <td>MP SET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/12/2024</td>
+                    <td>MPESB</td>
+                    <td>ITI Training Officer 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/12/2024</td>
+                    <td>MPESB</td>
+                    <td>Group 3 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/12/2024</td>
+                    <td>MPESB</td>
+                    <td>PSTET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Forest Service 2024 Prelims Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Forest Service 2024 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>23/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>Sports Officer 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>Librarian 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Forest Services Exam 2023 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Forest Services Exam 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/11/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Services Exam 2022 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/10/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Service Exam 2024 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/10/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Service Exam 2024 Mains Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/08/2024</td>
+                    <td>MPPGCL</td>
+                    <td>Jr Engineer, Plant Asst & Other 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/07/2024</td>
+                    <td>MPPSC</td>
+                    <td>Veterinary Asst Surgeon 2023 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/06/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Forest Service 2022 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>25/06/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Engg Service Exam 2023 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/06/2024</td>
+                    <td>MPPSC</td>
+                    <td>State Services 2021 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/03/2024</td>
+                    <td>MPMRCL</td>
+                    <td>MPMRCL 88 Various Vacancy 2024 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Maharashtra</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>BMC Bank</td>
+                    <td>PO and JEA</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/04/2025</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr>
+                    <td>08/04/2025</td>
+                    <td>Maharashtra</td>
+                    <td>Adivasi Vikas Vibhag</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>SBI</td>
+                    <td>PO</td>
+                </tr>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>AIIMS</td>
+                    <td>Nursing Officer (NORCET-8)</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>Union Bank</td>
+                    <td>LBO</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/04/2025</td>
+                    <td>Central Bank of India</td>
+                    <td>Credit Officer</td>
+                </tr>
+                <tr>
+                    <td>31/03/2025</td>
+                    <td>SBI</td>
+                    <td>Clerk</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/03/2025</td>
+                    <td>IDBI</td>
+                    <td>Junior Assistant Manager</td>
+                </tr>
+                <tr>
+                    <td>21/03/2025</td>
+                    <td>HPCL</td>
+                    <td>Junior Executive</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>MPSC</td>
+                    <td>MPSC Group B Services Exam 2024 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2025</td>
+                    <td>MPSC</td>
+                    <td>Maharashtra Agricultural Services 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/03/2025</td>
+                    <td>MPSC</td>
+                    <td>Maharashtra Civil Services 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/03/2025</td>
+                    <td>Central Bank of India</td>
+                    <td>ZBO</td>
+                </tr>
+                <tr>
+                    <td>07/03/2025</td>
+                    <td>SBI</td>
+                    <td>PO</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr>
+                    <td>27/02/2025</td>
+                    <td>BARC</td>
+                    <td>OCES DGFS</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/02/2025</td>
+                    <td>NIACL</td>
+                    <td>Assistant</td>
+                </tr>
+                <tr>
+                    <td>07/02/2025</td>
+                    <td>Bombay High Court</td>
+                    <td>Personal Assistant, Stenographer Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/01/2025</td>
+                    <td>MAHADISCOM</td>
+                    <td>Junior Assistant (Accounts) 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>08/01/2025</td>
+                    <td>MIDC</td>
+                    <td>Driver, Fire Extinguisher & Other Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/01/2025</td>
+                    <td>MAHATRANSCO</td>
+                    <td>Assistant Engineer 2024 On-Line Test Admit Card</td>
+                </tr>
+                <tr>
+                    <td>14/12/2024</td>
+                    <td>Maharashtra State Examination Council, Pune</td>
+                    <td>Maharashtra TET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/08/2024</td>
+                    <td>Savitribai Phule Pune University</td>
+                    <td>Maharashtra SET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/06/2024</td>
+                    <td>Maharashtra Police</td>
+                    <td>Constable 2024 PET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/06/2024</td>
+                    <td>Maharashtra Police</td>
+                    <td>Constable (Driver) 2024 PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/06/2024</td>
+                    <td>Maharashtra Prison Department</td>
+                    <td>Jail Constable 2024 PET Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Manipur</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/02/2025</td>
+                    <td>CAU Imphal</td>
+                    <td>Assistant Registrar and Assistant Comptroller Admit Card 2025 Released</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Meghalaya</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>Assam Rifle</td>
+                    <td>Technical / Tradesman</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/12/2024</td>
+                    <td>Meghalaya Police</td>
+                    <td>Various Vacancy 2024 PET Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/12/2024</td>
+                    <td>Meghalaya Police</td>
+                    <td>Various Vacancy 2024 PET Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>District Selection Committee East Khasi Hills</td>
+                    <td>Various Vacancy 2024 Typing Test Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Mizoram</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>21/12/2024</td>
+                    <td>Mizoram PSC</td>
+                    <td>Sub-Inspector Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/12/2024</td>
+                    <td>Mizoram PSC</td>
+                    <td>District Organiser, Junior Accounts Officer Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>21/12/2024</td>
+                    <td>Mizoram PSC</td>
+                    <td>Group 'D' (PE) Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/12/2024</td>
+                    <td>Mizoram PSC</td>
+                    <td>LDC Exam Admit Card</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Nagaland</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Odisha</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>24/03/2025</td>
+                    <td>OSSC</td>
+                    <td>Combined Post Graduate Level Exam 2023 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/03/2025</td>
+                    <td>OSSC</td>
+                    <td>Assistant Training Officer 2024 CV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/03/2025</td>
+                    <td>OSSC</td>
+                    <td>Assistant Training Officer (NTC/ NAC holders) 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>OSSC</td>
+                    <td>Junior Engineer</td>
+                </tr>
+                <tr>
+                    <td>12/03/2025</td>
+                    <td>OPSC</td>
+                    <td>Asst Executive Engineer (Civil) 2024 Preliminary Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr>
+                    <td>07/03/2025</td>
+                    <td>Odisha Police</td>
+                    <td>SI</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr>
+                    <td>04/03/2025</td>
+                    <td>OPSC</td>
+                    <td>AAO</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/02/2025</td>
+                    <td>OPSC</td>
+                    <td>Civil Judge (Jr Division) 2024 Main Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>OSSC</td>
+                    <td>Statistical Assistant 2023 Prelims Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/02/2025</td>
+                    <td>OSSC</td>
+                    <td>Inspector of Legal Metrology and Statistical Assistant CV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>15/02/2025</td>
+                    <td>OSSC</td>
+                    <td>Jr Stenographer & Jr Grade Typist Preliminary Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/02/2025</td>
+                    <td>Odisha Police</td>
+                    <td>Odisha Police Constable PET/ PST Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>12/02/2025</td>
+                    <td>Odisha Police</td>
+                    <td>Sepoy/ Constable 2024 CBRE Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/02/2025</td>
+                    <td>OPSC</td>
+                    <td>Odisha Civil Services 2023 New Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/02/2025</td>
+                    <td>Odisha Police</td>
+                    <td>Junior Clerk 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/02/2025</td>
+                    <td>Odisha Police</td>
+                    <td>Junior Clerk 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>03/02/2025</td>
+                    <td>OPSC</td>
+                    <td>OMFS 2025 Written Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/01/2025</td>
+                    <td>OPSC</td>
+                    <td>Post Graduate Teacher Admit card 2024</td>
+                </tr>
+                <tr>
+                    <td>24/01/2025</td>
+                    <td>OPSC</td>
+                    <td>Post Graduate Teacher (Group-B) 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/01/2025</td>
+                    <td>SSB, Odisha</td>
+                    <td>Laboratory Asst cum Storekeeper 2024 Written Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>15/01/2025</td>
+                    <td>BSE, Odisha</td>
+                    <td>OSSTET Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/12/2024</td>
+                    <td>OSSC</td>
+                    <td>CHSL (10+2) (Group B & C) 2024 CV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/12/2024</td>
+                    <td>Odisha Police</td>
+                    <td>Driver 2024 CBRE Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/11/2024</td>
+                    <td>SSB, Odisha</td>
+                    <td>PGT 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>08/11/2024</td>
+                    <td>OSSSC</td>
+                    <td>Amin, Revenue Inspector, ICDS Supervisor & Other Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/11/2024</td>
+                    <td>OSSC</td>
+                    <td>CGL (Group-B & C) 2023 CV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/11/2024</td>
+                    <td>OSSC</td>
+                    <td>CGL (Group-B & C) 2023 CV Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Puducherry</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Punjab</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>AIIMS</td>
+                    <td>Nursing Officer (NORCET-8)</td>
+                </tr>
+                <tr  id="pop">
+                    <td>19/03/2025</td>
+                    <td>PSSSB</td>
+                    <td>Instructor</td>
+                </tr>
+                <tr>
+                    <td>14/03/2025</td>
+                    <td>PSSSB</td>
+                    <td>Laboratory Assistant 2023 Written Exam Admit Card</td>
+                </tr>
+                <tr  id="pop">
+                    <td>14/03/2025</td>
+                    <td>PSSSB</td>
+                    <td>Librarian & Asst Librarian 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/03/2025</td>
+                    <td>PSSSB</td>
+                    <td>Labour Inspector</td>
+                </tr>
+                <tr  id="pop">
+                    <td>18/02/2025</td>
+                    <td>PSSSB</td>
+                    <td>Senior Assistant (IT) 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/02/2025</td>
+                    <td>PSSSB</td>
+                    <td>Law Officer 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr  id="pop">
+                    <td>12/02/2025</td>
+                    <td>BFUHS</td>
+                    <td>Junior Resident Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>12/02/2025</td>
+                    <td>PSSSB</td>
+                    <td>Laboratory Attendant Admit Card 2025 Released</td>
+                </tr>
+                <tr  id="pop">
+                    <td>31/01/2025</td>
+                    <td>PSPCL</td>
+                    <td>Accountant Officer and Assistant Manager 2024 Admit Card</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>PSPCL</td>
+                    <td>Junior Engineer 2024 Admit Card</td>
+                </tr>
+                <tr  id="pop">
+                    <td>28/12/2024</td>
+                    <td>PSSSB</td>
+                    <td>Clerk & Store Keeper 2024 Written Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>11/12/2024</td>
+                    <td>PSEB</td>
+                    <td>PSTET 2024 Call Letter</td>
+                </tr>
+                <tr  id="pop">
+                    <td>09/12/2024</td>
+                    <td>PSSSB</td>
+                    <td>Warder & Matron 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/11/2024</td>
+                    <td>Punjab Police</td>
+                    <td>Constable 2024 Call Letter</td>
+                </tr>
+                <tr  id="pop">
+                    <td>08/08/2024</td>
+                    <td>PSPCL</td>
+                    <td>Assistant Lineman 2024 Online Exam Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Rajasthan</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>RPSC</td>
+                    <td>RAS</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/04/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Jail Prahari</td>
+                </tr>
+                <tr>
+                    <td>08/04/2025</td>
+                    <td>RSSB Rajasthan</td>
+                    <td>Jail Prahari</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Jail Prahari</td>
+                </tr>
+                <tr>
+                    <td>02/04/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Jail Prahari</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/04/2025</td>
+                    <td>RVUNL</td>
+                    <td>Junior Engineer and Junior Chemist</td>
+                </tr>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RRB</td>
+                    <td>Technician</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Professor 2025 Interview Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Professor 2023 Interview Letter</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Professor 2023 Interview Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/03/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Professor 2025 Interview Admit Card</td>
+                </tr>
+                <tr>
+                    <td>26/03/2025</td>
+                    <td>RPSC</td>
+                    <td>RPSC Assistant Professor 2025 Interview Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/03/2025</td>
+                    <td>RSCB</td>
+                    <td>Banking Assistant, Manager and Other Post</td>
+                </tr>
+                <tr>
+                    <td>25/03/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Jr Instructor (Advt. No 09/2024) New CBT cum OMR Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/03/2025</td>
+                    <td>RPSC</td>
+                    <td>EO RO</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Stenographer Phase 2</td>
+                </tr>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>CSIR CEERI</td>
+                    <td>Technical Assistant</td>
+                </tr>
+                <tr>
+                    <td>13/03/2025</td>
+                    <td>RSMSSB</td>
+                    <td>CET (Sr Secondary Level) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Clerk Grade-II, LDC/ Junior Assistant 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/03/2025</td>
+                    <td>RRB</td>
+                    <td>ALP CBT 2</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/03/2025</td>
+                    <td>CEERI</td>
+                    <td>Technician</td>
+                </tr>
+                <tr>
+                    <td>06/03/2025</td>
+                    <td>RRB</td>
+                    <td>NTPC</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/03/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Prosecution Officer 2025 Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>28/02/2025</td>
+                    <td>RRC, North Western Railway</td>
+                    <td>Sports Quota</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/02/2025</td>
+                    <td>RPSC</td>
+                    <td>School Lecturer (Sanskrit) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/02/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Town Planner 2022 Counselling Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/02/2025</td>
+                    <td>RPSC</td>
+                    <td>Food Safety Officer 2022 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/02/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Professor 2023 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/02/2025</td>
+                    <td>RPSC</td>
+                    <td>RAS/ RTS 2024 Pre Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>20/02/2025</td>
+                    <td>RPSC</td>
+                    <td>Assistant Agriculture Research Officer and Agriculture Research Officer Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>RSMSSB</td>
+                    <td>CET (Graduate Level) 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>RSMSSB</td>
+                    <td>RSMSSB Junior Engineer (Agriculture) 2024 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Junior Engineer (Agriculture) 2024 Exam Hall Ticket</td>
+                </tr>
+                <tr>
+                    <td>25/01/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Animal Attendant 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/01/2025</td>
+                    <td>RPSC</td>
+                    <td>Senior Teacher Grade II 2024 Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>04/01/2025</td>
+                    <td>RSMSSB</td>
+                    <td>Female Supervisor 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/01/2025</td>
+                    <td>RPSC</td>
+                    <td>RAS/ RTS 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/12/2024</td>
+                    <td>RSMSSB</td>
+                    <td>Stenographer/ Personal Asst Grade-II 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>15/11/2024</td>
+                    <td>Rajasthan High Court</td>
+                    <td>District Judge 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/11/2024</td>
+                    <td>RSMSSB</td>
+                    <td>Jr Instructor (Advt. No 08/2024) New CBT cum OMR Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/10/2024</td>
+                    <td>Rajasthan Police</td>
+                    <td>Constable 2023 Proficiency Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>07/10/2024</td>
+                    <td>Rajasthan Police</td>
+                    <td>Constable 2023 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/05/2024</td>
+                    <td>Rajasthan High Court</td>
+                    <td>System Assistant 2023 Type Writing Test Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Sikkim</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        
+        <h1 id="tbh1">Tamil Nadu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02/04/2025</td>
+                    <td>Madras High Court</td>
+                    <td>Interpreter</td>
+                </tr>
+                <tr id="pop">
+                    <td>18/03/2025</td>
+                    <td>TN MRB</td>
+                    <td>AMO</td>
+                </tr>
+                <tr>
+                    <td>18/03/2025</td>
+                    <td>TNPSC</td>
+                    <td>Combined Technical Services Exam (Non Interview Posts) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr>
+                    <td>15/03/2025</td>
+                    <td>TNPSC</td>
+                    <td>CCSE (Group I-B & I-C Services) 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/03/2025</td>
+                    <td>Madras High Court</td>
+                    <td>Driver, Examiner, Reader & Other 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/02/2025</td>
+                    <td>TN</td>
+                    <td>SET</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>MRB, TN</td>
+                    <td>Assistant Surgeon Exam Admit Card 2025</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>Madras High Court</td>
+                    <td>Typist, Telephone Operator and Other Posts Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>TNPSC</td>
+                    <td>Combined Accounts Service Exam 2023 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>TNPSC</td>
+                    <td>Combined Technical Services Exam (Diploma/ITI Level) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/02/2025</td>
+                    <td>Madras High Court</td>
+                    <td>Junior Clerk, Typist, Driver, MTS & Other CV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/02/2025</td>
+                    <td>Madras High Court</td>
+                    <td>Junior Clerk, Typist, Driver, MTS & Other Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/02/2025</td>
+                    <td>TNPSC</td>
+                    <td>Combined Technical Service Exam 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>04/02/2025</td>
+                    <td>TNPSC</td>
+                    <td>CCSE (Group IV) 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>31/01/2025</td>
+                    <td>TNPSC</td>
+                    <td>CCSE (Group II and IIA Services) 2024 Preliminary Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>31/01/2025</td>
+                    <td>TNPSC</td>
+                    <td>CCSE (Group II and IIA Services) 2024 Main Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/12/2024</td>
+                    <td>TMB</td>
+                    <td>Senior Customer Service Executive 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/11/2024</td>
+                    <td>District Recruitment Bureau, Tamil Nadu</td>
+                    <td>Salesman & Packer 2024 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/10/2024</td>
+                    <td>Manonmaniam Sundaranar University</td>
+                    <td>TNSET 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/09/2024</td>
+                    <td>TNMAWS</td>
+                    <td>AE, JE, Technical Asst & Other 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/09/2024</td>
+                    <td>TNPSC</td>
+                    <td>CCSE-I (Group-I Services) 2024 Preliminary Exam Hall Ticket</td>
+                </tr>
+                <tr>
+                    <td>06/09/2024</td>
+                    <td>TNPSC</td>
+                    <td>AAO & AHO 2023 CBT Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>29/07/2024</td>
+                    <td>TRB, TN</td>
+                    <td>Secondary Grade Teacher 2024 Hall Ticket</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Telangana</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>Telangana High Court</td>
+                    <td>Assistants, Typist, and Other Posts</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/03/2025</td>
+                    <td>BDL</td>
+                    <td>Management Trainee</td>
+                </tr>
+                <tr>
+                    <td>21/03/2025</td>
+                    <td>Telangana High Court</td>
+                    <td>Civil Judge 2024 Computer Based Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/03/2025</td>
+                    <td>TSPSC</td>
+                    <td>Group II Services 2022 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>10/02/2025</td>
+                    <td>INCOIS</td>
+                    <td>Research Associate & Junior Research Fellow Admit Card will be Released</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/02/2025</td>
+                    <td>School Education Dept, Telangana</td>
+                    <td>TS TET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/01/2025</td>
+                    <td>TSPSC</td>
+                    <td>Women & Child Welfare Officer 2022 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/01/2025</td>
+                    <td>TSPSC</td>
+                    <td>Extension Officer Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/01/2025</td>
+                    <td>TSPSC</td>
+                    <td>Group 3 Services 2022 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/12/2024</td>
+                    <td>DSE, Telangana</td>
+                    <td>TG TET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>12/12/2024</td>
+                    <td>TSPSC</td>
+                    <td>HWO, Matron, Warden & Other 2022 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>03/12/2024</td>
+                    <td>MHSRB, Telangana</td>
+                    <td>Pharmacist Grade II 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/11/2024</td>
+                    <td>MHSRB, Telangana</td>
+                    <td>Staff Nurse 2024 CBT Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/11/2024</td>
+                    <td>Osmania University</td>
+                    <td>TS SET 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/11/2024</td>
+                    <td>MHSRB, Telangana</td>
+                    <td>Lab Technician Grade II 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>26/10/2024</td>
+                    <td>TSPSC</td>
+                    <td>Group I Services 2024 Mains Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/10/2024</td>
+                    <td>TSPSC</td>
+                    <td>Group I Services Exam 2024 Preliminary Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/10/2024</td>
+                    <td>SCCL</td>
+                    <td>Management Trainee, Jr Forest Officer & Other CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>30/09/2024</td>
+                    <td>TS DSC</td>
+                    <td>Teacher 2024 Online Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/09/2024</td>
+                    <td>TSGENCO</td>
+                    <td>Assistant Engineer 2023 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>16/09/2024</td>
+                    <td>TSGENCO</td>
+                    <td>Chemist 2023 CBT Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">Tripura</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>13/02/2025</td>
+                <td>Tripura PSC</td>
+                <td>Junior Engineer Admit Card 2025 Out</td>
+            </tr>
+            <tr id="pop">
+                <td>13/02/2025</td>
+                <td>Tripura PSC</td>
+                <td>Junior Engineer 2023 Mains Call Letter</td>
+            </tr>
+            <tr>
+                <td>01/02/2025</td>
+                <td>Tripura PSC</td>
+                <td>General Duty Medical Officer 2024 Written Exam Admit Card</td>
+            </tr>
+            <tr id="pop">
+                <td>13/01/2024</td>
+                <td>Tripura Police</td>
+                <td>Constable (Men & Women) 2022 Written Test Call Letter</td>
+            </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">UttraKhand</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11/03/2025</td>
+                    <td>UKPSC</td>
+                    <td>Lecturer and Assistant Research Officer</td>
+                </tr>
+                <tr id="pop">
+                    <td>08/03/2025</td>
+                    <td>UKPSC</td>
+                    <td>Group B</td>
+                </tr>
+                <tr>
+                    <td>07/03/2025</td>
+                    <td>UKSSSC</td>
+                    <td>Assistant Teacher LT 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>27/02/2025</td>
+                    <td>UKSSSC</td>
+                    <td>Assistant Teacher</td>
+                </tr>
+                <tr>
+                    <td>17/02/2025</td>
+                    <td>UKSSSC</td>
+                    <td>Intermediate Level Exam 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>RO/ARO Admit Card 2025 OUT</td>
+                </tr>
+                <tr>
+                    <td>14/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>RO/ARO 2023 Mains Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>ASO, Investigator and Computer & Other 2024 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>05/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>Investigator cum Computer & Asst Statistical Officer 2024 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/02/2025</td>
+                    <td>UKSSSC</td>
+                    <td>Personnel Assistant & Stenographer 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>01/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>SI, Platoon Commander & Fire Station Second Officer Exam Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>01/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>SI, Fire Station Second Officer 2024 Written Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>01/02/2025</td>
+                    <td>UKPSC</td>
+                    <td>SI, Platoon Commander & Fire Station Second Officer 2024 PET/PST Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/01/2025</td>
+                    <td>UKPSC</td>
+                    <td>Combined State Civil/Upper Subordinate Services Exam 2024 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/01/2025</td>
+                    <td>UKPSC</td>
+                    <td>Combined State Civil/Upper Subordinate Services 2024 Mains Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/01/2025</td>
+                    <td>UKPSC</td>
+                    <td>Combined State Civil/Upper Subordinate Services Exam 2024 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>17/01/2025</td>
+                    <td>UKPSC</td>
+                    <td>Additional Private Secretary 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>23/12/2024</td>
+                    <td>BSE, Uttarakhand</td>
+                    <td>UTET I & II 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>21/12/2024</td>
+                    <td>UKPSC</td>
+                    <td>RO/ ARO (Accounts) 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/12/2024</td>
+                    <td>UKSSSC</td>
+                    <td>Scaler 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/11/2024</td>
+                    <td>UKSSSC</td>
+                    <td>Graduate Level Exam 2023 Typing Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/11/2024</td>
+                    <td>UKSSSC</td>
+                    <td>Instructor (Advt.No 55/2024) Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>18/11/2024</td>
+                    <td>UKSSSC</td>
+                    <td>Draftsman, Technician Grade-II & Other 2024 Written Exam Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>17/11/2024</td>
+                    <td>Uttarakhand High Court</td>
+                    <td>Jr Asst & Stenographer 2024 Stage II (Hindi & English Typing/Shorthand Test) Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/09/2024</td>
+                    <td>UKPSC</td>
+                    <td>Lab Assistant 2023 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>      
+
+
+        <h1 id="tbh1"> Uttar Pradesh</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Mandi Parishad Sachiv</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/04/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Assistant Store Keeper and Assistant Grade III</td>
+                </tr>
+                <tr>
+                    <td>09/04/2025</td>
+                    <td>UPPSC</td>
+                    <td>AE</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/04/2025</td>
+                    <td>UPHESC</td>
+                    <td>Assistant Professor</td>
+                </tr>
+                <tr>
+                    <td>07/04/2025</td>
+                    <td>AIIMS</td>
+                    <td>Nursing Officer (NORCET-8)</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/04/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Sachiv Grade II</td>
+                </tr>
+                <tr>
+                    <td>04/04/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Assistant Store Keeper</td>
+                </tr>
+                <tr id="pop">
+                    <td>02/04/2025</td>
+                    <td>CSIR IITR</td>
+                    <td>JSA</td>
+                </tr>
+                <tr>
+                    <td>24/03/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Junior Assistant</td>
+                </tr>
+                <tr id="pop">
+                    <td>24/03/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Junior Assistant 2022 Typing Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/03/2025</td>
+                    <td>UP Police</td>
+                    <td>Head Operator</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/03/2025</td>
+                    <td>UP Police</td>
+                    <td>Workshop Staff 2022 DV/PST Admit Card</td>
+                </tr>
+                <tr>
+                    <td>20/03/2025</td>
+                    <td>Allahabad High Court</td>
+                    <td>Group D Driver</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/03/2025</td>
+                    <td>UPPSC</td>
+                    <td>Agriculture Services</td>
+                </tr>
+                <tr>
+                    <td>20/03/2025</td>
+                    <td>Allahabad High Court</td>
+                    <td>Group C & D 2024 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/03/2025</td>
+                    <td>UPPSC</td>
+                    <td>Combined State Agriculture Services Exam 2024 Prelims Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/03/2025</td>
+                    <td>UPSSSC</td>
+                    <td>Combined Technical Exam 2016 PET/PST</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2025</td>
+                    <td>UPPRPB</td>
+                    <td>Constable 2025 PET Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>13/03/2025</td>
+                    <td>UP Police</td>
+                    <td>Civilian Police Constable 2023 DV/PST Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>13/03/2025</td>
+                    <td>UPPRPB</td>
+                    <td>Civilian Police Constable 2023 Written Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>13/03/2025</td>
+                    <td>OIL</td>
+                    <td>Grade III, Grade IV</td>
+                </tr>
+                <tr id="pop">
+                    <td>07/03/2025</td>
+                    <td>Allahabad High Court</td>
+                    <td>Group C, Stenographer</td>
+                </tr>
+                <tr>
+                    <td>01/03/2025</td>
+                    <td>UPPSC</td>
+                    <td>Combined State/ Upper Subordinate Services 2024 Prelims Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>UP Police</td>
+                    <td>Workshop Staff</td>
+                </tr>
+                <tr>
+                    <td>28/02/2025</td>
+                    <td>UP Police</td>
+                    <td>Assistant Operator</td>
+                </tr>
+                <tr id="pop">
+                    <td>28/02/2025</td>
+                    <td>UP Police</td>
+                    <td>Assistant Operator 2022 DV/PST Admit Card</td>
+                </tr>
+                <tr>
+                    <td>26/02/2025</td>
+                    <td>Allahabad High Court</td>
+                    <td>Research Associate 2024 Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>22/02/2025</td>
+                    <td>UP Police</td>
+                    <td>Constable PET Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>19/02/2025</td>
+                    <td>UPPSC</td>
+                    <td>Staff Nurse Admit Card 2025 Released</td>
+                </tr>
+                <tr id="pop">
+                    <td>19/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Staff Nurse Ayurved 2023 Prelims Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>14/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Assistant Accountant Admit Card 2025</td>
+                </tr>
+                <tr id="pop">
+                    <td>12/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Staff Nurse Admit Card 2025 Released</td>
+                </tr>
+                <tr>
+                    <td>05/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Junior Analyst (Drug) 2025 Exam Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>05/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Homeopathic Pharmacist Exam Admit Card</td>
+                </tr>
+                <tr>
+                    <td>04/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Unani Medical Officer 2023 Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>04/02/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Medical Officer 2023 Revised Screening Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/01/2025</td>
+                    <td>UPPSSC</td>
+                    <td>Eye Testing Officer 2025 Admit Card</td>
+                </tr>
+                <tr id="pop">
+                    <td>21/12/2024</td>
+                    <td>UPPSSC</td>
+                    <td>X-Ray Technician 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>19/12/2024</td>
+                    <td>SGPGIMS, Lucknow</td>
+                    <td>Various Vacancy (I /48/-01-18 /Rectt/2023-24) Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>16/12/2024</td>
+                    <td>UPUMS</td>
+                    <td>Group C 2024 CBT Call Letter</td>
+                </tr>
+                <tr>
+                    <td>09/12/2024</td>
+                    <td>Allahabad University</td>
+                    <td>MTS, Jr Office Asst & Other 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>09/12/2024</td>
+                    <td>Allahabad University</td>
+                    <td>MTS 2024 Re Exam Call Letter</td>
+                </tr>
+                <tr>
+                    <td>06/12/2024</td>
+                    <td>UPPSSC</td>
+                    <td>Head Servant (Mukhya Sevika) 2022 DV Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>06/12/2024</td>
+                    <td>UPPSSC</td>
+                    <td>VPO, VDO & Social Welfare Supervisor 2018 DV Call Letter</td>
+                </tr>
+                <tr>
+                    <td>26/10/2024</td>
+                    <td>UPPSSC</td>
+                    <td>Forest Guard 2022 DV Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/10/2024</td>
+                    <td>UPPSSC</td>
+                    <td>UP Technical Education (Teaching) Services 2021 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>28/09/2024</td>
+                    <td>UPPSC</td>
+                    <td>Homeopathic Medical Officer 2023 Revised Screening Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>30/08/2024</td>
+                    <td>UPSSSC</td>
+                    <td>Forest & Wild Life Guard 2019 Aptitude/Record Test Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/08/2024</td>
+                    <td>UPSSSC</td>
+                    <td>Instructor 2022 DV Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>25/07/2024</td>
+                    <td>UPPSC</td>
+                    <td>Staff Nurse 2023 Mains Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/06/2024</td>
+                    <td>UPPSC</td>
+                    <td>APS 2023 Phase II Shorthand/ Typing Test Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>11/06/2024</td>
+                    <td>UPMRC</td>
+                    <td>UPMRC, Lucknow Various Vacancy 2024 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>24/04/2024</td>
+                    <td>BHU</td>
+                    <td>Nursing Officer (Male and Female) 2023 Call Letter</td>
+                </tr>  
+                   
+            </tbody>
+        </table> 
+        <br>      
+
+        <h1 id="tbh1">West Bengal</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Post Date</th>
+                    <th>Recruitment Board</th>
+                    <th>Post/Exam Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>17/03/2025</td>
+                    <td>RRB RPF</td>
+                    <td>Constable</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/03/2025</td>
+                    <td>DVC</td>
+                    <td>JE</td>
+                </tr>
+                <tr>
+                    <td>13/03/2025</td>
+                    <td>Coal India CIL</td>
+                    <td>MT</td>
+                </tr>
+                <tr id="pop">
+                    <td>10/02/2025</td>
+                    <td>WBPSC</td>
+                    <td>Sub Inspector 2023 Call Letter</td>
+                </tr>
+                <tr>
+                    <td>20/01/2025</td>
+                    <td>WBPSC</td>
+                    <td>Instructor (Electrician) 2020 Interview Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/01/2025</td>
+                    <td>Calcutta High Court</td>
+                    <td>Lower Division Asst 2024 Preliminary Screening Test (Phase-I) Call Letter</td>
+                </tr>
+                <tr>
+                    <td>27/12/2024</td>
+                    <td>WBPSC</td>
+                    <td>Clerk Exam 2023 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>20/12/2024</td>
+                    <td>WBPSC</td>
+                    <td>General Duty Medical Officer 2023 Interview Call Letter</td>
+                </tr>
+                <tr>
+                    <td>22/11/2024</td>
+                    <td>WBCSC</td>
+                    <td>WB SET 2024 Call Letter</td>
+                </tr>
+                <tr id="pop">
+                    <td>14/09/2024</td>
+                    <td>WBPSC</td>
+                    <td>Assistant Director of Agriculture 2023 Call Letter</td>
+                </tr>
+            </tbody>
+        </table> 
+        <footer>
+            <p style="color: red;">Notice: Always type .Com after DreamJob. Beware of duplicate websites with DreamJob name. DreamJob.Com is the ONLY Official website of DreamJob.Com</p>
+            <p>DreamJob.Com provides free job alert service to job seekers in India on latest government jobs, on study material and on video lessons with online test. To get free job alert daily subscribe to our email job alert services.</p>
+            <a onclick="window.location.href='/ContactUs'">Contact Us</a>
+            <p>Copyright © 2024 DreamJob.Com All Rights Reserved.</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

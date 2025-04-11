@@ -75,6 +75,7 @@ app.get('/search', (req, res) => {
         "Notification status": "/Notificationstatus",
         "Cutoff marks": "/Cutoffmarks",
         "Interview results": "/Interviewresults",
+        "Admit card": "/Admitcard",
         "Eligibility": "/Eligibility",
         "Selection process": "/Selectionprocess"
     };
@@ -128,6 +129,10 @@ app.get('/Cutoffmarks', (req, res) => {
 
 app.get('/Interviewresults', (req, res) => {
     res.render("Interview_results");
+});
+
+app.get('/Admitcard', (req, res) => {
+    res.render('Admit_card');
 });
 
 app.get('/Eligibility', (req, res) => {
@@ -235,6 +240,7 @@ app.get('/usersearch', (req, res) => {
         "Notification status": "/Notificationstatus",
         "Cutoff marks": "/Cutoffmarks",
         "Interview results": "/Interviewresults",
+        "Admit card": "/Admitcard",
         "Eligibility": "/Eligibility",
         "Selection process": "/Selectionprocess"
     };
@@ -316,6 +322,7 @@ app.get('/adminsearch', (req, res) => {
         "Notification status": "/Notificationstatus",
         "Cutoff marks": "/Cutoffmarks",
         "Interview results": "/Interviewresults",
+        "Admit card": "/Admitcard",
         "Eligibility": "/Eligibility",
         "Selection process": "/Selectionprocess",
         "Manage users": "/Adminmanageuser",
