@@ -154,7 +154,12 @@ app.post('/NewAdmin', (req, res) => {
     connection.query('INSERT INTO admins (id, username, email, password) VALUES (?, ?, ?, ?)', 
     [id, username, email, password], (err) => {
         if (err) throw err;
-            res.redirect('/AdminLogin');
+            res.send(`
+                <script>
+                    alert("Account Created Successfully!");
+                    window.location.href = "/AdminLogin";
+                </script>
+            `);
         }
     );
 });
@@ -170,7 +175,12 @@ app.post('/NewUser', (req, res) => {
     connection.query('INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)', 
     [id, username, email, password], (err) => {
         if (err) throw err;
-            res.redirect('/UserLogin');
+            res.send(`
+                <script>
+                    alert("Account Created Successfully!");
+                    window.location.href = "/UserLogin";
+                </script>
+            `);
         }
     );
 });
